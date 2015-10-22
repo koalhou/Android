@@ -1,0 +1,16 @@
+一、新增
+com.neusoft.mid.clwapi.entity.video.BusVideoStatus.java
+com.neusoft.mid.clwapi.entity.video.VideoCarTree.java
+com.neusoft.mid.clwapi.entity.video.WatchSet.java
+
+com.neusoft.mid.clwapi.service.video.VideoService.java
+com.neusoft.mid.clwapi.service.video.VideoServiceImpl.java
+com.neusoft.mid.clwapi.service.video.WatchVideoService.java
+
+src/main/resources/mapper/VideoMapper.xml
+
+src/main/resources/restApi/videoApi.xml
+
+二、更改 
+<!-- yutong add -->	
+src/main/resources/mybatis/mybatis-configuration.xml 

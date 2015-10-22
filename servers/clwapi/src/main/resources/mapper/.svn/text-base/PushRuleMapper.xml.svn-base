@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mid.clwapi.mapper.PushRuleMapper">
+
+	<resultMap id="pushRuleMap" type="pushRuleInfo">
+		<result property="ruleId" column="RULE_ID" />
+		<result property="ruleDesc" column="PM_RULE_DESC" />
+		<result property="onOff" column="ON_OFF" />
+		<result property="flag" column="FLAG" />
+		<result property="usrId" column="USER_ID" />
+		<result property="pmRuleId" column="PM_RULE_ID" />
+		<result property="operateTime" column="UPDATE_TIME_NEW" />
+	</resultMap>
+
+	<!-- 根据企业ID查询企业下默认的推送规则 -->
+	<select id="getEnterpriseRule" parameterType="String" resultMap="pushRuleMap">
+		SELECT ON_OFF, FLAG, PM_RULE_ID
+		FROM CLW_M_ORGASEND_RULE_T
+		WHERE
+		ENTERPRISE_ID = #{enId} AND DEL = '0'
+	</select>
+
+	<!-- 批量插入用户个人推送规则表内 -->
+	<insert id="insertPersonalRule" parameterType="java.util.List">
+		INSERT INTO CLW_M_PERSONALSEND_RULE_T (RULE_ID,
+		USER_ID,
+		PM_RULE_ID,
+		ON_OFF,
+		UPDATE_TIME,
+		FLAG)
+		<foreach collection="list" item="item" index="index"
+			separator="union all">
+			SELECT
+			#{item.ruleId},
+			#{item.usrId},
+			#{item.pmRuleId},
+			#{item.onOff},
+			SYSDATE,
+			#{item.flag}
+			FROM DUAL
+		</foreach>
+	</insert>
+
+	<!-- 根据用户ID查询用户所有有效的推送规则 -->
+	<select id="getPushRules" parameterType="String" resultMap="pushRuleMap">
+		SELECT RULE_ID,
+		CLW_M_PERSONALSEND_RULE_T.PM_RULE_ID,
+		CLW_M_PERSONALSEND_RULE_T.ON_OFF,
+		CLW_M_PERSONALSEND_RULE_T.FLAG,
+		PM_RULE_DESC,
+		TO_CHAR(CLW_M_PERSONALSEND_RULE_T.UPDATE_TIME,'yyyymmddhh24miss')
+		UPDATE_TIME_NEW
+		FROM
+		CLW_M_PERSONALSEND_RULE_T
+		INNER JOIN
+		CLW_M_ORGASEND_RULE_T
+		ON
+		(CLW_M_PERSONALSEND_RULE_T.PM_RULE_ID =
+		CLW_M_ORGASEND_RULE_T.PM_RULE_ID)
+		INNER JOIN
+		CLW_M_SENDRULE_DESC_T
+		ON
+		(CLW_M_PERSONALSEND_RULE_T.PM_RULE_ID =
+		CLW_M_SENDRULE_DESC_T.PM_RULE_ID)
+		WHERE CLW_M_ORGASEND_RULE_T.DEL = '0'
+		AND CLW_M_SENDRULE_DESC_T.DEL = '0'
+		AND
+		CLW_M_ORGASEND_RULE_T.ENTERPRISE_ID = #{enId}
+		AND USER_ID = #{usrId}
+		ORDER BY
+		UPDATE_TIME DESC
+	</select>
+
+	<!-- 批量更新用户推送列表 -->
+	<update id="updatePersonalRule" parameterType="java.util.List">
+		UPDATE CLW_M_PERSONALSEND_RULE_T
+		SET ON_OFF =
+		CASE
+		<foreach collection="list" item="item" index="index">
+			WHEN ( USER_ID =
+			#{item.usrId}
+			AND RULE_ID = #{item.rule_id})
+			THEN
+			#{item.on_off}
+		</foreach>
+		END,
+		FLAG =
+		CASE
+		<foreach collection="list" item="item" index="index">
+			WHEN ( USER_ID =
+			#{item.usrId}
+			AND RULE_ID = #{item.rule_id})
+			THEN
+			#{item.flag}
+		</foreach>
+		END,
+		UPDATE_TIME =
+		CASE
+		<foreach collection="list" item="item" index="index">
+			WHEN ( USER_ID =
+			#{item.usrId}
+			AND RULE_ID = #{item.rule_id})
+			THEN
+			SYSDATE
+		</foreach>
+		END
+		WHERE
+		<foreach collection="list" item="item" index="index"
+			separator="OR">
+			(
+			USER_ID =
+			#{item.usrId}
+			AND RULE_ID = #{item.rule_id}
+			)
+		</foreach>
+	</update>
+</mapper>

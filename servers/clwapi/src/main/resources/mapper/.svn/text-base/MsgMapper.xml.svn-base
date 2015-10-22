@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mid.clwapi.mapper.MsgMapper">
+
+	<!-- 车辆终端最新状态信息 -->
+	<resultMap id="realVehcileByVinResultMap"
+		type="com.neusoft.mid.clwapi.entity.msg.TerminalViBean">
+		<id property="terminalTime" column="TERMINAL_TIME" />
+		<id property="stateInfo" column="STAT_INFO" />
+		<id property="simCardNum" column="SIM_CARD_NUMBER" />
+		<id property="accFlg" column="ACC_FLG" />
+		<id property="seconds" column="SECONDS" />
+	</resultMap>
+
+	<!-- CLWAPI应用配置信息 -->
+	<resultMap id="appConfResultMap"
+		type="com.neusoft.mid.clwapi.process.delivermsg.ClwapiAccessCoreCommon">
+		<id property="appId" column="APP_ID" />
+		<id property="appname" column="APP_NAME" />
+		<id property="appIp" column="APP_IP" />
+		<id property="sendPath" column="SEND_PATH" />
+		<id property="coreId" column="CORE_ID" />
+		<id property="appPass" column="CORE_PASS" />
+	</resultMap>
+
+	<!-- 根据车辆VIN信息查询终端最新状态信息 -->
+	<select id="getRealVehcileByVin" parameterType="String"
+		resultMap="realVehcileByVinResultMap">
+		SELECT
+		TO_CHAR (terminal_time, 'yyyymmddhh24miss')
+		terminal_time,
+		stat_info,
+		sim_card_number,
+		NVL (SUBSTRB (stat_info, 32,
+		1), '1') ACC_FLG,
+		(SYSDATE - terminal_time) * 24 * 60 * 60 SECONDS
+		FROM
+		clw_jc_terminal_t
+		WHERE
+		valid_flag = '0'
+		AND device_type = '0'
+		AND
+		vehicle_vin = #{vin}
+	</select>
+
+	<!-- 根据应用ID信息获取核心服务分配给CLWAPI的应用配置信息 -->
+	<select id="getAppConfInfo" parameterType="String" resultMap="appConfResultMap">
+		SELECT
+		app_id,
+		app_name,
+		app_ip,
+		send_path,
+		core_id,
+		core_pass
+		FROM
+		clw_yw_app_cfg_t
+		WHERE
+		app_id = #{appId}
+	</select>
+
+	<!-- 根据模板ID信息查询条数 -->
+	<select id="getMsgMoldCount" resultType="int">
+		SELECT COUNT(1)
+		FROM
+		CLW_M_PERSONAL_TEMPLATE_T T
+		WHERE T.TEMP_ID = #{tempId}
+		AND T.USER_ID = #{usrId}
+		AND T.DEL = '0'
+	</select>
+
+
+	<!-- 添加消息调度模板 -->
+	<insert id="insertMsgMoldInfo" parameterType="msgMold">
+		<selectKey resultType="java.lang.String" keyProperty="id"
+			order="BEFORE">
+			SELECT SEQ_CLW_M_PERSONAL_TEMPLATE_T.NEXTVAL FROM DUAL
+		</selectKey>
+		INSERT INTO CLW_M_PERSONAL_TEMPLATE_T
+		(TEMP_ID, USER_ID, INFO_REMARK,
+		CREATE_TIME, UPDATE_TIME, DEL)
+		VALUES
+		(#{id}, #{userId}, #{remark},
+		SYSDATE, SYSDATE, '0')
+	</insert>
+
+	<!-- 根据模板ID信息获取调度消息模板信息 -->
+	<resultMap id="msgMoldMap" type="msgMold">
+		<id property="id" column="TEMP_ID" />
+		<id property="remark" column="INFO_REMARK" />
+		<id property="editT" column="UPDATE_TIME" />
+		<id property="del" column="DEL" />
+	</resultMap>
+	<select id="getMsgMoldInfo" parameterType="msgMold" resultMap="msgMoldMap">
+		SELECT T.TEMP_ID,T.INFO_REMARK,
+		TO_CHAR(T.UPDATE_TIME,'yyyymmddhh24miss') UPDATE_TIME
+		FROM
+		CLW_M_PERSONAL_TEMPLATE_T T
+		WHERE T.TEMP_ID = #{id}
+		AND T.USER_ID = #{userId}
+		<choose>
+			<when test="delFlag != null">
+				AND T.DEL = #{delFlag}
+			</when>
+			<otherwise>
+				AND T.DEL = '0'
+			</otherwise>
+		</choose>
+	</select>
+
+	<!-- 根据用户ID信息获取调度消息模板信息 -->
+	<select id="getMsgMoldInfoWithUsr" parameterType="String"
+		resultMap="msgMoldMap">
+		SELECT
+		T.TEMP_ID,T.INFO_REMARK,TO_CHAR(T.UPDATE_TIME,'yyyymmddhh24miss')
+		UPDATE_TIME,T.DEL
+		FROM CLW_M_PERSONAL_TEMPLATE_T
+		T
+		WHERE T.USER_ID = #{usrId}
+		ORDER BY UPDATE_TIME DESC
+	</select>
+
+	<!-- 更新调度信息模板 -->
+	<update id="updateUserMsgMold" parameterType="msgMold">
+		UPDATE CLW_M_PERSONAL_TEMPLATE_T
+		<set>
+			<if test="remark != null">INFO_REMARK = #{remark},</if>
+			<if test="delFlag != null">DEL = #{delFlag},</if>
+			UPDATE_TIME = SYSDATE
+		</set>
+		WHERE TEMP_ID = #{id}
+		AND USER_ID = #{userId}
+	</update>
+	
+	<!-- 更新推送信息[告警信息]已成功被客户端接收标识. added by majch-->
+	<update id="updateAlarmPushMsgReceived">
+		UPDATE 
+			CLW_M_PUSH_ALARM_RECORD_T
+		SET
+			REC_STATE = '1'
+		WHERE 
+			USER_ID = #{userId}
+			AND
+			CLIENT_ID = #{clientId}
+			AND
+			ALARM_ID = #{msgId}
+	</update>
+	
+	<!-- 更新推送信息[照片信息]已成功被客户端接收标识. added by majch-->
+	<update id="updatePicPushMsgReceived">
+		UPDATE 
+			CLW_M_PUSH_PHOTO_RECORD_T
+		SET
+			REC_STATE = '1'
+		WHERE 
+			USER_ID = #{userId}
+			AND
+			CLIENT_ID = #{clientId}
+			AND
+			PHOTO_ID = #{msgId}
+	</update>
+	
+	<!-- 更新推送信息[新闻信息]已成功被客户端接收标识. added by majch-->
+	<update id="updateNewPushMsgReceived">
+		UPDATE 
+			CLW_M_PUSH_MESSAGE_RECORD_T
+		SET
+			REC_STATE = '1'
+		WHERE 
+			USER_ID = #{userId}
+			AND
+			CLIENT_ID = #{clientId}
+			AND
+			MSG_ID = to_number(#{msgId})
+	</update>
+</mapper>

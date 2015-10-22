@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="  
+                       http://www.springframework.org/schema/beans  
+                       http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+                       http://www.springframework.org/schema/context 
+                       http://www.springframework.org/schema/context/spring-context-3.2.xsd 
+                       http://cxf.apache.org/jaxrs  
+                       http://cxf.apache.org/schemas/jaxrs.xsd">
+
+	<!-- 设置需要发布的bean -->
+	<bean id="siteService" class="com.neusoft.mid.clwapi.service.site.SiteServiceImpl" />
+
+	<!-- 站点相关服务API -->
+	<jaxrs:server id="site" address="/site">
+		<jaxrs:serviceBeans>
+			<ref bean="siteService" />
+		</jaxrs:serviceBeans>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+		</jaxrs:extensionMappings>
+		<jaxrs:providers>
+			<bean class="org.apache.cxf.jaxrs.provider.json.JSONProvider">
+				<property name="dropRootElement" value="true" />
+				<property name="supportUnwrapped" value="true" />
+			</bean>
+		</jaxrs:providers>
+
+		<!-- 日志相关拦截器 -->
+		<jaxrs:features>
+			<bean class="com.neusoft.mid.clwapi.feature.SyncLoggingFeature" />
+		</jaxrs:features>
+	</jaxrs:server>
+
+</beans>

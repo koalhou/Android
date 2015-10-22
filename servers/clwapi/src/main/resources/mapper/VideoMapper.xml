@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mid.clwapi.mapper.VideoMapper">
+
+	<select id="getWatchSet" parameterType="string" resultType="watchSet">
+		select a.in_wifi as inWifi, a.play_time as playTime
+		  from clw_xc_watch_video a
+		 where a.user_id =#{user_id}
+	</select>
+	
+	<insert id="add" parameterType="watchSet">
+		insert into clw_xc_watch_video values (#{UID},#{inWifi},#{playTime})
+	</insert>
+	
+	<update id="update" parameterType="watchSet">
+		update clw_xc_watch_video a set a.in_wifi=#{inWifi} ,a.play_time=#{playTime,jdbcType=VARCHAR} where a.user_id=#{UID}
+	</update>
+	
+	<select id="getBusVideoStatus" parameterType="string" resultType="busVideoStatus">
+	select a.vehicle_vin as vin,
+	       SUBSTRB(a.veh_ext_info,1,1) as is3GOnline,       
+	       NVL(SUBSTRB(a.DEVICE_FAULT_LIST, 24, 1), '0')  as wholeBus,
+	       NVL(SUBSTRB(a.DEVICE_FAULT_LIST, 23, 1), '0') as  roadCondition,
+	       NVL(SUBSTRB(a.DEVICE_FAULT_LIST, 22, 1), '0') as carDoor,
+	       NVL(SUBSTRB(a.DEVICE_FAULT_LIST, 21, 1), '0') as busDriver,
+	       a.video_factory as brand,
+	       b.vehicle_ln as vehicleNum,
+	        <![CDATA[ 
+	       CASE
+	         WHEN NVL(SUBSTRB(a.STAT_INFO, 32, 1), '1') = '1' AND (SYSDATE - a.TERMINAL_TIME) * 24 * 60  < 5  THEN
+	          '1'
+	         WHEN NVL(SUBSTRB(a.STAT_INFO, 32, 1), '1') = '0' AND (SYSDATE - a.TERMINAL_TIME) * 24 * 60  < 30  THEN
+	          '1'
+	         else
+	          '0'
+	       END vehicleOnline,
+	       ]]>
+           a.stream_server_ip as  realServer,
+           a.video_server_ip as authServer
+	  from clw_jc_terminal_t a, clw_cl_base_info_t b
+	 where a.vehicle_vin = b.vehicle_vin 
+	   and a.vehicle_vin = #{vin}
+	</select>
+	
+	<select id="getVideoBusTree" resultType="videoCarTree">
+	 
+	SELECT '02'  dataType,
+	       CL.VEHICLE_VIN id,
+	       CL.VEHICLE_LN name,
+	       CL.ORGANIZATION_ID pid,
+	       CR.DRIVER_NAME driver,
+	        <![CDATA[ 
+	       CASE
+	         WHEN CR.FIRE_UP_STATE = '0' AND CR.LAST_TIME >= 30 * 60 THEN
+	          '0'
+	         WHEN CR.FIRE_UP_STATE = '1' AND CR.LAST_TIME >= 5 * 60 THEN
+	          '0'
+	         WHEN CR.FIRE_UP_STATE = '0' AND CR.LAST_TIME < 30 * 60 THEN
+	          '2'
+	         WHEN CR.FIRE_UP_STATE = '1' AND CR.LAST_TIME < 5 * 60 THEN
+	          '1'
+	         WHEN CR.LAST_TIME IS NULL THEN
+	          '0'
+	       END status
+	       ]]>
+	  FROM CLW_CL_BASE_INFO_T CL,
+	       (SELECT CJT.VEHICLE_VIN,
+	               D.DRIVER_NAME,
+	               NVL(SUBSTRB(CJT.STAT_INFO, 32, 1), '1') FIRE_UP_STATE,
+	               (SYSDATE - CJT.TERMINAL_TIME) * 24 * 60 * 60 LAST_TIME
+	          FROM CLW_JC_TERMINAL_T CJT, CLW_YW_DRIVER_T D
+	         WHERE CJT.DRIVER_ID = D.DRIVER_ID(+)
+	           and SUBSTRB(CJT.veh_ext_info, 1, 1) = 1 and NVL(SUBSTRB(CJT.STAT_INFO, 32, 1), '1')=1
+	           and CJT.video_factory  in <foreach collection="brands" item="item" separator="," open="(" close=")" >
+	   		#{item}
+	   </foreach>
+	           AND CJT.ENTERPRISE_ID = #{ent}) CR
+	 WHERE CL.VEHICLE_VIN = CR.VEHICLE_VIN
+	   AND CL.VALID_FLAG = '0'
+	   AND CL.DEVICE_TYPE = '0'
+	   AND CL.ENTERPRISE_ID = #{ent}
+	   AND CL.ORGANIZATION_ID IN
+	    <![CDATA[ 
+	       (SELECT ENTERPRISE_ID
+	          FROM CLW_JC_ENTERPRISE_T
+	         WHERE LEFT_NUM >=
+	               (SELECT LEFT_NUM
+	                  FROM CLW_JC_ENTERPRISE_T
+	                 WHERE ENTERPRISE_ID = #{org})
+	           AND RIGHT_NUM <=
+	               (SELECT RIGHT_NUM
+	                  FROM CLW_JC_ENTERPRISE_T
+	                 WHERE ENTERPRISE_ID = #{org}))
+	      ]]>
+	UNION ALL
+	SELECT DISTINCT '01' dataType,
+	                ET.ENTERPRISE_ID id,
+	                ET.SHORT_NAME name,
+	                '' pid,
+	                ''  driver,
+	                ''  status
+	  FROM CLW_CL_BASE_INFO_T CL, CLW_JC_ENTERPRISE_T ET
+	 WHERE CL.ORGANIZATION_ID = ET.ENTERPRISE_ID
+	   AND ET.VALID_FLAG = '0'
+	   AND CL.VALID_FLAG = '0'
+	   AND CL.DEVICE_TYPE = '0'
+	   AND CL.ENTERPRISE_ID = #{ent}
+	   AND CL.ORGANIZATION_ID IN
+	    <![CDATA[ 
+	       (SELECT ENTERPRISE_ID
+	          FROM CLW_JC_ENTERPRISE_T
+	         WHERE LEFT_NUM >=
+	               (SELECT LEFT_NUM
+	                  FROM CLW_JC_ENTERPRISE_T
+	                 WHERE ENTERPRISE_ID = #{org})
+	           AND RIGHT_NUM <=
+	               (SELECT RIGHT_NUM
+	                  FROM CLW_JC_ENTERPRISE_T
+	                 WHERE ENTERPRISE_ID = #{org}))
+
+	]]>
+	</select>
+</mapper>

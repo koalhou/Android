@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/xiaochelaile/build/classes/com/yutong/clwwxp/message/request
+END
+LocationMessage.class
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/xiaochelaile/build/classes/com/yutong/clwwxp/message/request/LocationMessage.class
+END
+BaseMessage.class
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/xiaochelaile/build/classes/com/yutong/clwwxp/message/request/BaseMessage.class
+END
+LinkMessage.class
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/xiaochelaile/build/classes/com/yutong/clwwxp/message/request/LinkMessage.class
+END
+ImageMessage.class
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/xiaochelaile/build/classes/com/yutong/clwwxp/message/request/ImageMessage.class
+END
+TextMessage.class
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/xiaochelaile/build/classes/com/yutong/clwwxp/message/request/TextMessage.class
+END
+VoiceMessage.class
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/xiaochelaile/build/classes/com/yutong/clwwxp/message/request/VoiceMessage.class
+END

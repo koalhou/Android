@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mid.clwapi.mapper.NewsMapper">
+
+	<resultMap id="newsInfoMap" type="newsInfo">
+		<result property="newsId" column="MSG_ID" />
+		<result property="newsTitle" column="MSG_TITLE" />
+		<result property="newsSummary" column="MSG_OV" />
+		<result property="newsTime" column="PUBLISH_TIME" />
+		<result property="newsType" column="MSG_TYPE" />
+	</resultMap>
+
+	<resultMap id="checkNewsInfoMap" type="checkNewsInfo">
+		<result property="usrId" column="USER_ID" />
+		<result property="msgId" column="MSG_ID" />
+		<result property="msgType" column="MSG_TYPE" />
+		<result property="count" column="COUNT" />
+		<result property="createTime" column="CREATE_TIME" />
+		<result property="updateTime" column="UPDATE_TIME" />
+		<result property="publishTime" column="PUBLISH_TIME" />
+	</resultMap>
+
+	<!-- 获取新闻列表 -->
+	<select id="getNewsList" parameterType="newsRequ" resultMap="newsInfoMap">
+		<if test="num != null">
+			SELECT * FROM(
+		</if>
+		SELECT MSG_ID,
+		MSG_TYPE,
+		MSG_TITLE,
+		MSG_OV,
+		TO_CHAR(PUBLISH_TIME,'yyyymmddhh24miss') PUBLISH_TIME
+		FROM
+		CLW_M_PUSH_MESSAGE_T
+		WHERE MSG_STATUS = '1'
+		<if test=" type != null ">
+			AND MSG_TYPE=#{type}
+		</if>
+		<if test="startTime != null">
+            <![CDATA[
+            AND PUBLISH_TIME >= TO_DATE (#{startTime}, 'yyyymmddhh24miss')
+            ]]>
+		</if>
+		<if test="endTime != null">
+            <![CDATA[
+            AND PUBLISH_TIME <= TO_DATE (#{endTime}, 'yyyymmddhh24miss')
+            ]]>
+		</if>
+		<![CDATA[
+			AND PUBLISH_TIME < SYSDATE
+			AND END_TIME > SYSDATE
+		]]>
+		ORDER BY PUBLISH_TIME DESC
+		<if test="num != null">
+			)
+			WHERE
+		<![CDATA[
+			ROWNUM <= #{num}
+		 ]]>
+		</if>
+	</select>
+
+	<!-- 查询用户推送消息查看记录 -->
+	<select id="getCheckNewsInfo" parameterType="checkNewsRequ"
+		resultMap="checkNewsInfoMap">
+		SELECT
+		USER_ID,
+		MSG_ID,
+		MSG_TYPE,
+		COUNT,
+		TO_CHAR(CREATE_TIME,'yyyymmddhh24miss') CREATE_TIME,
+		TO_CHAR(UPDATE_TIME,'yyyymmddhh24miss') UPDATE_TIME,
+		TO_CHAR(PUBLISH_TIME,'yyyymmddhh24miss') PUBLISH_TIME
+		FROM
+		CLW_M_PUSH_MESSAGE_CHECK_T
+		WHERE USER_ID =
+		#{usrId} AND MSG_ID =
+		#{newsId}
+	</select>
+
+	<!-- 更新用户推送消息查看记录 -->
+	<update id="updateCheckNewsInfo" parameterType="checkNewsInfo">
+		UPDATE CLW_M_PUSH_MESSAGE_CHECK_T
+		<set>
+			COUNT = #{count},
+			UPDATE_TIME = SYSDATE
+		</set>
+		WHERE USER_ID = #{usrId} AND MSG_ID = #{msgId}
+	</update>
+
+	<!-- 新增用户推送消息查看记录 -->
+	<insert id="addCheckNewsInfo" parameterType="checkNewsRequ">
+		INSERT INTO
+		CLW_M_PUSH_MESSAGE_CHECK_T (USER_ID,
+		MSG_ID,
+		MSG_TYPE,
+		COUNT,
+		CREATE_TIME,
+		UPDATE_TIME,
+		PUBLISH_TIME)
+		VALUES (#{usrId},
+		#{newsId},
+		#{newsType},
+		'1',
+		SYSDATE,
+		SYSDATE,
+		TO_DATE(#{newsTime},'yyyymmddhh24miss'))
+	</insert>
+</mapper>

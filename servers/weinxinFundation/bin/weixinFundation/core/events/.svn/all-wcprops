@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/events
+END
+LocationEventMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/events/LocationEventMessage.java
+END
+LocationEventMessageReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/events/LocationEventMessageReader.java
+END
+GuanzhuEventMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/events/GuanzhuEventMessage.java
+END
+GuanzhuEventMessageReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/events/GuanzhuEventMessageReader.java
+END
+MenuEventMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/events/MenuEventMessage.java
+END
+MenuEventMessageReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/events/MenuEventMessageReader.java
+END

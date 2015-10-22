@@ -1,0 +1,9 @@
+问：我刚打开工程，该做什么？
+答：打开文件 src/weixinmobile.services/WeixinContextImpl.java 文件
+       修改Token 和你在 微信公众平台后台
+       appID，appsecret
+	
+
+问：如何修改日志文件的存放地址？
+答：请打开 src/logger.properties ,进行修改，开发人员一看就明白
+

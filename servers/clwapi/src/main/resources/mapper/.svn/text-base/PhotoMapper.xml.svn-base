@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mid.clwapi.mapper.PhotoMapper">
+
+	<resultMap id="photoInfoMap" type="phtotoInfo">
+		<result property="imgId" column="PHOTO_ID" />
+		<result property="vin" column="VEHICLE_VIN" />
+		<result property="carLn" column="VEHICLE_LN" />
+		<result property="time" column="PHOTO_TIME_NUW" />
+		<result property="flag" column="PHOTO_FALG" />
+		<result property="info" column="PHOTO_DESC" />
+		<result property="flagTime" column="FLAG_TIME_NUW" />
+		<result property="orgaId" column="ORGANIZATION_ID" />
+		<result property="type" column="CHANNEL_NUMBER" />
+		<result property="operateTime" column="OPERATE_TIME" />
+	</resultMap>
+
+	<resultMap id="photoSignInfoMap" type="photoSignInfo">
+		<result property="time" column="FLAG_TIME_NUW" />
+		<result property="info" column="PHOTO_DESC" />
+		<result property="flag" column="PHOTO_FALG" />
+	</resultMap>
+
+	<!-- 获取照片列表 -->
+	<select id="getPhotoList" parameterType="photoRequ" resultMap="photoInfoMap">
+		SELECT *
+		FROM (SELECT
+		ROWNUM rn,
+		CHANNEL_NUMBER,
+		PHOTO_ID,
+		VEHICLE_VIN,
+		VEHICLE_LN,
+		PHOTO_TIME_NUW,
+		PHOTO_DESC,
+		PHOTO_FALG,
+		FLAG_TIME_NUW,
+		OPERATE_TIME,
+		ORGANIZATION_ID
+		FROM (
+		SELECT
+		CHANNEL_NUMBER,
+		PHOTO_ID,
+		TO_CHAR(CLW_YW_PHOTO_T.OPERATE_TIME,'yyyymmddhh24miss')
+		OPERATE_TIME,
+		CLW_YW_PHOTO_T.VEHICLE_VIN,
+		VEHICLE_LN,
+		TO_CHAR(PHOTO_TIME,'yyyymmddhh24miss') PHOTO_TIME_NUW,
+		PHOTO_DESC,
+		PHOTO_FALG,
+		CLW_CL_BASE_INFO_T.ORGANIZATION_ID,
+		TO_CHAR(FLAG_TIME,'yyyymmddhh24miss')
+		FLAG_TIME_NUW
+		FROM
+		CLW_YW_PHOTO_T
+		<if test="type != null">
+			LEFT JOIN CLW_YW_SEND_COMMAND_T ON (PHOTO_ID = MSG_ID)
+		</if>
+		LEFT JOIN CLW_CL_BASE_INFO_T
+		ON
+		(CLW_YW_PHOTO_T.VEHICLE_VIN =
+		CLW_CL_BASE_INFO_T.VEHICLE_VIN)
+		WHERE
+		<choose>
+			<when test="vin != null">
+				CLW_YW_PHOTO_T.VEHICLE_VIN = #{vin}
+			</when>
+			<when test="orgaId != null">
+				ORGANIZATION_ID = #{orgaId}
+			</when>
+			<otherwise>
+				ENTERPRISE_ID = #{enId}
+			</otherwise>
+		</choose>
+		AND
+		CLW_CL_BASE_INFO_T.ORGANIZATION_ID IN
+		(SELECT ENTERPRISE_ID
+		FROM
+		CLW_JC_ENTERPRISE_T
+         <![CDATA[WHERE LEFT_NUM >= (SELECT LEFT_NUM
+                      FROM CLW_JC_ENTERPRISE_T
+                      WHERE ENTERPRISE_ID = #{organizationId})
+         AND RIGHT_NUM <=(SELECT RIGHT_NUM
+                      FROM CLW_JC_ENTERPRISE_T
+                      WHERE ENTERPRISE_ID = #{organizationId})
+         ]]>
+		)
+		<if test="endTime != null">
+			<![CDATA[ 
+			AND CLW_YW_PHOTO_T.OPERATE_TIME <= TO_DATE(#{endTime},'yyyymmddhh24miss')
+			]]>
+		</if>
+		<if test="startTime != null">
+   			<![CDATA[
+			AND CLW_YW_PHOTO_T.OPERATE_TIME >= TO_DATE(#{startTime},'yyyymmddhh24miss')
+			]]>
+		</if>
+		<if test="type != null">
+			AND SOURCE = '1'
+			AND CLW_YW_SEND_COMMAND_T.OPERATE_USER_ID
+			= #{usrId}
+		</if>
+		AND CLW_CL_BASE_INFO_T.DEVICE_TYPE = '0'
+		AND
+		CLW_CL_BASE_INFO_T.VALID_FLAG = '0'
+		ORDER BY
+		CLW_YW_PHOTO_T.OPERATE_TIME
+		DESC,CLW_YW_PHOTO_T.PHOTO_TIME DESC,
+		NLSSORT(VEHICLE_LN,'NLS_SORT=SCHINESE_PINYIN_M') ASC,CHANNEL_NUMBER
+		ASC)
+		)
+		WHERE
+		<![CDATA[
+		rn > #{startRow}
+		AND
+		rn <= #{endRow}
+		]]>
+	</select>
+
+
+	<!-- 获取照片标记 -->
+	<select id="getPhotoSign" parameterType="photoSignRequ"
+		resultMap="photoSignInfoMap">
+		SELECT
+		NVL (PHOTO_FALG,
+		'0') PHOTO_FALG,
+		PHOTO_DESC,
+		TO_CHAR(FLAG_TIME,'yyyymmddhh24miss')
+		FLAG_TIME_NUW
+		FROM CLW_YW_PHOTO_T
+		WHERE
+		PHOTO_ID = #{imgId}
+		<if test=" upTime != null">
+			<![CDATA[
+			AND FLAG_TIME > TO_DATE(#{upTime},'yyyymmddhh24miss')
+			]]>
+		</if>
+		<![CDATA[
+		AND ROWNUM <= 1
+		]]>
+	</select>
+
+	<!-- 更新照片标记信息 -->
+	<update id="signPhoto" parameterType="photoSignRequ">
+		UPDATE CLW_YW_PHOTO_T
+		<set>
+			<if test=" flag != null">PHOTO_FALG = #{flag},</if>
+			PHOTO_DESC = #{info},
+			FLAG_TIME =
+			SYSDATE,
+			FLAG_USER = #{usrId}
+		</set>
+		WHERE PHOTO_ID = #{imgId}
+	</update>
+
+	<!-- 获取系统时间 -->
+	<select id="getUpDate" resultType="String" parameterType="photoSignRequ">
+		SELECT
+		TO_CHAR(FLAG_TIME,'yyyymmddhh24miss') FROM
+		CLW_YW_PHOTO_T
+		WHERE
+		PHOTO_ID
+		= #{imgId}
+		<![CDATA[
+		AND ROWNUM <=1
+		]]>
+	</select>
+
+</mapper>

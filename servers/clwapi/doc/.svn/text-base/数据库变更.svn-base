@@ -1,0 +1,20 @@
+-- Create table
+create table CLW_XC_WATCH_VIDEO
+(
+  user_id   VARCHAR2(64) not null,
+  in_wifi   VARCHAR2(1) not null,
+  play_time NUMBER
+);
+-- Add comments to the table 
+comment on table CLW_XC_WATCH_VIDEO
+  is '查看视频监控设置';
+-- Add comments to the columns 
+comment on column CLW_XC_WATCH_VIDEO.user_id
+  is '账号id';
+comment on column CLW_XC_WATCH_VIDEO.in_wifi
+  is '是否支持仅wifi下查看视频  1-是 0-否';
+comment on column CLW_XC_WATCH_VIDEO.play_time
+  is '视频播放时长，单位秒，为空代表不限制时长';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table CLW_XC_WATCH_VIDEO
+  add constraint PK_CLW_XC_WATCH_VIDEO primary key (USER_ID);

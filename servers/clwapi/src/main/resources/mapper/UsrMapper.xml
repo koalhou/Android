@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mid.clwapi.mapper.UsrMapper">
+
+	<!-- 添加用户行为信息记录 -->
+	<insert id="insertUserBehavior" parameterType="com.neusoft.mid.clwapi.entity.usr.UserBehavior">  
+        INSERT INTO CLW_M_USER_BEHAVIOR_T (
+			USER_ID,
+  			ENTERPRISE_ID,
+  			MODULE_ID,
+  			MODULE_SON_ID,
+  			OPERATE_TIME)  
+        VALUES   (#{usrId},
+                  #{entrepriseId},
+                  #{moduleId}, 
+                  #{moduleSonId},
+                  sysdate)
+	</insert>
+	
+	<!-- 根据用户ID和登录密码获取用户数 -->
+	<select id="getUserCountByPwd" resultType="int">
+		SELECT 
+			COUNT (*)
+  		FROM 
+  			clw_jc_user_t
+ 		WHERE 
+ 			login_pwd = #{pwd}
+ 			AND user_id = #{userId}
+	</select>
+	
+	<!-- 用户登出操作 -->
+	<update id="updateUserPwd">
+		UPDATE clw_jc_user_t
+		SET
+			login_pwd=#{newPwd}
+		WHERE  
+ 			login_pwd = #{oldPwd}
+ 			AND user_id = #{userId}
+	</update>
+	
+	<!-- 安芯顾问信息结果集 -->
+	<resultMap id="consultantResult" type="com.neusoft.mid.clwapi.entity.usr.ConsultantInfo">
+		<result property="name" column="manager_name" />
+		<result property="tel" column="manager_mp" />
+		<result property="managerType" column="manager_type" />
+	</resultMap>
+	<!-- 获取用户所属企业所在地安芯顾问信息 -->
+	<select id="getConsultantInfos" resultMap="consultantResult">
+	<![CDATA[ 
+		SELECT   
+			tab2.manager_name, 
+			tab2.manager_mp, 
+			tab2.manager_type
+    	FROM 
+    		clw_m_area_info_t tab1,
+         	clw_m_area_personnel_info_t tab2,
+         	clw_m_area_province_t tab3,
+         	clw_jc_enterprise_t tab4
+		WHERE 
+			tab1.region_status = '0'
+     		AND tab1.region_id = tab2.region_id
+     		AND tab2.region_id = tab1.region_id
+     		AND tab3.region_id = tab2.region_id
+     		AND tab4.enterprise_province = tab3.province_id
+     		AND tab4.valid_flag = '0'
+     		AND tab4.is_mobile_allow = '1'
+     		AND tab4.enterprise_id = #{enterpriseId}
+			ORDER BY tab2.manager_type ASC
+    ]]>
+	</select>
+</mapper>

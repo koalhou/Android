@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages
+END
+MusicMessageReply.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/MusicMessageReply.java
+END
+TextMessageReplyWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/TextMessageReplyWriter.java
+END
+LinkMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/LinkMessage.java
+END
+ImageMessageReply.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/ImageMessageReply.java
+END
+TextMessageReply.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/TextMessageReply.java
+END
+TextAndImageWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/TextAndImageWriter.java
+END
+GeographyReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/GeographyReader.java
+END
+ImageMessageReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/ImageMessageReader.java
+END
+VoiceMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/VoiceMessage.java
+END
+VideoMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/VideoMessage.java
+END
+TextMessageReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/TextMessageReader.java
+END
+MusicMessageWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/MusicMessageWriter.java
+END
+VoiceMessageReplyWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/VoiceMessageReplyWriter.java
+END
+ImageMessageWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/ImageMessageWriter.java
+END
+VideoMessageReplyWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/VideoMessageReplyWriter.java
+END
+LinkMessageReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/LinkMessageReader.java
+END
+VoiceMessageReply.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/VoiceMessageReply.java
+END
+ImageMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/ImageMessage.java
+END
+VideoMessageReply.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/VideoMessageReply.java
+END
+TextMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/TextMessage.java
+END
+GeographyMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/GeographyMessage.java
+END
+TextAndImageMessageReply.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/TextAndImageMessageReply.java
+END
+VoiceMessageReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/VoiceMessageReader.java
+END
+VideoMessageReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/weinxinFundation/src/weixinFundation/core/messages/VideoMessageReader.java
+END

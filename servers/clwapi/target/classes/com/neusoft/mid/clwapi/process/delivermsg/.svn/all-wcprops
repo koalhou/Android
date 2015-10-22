@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/process/delivermsg
+END
+DeliverMsgResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/process/delivermsg/DeliverMsgResult.java
+END
+ClwapiAccessCoreCommon.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/process/delivermsg/ClwapiAccessCoreCommon.java
+END
+CoreSysAccessProtocolCommon.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/process/delivermsg/CoreSysAccessProtocolCommon.java
+END
+SendCommandInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/process/delivermsg/SendCommandInfo.java
+END
+CreateDeliverMsg.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/process/delivermsg/CreateDeliverMsg.java
+END
+SendDeliverMsgService.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/process/delivermsg/SendDeliverMsgService.java
+END

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mid.clwapi.mapper.IssueMapper">
+
+	<!-- 记录用户完成的问卷信息 -->
+	<insert id="insertIssueReply">
+        INSERT INTO CLW_M_Q_REPLY_INFO_T (
+			USER_ID,
+  			QUES_ID,
+  			ANSW_OPTI_NUMB,
+  			REPLY_TIME)
+  		<foreach collection="issueAnswerList" item="item" index="index" separator="UNION ALL">
+        	select #{userId, jdbcType=VARCHAR}, ques_id, 
+                   #{item.choiceId, jdbcType=NUMERIC}, sysdate 
+           	FROM 
+           		clw_m_q_question_t
+ 			WHERE 
+ 				ques_index = #{item.issueId, jdbcType=NUMERIC} 
+        </foreach>
+	</insert>
+	
+	<!-- 平台监控员行为统计信息-过去结果集 -->
+	<resultMap id="issueResult" type="com.neusoft.mid.clwapi.entity.issue.IssueInfo">
+  		<constructor>
+    		<arg column="ques_index" javaType="Long"/>
+    		<arg column="ques_content" javaType="String"/>
+  		</constructor>
+  		<collection property="choiceList" javaType="ArrayList" ofType="com.neusoft.mid.clwapi.entity.issue.IssueChoiceInfo">
+    		<result property="choiceId" column="answ_opti_numb"/>
+    		<result property="choiceCont" column="answ_content"/>
+  		</collection>
+	</resultMap>
+	<!-- 获取用户的问卷信息 -->
+	<select id="getIssueInfos" resultMap="issueResult">
+	<![CDATA[ 
+		SELECT   
+			ques.ques_index, 
+			ques.ques_content, 
+			answer.answ_opti_numb,
+         	answer.answ_content
+    	FROM 
+    		clw_m_q_question_t ques, 
+    		clw_m_q_answer_t answer
+   		WHERE 
+   			ques.ques_id = answer.ques_id
+     		AND ques_status = 1
+     		AND publish_time <= SYSDATE
+     		AND SYSDATE < end_time
+     		AND ques_index > #{quesIdex}
+		ORDER BY ques_index, answ_opti_numb
+    ]]>
+	</select>
+	
+	<!-- 更新用户 问卷ETAG消息-->
+	<update id="updateUserQuesEtag">
+		UPDATE CLW_M_USER_INFO_T
+		SET
+			USER_QUES_ETAG=#{quesIndex}
+		WHERE  
+ 			USER_ID = #{userId}
+	</update>
+	
+	<!-- 更新问卷信息用户完成情况-->
+	<update id="updateBathQuesInfo">
+		UPDATE 
+			clw_m_q_question_t
+   		SET
+       		comp_num = comp_num + 1
+ 		WHERE ques_index
+        IN
+        <foreach collection="issueAnswerList" index="index" item="item" open="(" separator="," close=")">  
+            #{item.issueId, jdbcType=NUMERIC}
+        </foreach>
+	</update>
+	
+	<!-- 更新问卷答案信息用户完成情况-->
+	<update id="updateBathAnswerInfo">
+		UPDATE 
+			clw_m_q_answer_t
+   		SET
+       		comp_num = comp_num + 1
+ 		WHERE 
+        <foreach collection="issueAnswerList" index="index" item="item" open="(" separator="OR" close=")">  
+            (ques_id = (SELECT ques_id
+                    FROM clw_m_q_question_t
+                   WHERE ques_index = #{item.issueId, jdbcType=NUMERIC}) 
+             AND answ_opti_numb=#{item.choiceId, jdbcType=NUMERIC})
+        </foreach>  
+	</update>
+	
+</mapper>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mid.clwapi.mapper.AlarmMapper">
+
+	<resultMap id="alarmInfoMap" type="alarmInfo">
+		<result property="alarmId" column="ALARM_ID" />
+		<result property="alarmType" column="ALARM_TYPE_ID" />
+		<result property="speeding" column="SPEEDING" />
+		<result property="photoId" column="PHOTO_ID" />
+		<result property="alarmTime" column="ALARM_TIME_NEW" />
+		<result property="alarmEnd" column="ALARM_END_NEW" />
+		<result property="confTime" column="CONFIRM_TIME_NEW" />
+		<result property="confUsrName" column="USER_ID" />
+		<result property="confInfo" column="OPEERATE_DESC" />
+		<result property="vin" column="VEHICLE_VIN" />
+		<result property="ln" column="VEHICLE_LN" />
+		<result property="driver" column="DRIVER_NAME" />
+		<result property="dealFlag" column="DEAL_FLAG" />
+		<result property="orgaId" column="ORGANIZATION_ID" />
+	</resultMap>
+
+	<!-- 获取告警列表 -->
+	<select id="getAlarmList" parameterType="alarmRequ" resultMap="alarmInfoMap">
+		SELECT *
+		FROM
+		(SELECT ROWNUM
+		rn,
+		DRIVER_NAME,
+		ALARM_ID,
+		VEHICLE_LN,
+		VEHICLE_VIN,
+		ALARM_TYPE_ID,
+		OPEERATE_DESC,
+		REPLACE (NVL (SPEEDING,
+		'FFFF'), 'FFFF',
+		'无效') SPEEDING,
+		ORGANIZATION_ID,
+		TO_CHAR (CONFIRM_TIME,
+		'yyyymmddhh24miss')
+		CONFIRM_TIME_NEW,
+		TO_CHAR (ALARM_TIME,
+		'yyyymmddhh24miss')
+		ALARM_TIME_NEW,
+		TO_CHAR (ALARM_END_TIME,
+		'yyyymmddhh24miss') ALARM_END_NEW,
+		USER_ID,
+		DEAL_FLAG,
+		PHOTO_ID
+		FROM (
+		SELECT
+		SJ.DRIVER_NAME,
+		GJ.ALARM_ID,
+		CL.VEHICLE_LN,
+		GJ.VEHICLE_VIN,
+		GJ.ALARM_TYPE_ID,
+		GJ.OPEERATE_DESC,
+		GJ.SPEEDING,
+		CL.ORGANIZATION_ID,
+		GJ.CONFIRM_TIME,
+		GJ.ALARM_TIME,
+		GJ.ALARM_END_TIME,
+		GJ.USER_ID,
+		GJ.DEAL_FLAG,
+		GJ.PHOTO_ID
+		FROM
+		CLW_YW_ALERM_RECORD_T GJ,
+		(SELECT
+		VEHICLE_LN, ORGANIZATION_ID,
+		VEHICLE_VIN
+		FROM CLW_CL_BASE_INFO_T
+		WHERE
+		CLW_CL_BASE_INFO_T.ENTERPRISE_ID = #{enId}
+		AND
+		CLW_CL_BASE_INFO_T.ORGANIZATION_ID IN
+		(SELECT ENTERPRISE_ID
+		FROM
+		CLW_JC_ENTERPRISE_T
+         <![CDATA[WHERE LEFT_NUM >= (SELECT LEFT_NUM
+                      FROM CLW_JC_ENTERPRISE_T
+                      WHERE ENTERPRISE_ID = #{organizationId})
+         AND RIGHT_NUM <=(SELECT RIGHT_NUM
+                      FROM CLW_JC_ENTERPRISE_T
+                      WHERE ENTERPRISE_ID = #{organizationId})
+         ]]>
+		)
+		AND
+		CLW_CL_BASE_INFO_T.VALID_FLAG = '0') CL,
+		CLW_YW_DRIVER_T SJ
+		WHERE
+		<choose>
+			<when test="speedFlag != null">
+				GJ.ALARM_TYPE_ID = '32'
+			</when>
+			<when test="overLoadFlag != null">
+				GJ.ALARM_TYPE_ID IN ('87','72')
+			</when>
+			<otherwise>
+				GJ.ALARM_TYPE_ID IN
+				('32','87','72')
+			</otherwise>
+		</choose>
+		AND GJ.VEHICLE_VIN(+) = CL.VEHICLE_VIN
+		AND GJ.DRIVER_ID =
+		SJ.DRIVER_ID(+)
+		<if test="startTime != null">
+            <![CDATA[
+            AND GJ.ALARM_TIME >= TO_DATE (#{startTime}, 'yyyymmddhh24miss')
+            ]]>
+		</if>
+		<if test="endTime != null">
+            <![CDATA[
+            AND GJ.ALARM_TIME <= TO_DATE (#{endTime}, 'yyyymmddhh24miss')
+            ]]>
+		</if>
+		<if test="operat != null">
+			AND DEAL_FLAG = #{operat}
+		</if>
+		ORDER BY GJ.ALARM_TIME DESC))
+		<if test="startRow != null">
+			WHERE <![CDATA[
+			rn > #{startRow}
+			AND
+        	rn <= #{endRow}
+                    ]]>
+		</if>
+	</select>
+
+	<!-- 处理告警信息 -->
+	<update id="dealAlarm" parameterType="java.util.Map">
+		UPDATE
+		CLW_YW_ALERM_RECORD_T
+		SET DEAL_FLAG = '1',
+		OPERATE_TYPE = '3',
+		OPEERATE_DESC = #{body},
+		CONFIRM_TIME = SYSDATE,
+		USER_ID = #{usrId}
+		WHERE
+		ALARM_ID = #{alarmId}
+		AND ALARM_TIME =
+		TO_DATE(#{alarmTime},'yyyymmddhh24miss')
+	</update>
+
+	<!-- 获取告警处理信息 -->
+	<select id="getAlarmDealInfo" parameterType="alarmRequ"
+		resultMap="alarmInfoMap">
+		SELECT ALARM_ID,USER_ID, OPEERATE_DESC,
+		TO_CHAR(CONFIRM_TIME,
+		'yyyymmddhh24miss') CONFIRM_TIME_NEW
+		FROM CLW_YW_ALERM_RECORD_T
+		WHERE
+		ALARM_ID = #{alarmId}
+		<if test=" confTime != null ">
+		<![CDATA[
+			AND CONFIRM_TIME > TO_DATE (#{confTime}, 'yyyymmddhh24miss')
+		]]>
+		</if>
+		AND ALARM_TIME =
+		TO_DATE(#{alarmTime},'yyyymmddhh24miss')
+	</select>
+</mapper>

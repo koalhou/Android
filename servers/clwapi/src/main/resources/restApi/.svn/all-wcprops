@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi
+END
+msgApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/msgApi.xml
+END
+monitorApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/monitorApi.xml
+END
+resourceApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/resourceApi.xml
+END
+issueApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/issueApi.xml
+END
+photoApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/photoApi.xml
+END
+statisticsApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/statisticsApi.xml
+END
+softwareApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/softwareApi.xml
+END
+alarmApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/alarmApi.xml
+END
+authApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/authApi.xml
+END
+siteApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/siteApi.xml
+END
+tacksApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/tacksApi.xml
+END
+videoApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/videoApi.xml
+END
+pushRuleApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/pushRuleApi.xml
+END
+usrApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/usrApi.xml
+END
+adviseApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/adviseApi.xml
+END
+newsApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/newsApi.xml
+END
+oauthApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/oauthApi.xml
+END
+pushNoticeApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/pushNoticeApi.xml
+END
+envReportApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/envReportApi.xml
+END
+homePageApi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/restApi/homePageApi.xml
+END

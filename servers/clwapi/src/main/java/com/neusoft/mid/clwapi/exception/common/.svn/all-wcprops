@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/exception/common
+END
+JacksonSerializeException.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/exception/common/JacksonSerializeException.java
+END
+ApplicationException.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/exception/common/ApplicationException.java
+END
+JacksonDeserializeException.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/exception/common/JacksonDeserializeException.java
+END

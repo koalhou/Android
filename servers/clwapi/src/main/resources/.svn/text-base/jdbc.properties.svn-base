@@ -1,0 +1,5 @@
+#\u6570\u636e\u5e93\u8fde\u63a5\u914d\u7f6e
+database.driver=oracle.jdbc.driver.OracleDriver
+database.url=jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=10.8.2.203)(PORT=1521)))(CONNECT_DATA=(SID=m2mqasdb)))
+database.username=xc
+database.password=xc

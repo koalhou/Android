@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mid.clwapi.mapper.StatisticsMapper">
+
+	<resultMap id="carMonthInfo" type="carMonthData">
+		<result property="carVIN" column="VEHICLE_VIN" />
+		<result property="carLn" column="VEHICLE_LN" />
+		<result property="dateTime" column="REPORT_MONTH" />
+		<result property="limitNum" column="LIMITE_NUMBER" />
+		<result property="totalMileage" column="TOTAL_MILEAGE" />
+		<result property="totalOil" column="TOTAL_OIL" />
+		<result property="oilPre" column="OIL_PER" />
+		<result property="oilPreOrder" column="OIL_PER_ORDER" />
+		<result property="oilPreDesc" column="OIL_PER_DESC" />
+		<result property="oilPreAvg" column="OIL_PER_HY" />
+		<result property="badHourPer" column="BAD_HOUR_PER" />
+		<result property="badHourPerOrder" column="BAD_HOUR_PER_ORDER" />
+		<result property="badHourPerDesc" column="BAD_HOUR_DESC" />
+		<result property="badHourPerAvg" column="BAD_HOUR_PER_HY" />
+		<result property="speedMileagePer" column="SPEED_MILEAGE_PER" />
+		<result property="speedMileagePerOrder" column="SPEED_MILEAGE_PER_ORDER" />
+		<result property="speedMileagePerDesc" column="SPEED_MILEAGE_PER_DESC" />
+		<result property="speedMileagePerAvg" column="SPEED_MILEAGE_PER_HY" />
+		<result property="speedMileagePerCmpPrior" column="SPEED_MILEAGE_PER_CMP_PRIOR" />
+		<result property="speedMileagePerCmpAvg" column="SPEED_MILEAGE_PER_CMP_AVG" />
+		<result property="badHourPerCmpPrior" column="BAD_HOUR_PER_CMP_PRIOR" />
+		<result property="badHourPerCmpAvg" column="BAD_HOUR_PER_CMP_AVG" />
+		<result property="oilPerCmpPrior" column="OIL_PER_CMP_PRIOR" />
+		<result property="oilPerCmpAvg" column="OIL_PER_CMP_AVG" />
+		<result property="driverName" column="DRIVER_NAME" />
+		<result property="validFlag" column="VALID_FLAG" />
+	</resultMap>
+
+	<select id="getCarMonthData" resultType="carMonthData"
+		resultMap="carMonthInfo">  
+        <![CDATA[ 
+	    SELECT T.VEHICLE_VIN,T.VEHICLE_LN,TO_CHAR(T.REPORT_MONTH,'yyyy-mm') REPORT_MONTH,
+				T.LIMITE_NUMBER,T.TOTAL_MILEAGE,T.TOTAL_OIL,
+				T.OIL_PER,T.OIL_PER_ORDER,T.OIL_PER_DESC,T.OIL_PER_HY,
+				T.SPEED_MILEAGE_PER,T.SPEED_MILEAGE_PER_ORDER,T.SPEED_MILEAGE_PER_DESC,T.SPEED_MILEAGE_PER_HY,
+				T.BAD_HOUR_PER,T.BAD_HOUR_PER_ORDER,T.BAD_HOUR_DESC,T.BAD_HOUR_PER_HY,
+				T.SPEED_MILEAGE_PER_CMP_PRIOR,T.SPEED_MILEAGE_PER_CMP_AVG,
+	       		T.BAD_HOUR_PER_CMP_PRIOR,T.BAD_HOUR_PER_CMP_AVG,
+	       		T.OIL_PER_CMP_PRIOR,T.OIL_PER_CMP_AVG,
+	       		T.DRIVER_NAME,T.VALID_FLAG
+        FROM (
+		    SELECT *
+        	FROM (
+				SELECT R.VEHICLE_VIN,CL.VEHICLE_LN,R.REPORT_MONTH,
+					CL.LIMITE_NUMBER,R.TOTAL_MILEAGE,R.TOTAL_OIL,
+					R.OIL_PER,R.OIL_PER_ORDER,R.OIL_PER_DESC,HY.OIL_PER_HY,
+					R.SPEED_MILEAGE_PER,R.SPEED_MILEAGE_PER_ORDER,R.SPEED_MILEAGE_PER_DESC,HY.SPEED_MILEAGE_PER_HY,
+					R.BAD_HOUR_PER,R.BAD_HOUR_PER_ORDER,R.BAD_HOUR_DESC,HY.BAD_HOUR_PER_HY,
+					R.SPEED_MILEAGE_PER_CMP_PRIOR,R.SPEED_MILEAGE_PER_CMP_AVG,
+		       		R.BAD_HOUR_PER_CMP_PRIOR,R.BAD_HOUR_PER_CMP_AVG,
+		       		R.OIL_PER_CMP_PRIOR,R.OIL_PER_CMP_AVG,
+		       		R.DRIVER_NAME,R.VALID_FLAG
+				FROM 
+					CLW_M_CAR_MONTH_T R,
+					CLW_CL_BASE_INFO_T CL,
+					(
+						SELECT TO_DATE(#{month},'yyyymm')REPORT_MONTH, 
+						ROUND(T.OIL_PER,1) OIL_PER_HY, 
+						ROUND(T.SPEED_MILEAGE_PER,1) SPEED_MILEAGE_PER_HY,
+						ROUND(T.BAD_HOUR_PER,1) BAD_HOUR_PER_HY
+						FROM CLW_M_HY_MONTH_T T
+						WHERE T.REPORT_MONTH = TO_DATE(#{month},'yyyymm')		
+					) HY
+				WHERE R.VEHICLE_VIN = CL.VEHICLE_VIN
+				AND HY.REPORT_MONTH(+) = R.REPORT_MONTH
+				AND CL.VALID_FLAG = '0'
+				AND CL.DEVICE_TYPE = '0'
+				AND R.VEHICLE_VIN = #{vin}
+				AND R.REPORT_MONTH = TO_DATE(#{month},'yyyymm')
+				UNION ALL
+		 		SELECT R.VEHICLE_VIN,'' VEHICLE_LN,R.REPORT_MONTH,
+					0 LIMITE_NUMBER,'' TOTAL_MILEAGE,'' TOTAL_OIL,
+					R.OIL_PER,R.OIL_PER_ORDER,'' OIL_PER_DESC,0 OIL_PER_HY,
+					R.SPEED_MILEAGE_PER,R.SPEED_MILEAGE_PER_ORDER,'' SPEED_MILEAGE_PER_DESC,0 SPEED_MILEAGE_PER_HY,
+					R.BAD_HOUR_PER,R.BAD_HOUR_PER_ORDER,'' BAD_HOUR_DESC,0 BAD_HOUR_PER_HY,
+					'' SPEED_MILEAGE_PER_CMP_PRIOR,'' SPEED_MILEAGE_PER_CMP_AVG,
+		       		'' BAD_HOUR_PER_CMP_PRIOR,'' BAD_HOUR_PER_CMP_AVG,
+		       		'' OIL_PER_CMP_PRIOR,'' OIL_PER_CMP_AVG,
+		       		'' DRIVER_NAME,R.VALID_FLAG
+				FROM 
+					CLW_M_CAR_MONTH_T R,
+					CLW_CL_BASE_INFO_T CL
+				WHERE R.VEHICLE_VIN = CL.VEHICLE_VIN   
+				AND CL.VALID_FLAG = '0'
+				AND CL.DEVICE_TYPE = '0' 
+		    	AND R.VALID_FLAG = '0'
+				AND R.VEHICLE_VIN = #{vin}
+				AND R.REPORT_MONTH < TO_DATE(#{month},'yyyymm')
+        	) T
+        	ORDER BY T.REPORT_MONTH DESC
+        ) T
+        WHERE ROWNUM < 6
+        ]]>
+	</select>
+
+	<resultMap id="epMonthInfo" type="epMonthData">
+		<result property="dateTime" column="REPORT_MONTH" />
+		<result property="carNum" column="CAR_NUM" />
+		<result property="totalMileage" column="TOTAL_MILEAGE" />
+		<result property="totalOil" column="TOTAL_OIL" />
+		<result property="speedMileagePer" column="SPEED_MILEAGE_PER" />
+		<result property="speedMileagePerDesc" column="SPEED_MILEAGE_PER_DESC" />
+		<result property="speedMileagePerAvg" column="SPEED_MILEAGE_PER_HY" />
+		<result property="speedCarPer" column="SPEED_CAR_PER" />
+		<result property="speedCarPerDesc" column="SPEED_CAR_PER_DESC" />
+		<result property="speedCarPerAvg" column="SPEED_CAR_PER_HY" />
+		<result property="rpmHourPer" column="RPM_HOUR_PER" />
+		<result property="rpmHourPerAvg" column="RPM_HOUR_PER_HY" />
+		<result property="longIdleHourPer" column="LONG_IDLE_HOUR_PER" />
+		<result property="longIdleHourPerAvg" column="LONG_IDLE_HOUR_PER_HY" />
+		<result property="speedHourPer" column="SPEED_HOUR_PER" />
+		<result property="speedHourPerAvg" column="SPEED_HOUR_PER_HY" />
+		<result property="airIdleHourPer" column="AIR_IDLE_HOUR_PER" />
+		<result property="airIdleHourPerAvg" column="AIR_IDLE_HOUR_PER_HY" />
+		<result property="economicRunHourPer" column="ECONOMIC_RUN_HOUR_PER" />
+		<result property="economicRunHourPerAvg" column="ECONOMIC_RUN_HOUR_PER_HY" />
+		<result property="badHourPer" column="BAD_HOUR_PER" />
+		<result property="badHourPerDesc" column="BAD_HOUR_PER_DESC" />
+		<result property="badHourPerAvg" column="BAD_HOUR_PER_HY" />
+		<result property="badCarPer" column="BAD_CAR_PER" />
+		<result property="badCarPerDesc" column="BAD_CAR_PER_DESC" />
+		<result property="badCarPerAvg" column="BAD_CAR_PER_HY" />
+		<result property="oilPre" column="OIL_PER" />
+		<result property="oilPreDesc" column="OIL_PER_DESC" />
+		<result property="oilPreAvg" column="OIL_PER_HY" />
+		<result property="oilCarPer" column="OIL_CAR_PER" />
+		<result property="oilCarPerDesc" column="OIL_CAR_PER_DESC" />
+		<result property="oilCarPerAvg" column="OIL_CAR_PER_HY" />
+		<result property="rpmCarPer" column="RPM_CAR_PER" />
+		<result property="longIdleCarPer" column="LONG_IDLE_CAR_PER" />
+		<result property="speedCarHourPer" column="SPEED_CAR_HOUR_PER" />
+		<result property="airIdleCarPer" column="AIR_IDLE_CAR_PER" />
+		<result property="economicRunCarPer" column="ECONOMIC_RUN_CAR_PER" />
+		<result property="speedMileagePerCmpPrior" column="SPEED_MILEAGE_PER_CMP_PRIOR" />
+		<result property="speedMileagePerCmpAvg" column="SPEED_MILEAGE_PER_CMP_AVG" />
+		<result property="speedCarPerCmpPrior" column="SPEED_CAR_PER_CMP_PRIOR" />
+		<result property="speedCarPerCmpAvg" column="SPEED_CAR_PER_CMP_AVG" />
+		<result property="badHourPerCmpPrior" column="BAD_HOUR_PER_CMP_PRIOR" />
+		<result property="badHourPerCmpAvg" column="BAD_HOUR_PER_CMP_AVG" />
+		<result property="badCarPerCmpPrior" column="BAD_CAR_PER_CMP_PRIOR" />
+		<result property="badCarPerCmpAvg" column="BAD_CAR_PER_CMP_AVG" />
+		<result property="oilPerCmpPrior" column="OIL_PER_CMP_PRIOR" />
+		<result property="oilPerCmpAvg" column="OIL_PER_CMP_AVG" />
+		<result property="oilCarPerCmpPrior" column="OIL_CAR_PER_CMP_PRIOR" />
+		<result property="oilCarPerCmpAvg" column="OIL_CAR_PER_CMP_AVG" />
+		<result property="validFlag" column="VALID_FLAG" />
+	</resultMap>
+
+	<select id="getEpMonthData" resultType="epMonthData" resultMap="epMonthInfo">  
+        <![CDATA[ 
+		SELECT TO_CHAR(T.REPORT_MONTH,'yyyy-mm') REPORT_MONTH,
+			T.CAR_NUM,T.TOTAL_MILEAGE,T.TOTAL_OIL,
+			T.SPEED_MILEAGE_PER,T.SPEED_MILEAGE_PER_HY,T.SPEED_MILEAGE_PER_DESC,
+			T.SPEED_CAR_PER,T.SPEED_CAR_PER_HY,T.SPEED_CAR_PER_DESC,
+			T.RPM_HOUR_PER,T.RPM_HOUR_PER_HY,T.LONG_IDLE_HOUR_PER,T.LONG_IDLE_HOUR_PER_HY,
+			T.SPEED_HOUR_PER,T.SPEED_HOUR_PER_HY,T.AIR_IDLE_HOUR_PER,T.AIR_IDLE_HOUR_PER_HY,
+			T.ECONOMIC_RUN_HOUR_PER,T.ECONOMIC_RUN_HOUR_PER_HY,
+			T.BAD_HOUR_PER,T.BAD_HOUR_PER_HY,T.BAD_HOUR_PER_DESC,
+			T.BAD_CAR_PER,T.BAD_CAR_PER_HY,T.BAD_CAR_PER_DESC,
+			T.OIL_PER,T.OIL_PER_HY,T.OIL_PER_DESC,
+			T.OIL_CAR_PER,T.OIL_CAR_PER_HY,T.OIL_CAR_PER_DESC,
+			T.RPM_CAR_PER,T.LONG_IDLE_CAR_PER,T.SPEED_CAR_HOUR_PER,
+			T.AIR_IDLE_CAR_PER,T.ECONOMIC_RUN_CAR_PER,
+	        T.SPEED_MILEAGE_PER_CMP_PRIOR,T.SPEED_MILEAGE_PER_CMP_AVG,
+	        T.SPEED_CAR_PER_CMP_PRIOR,T.SPEED_CAR_PER_CMP_AVG,
+	        T.BAD_HOUR_PER_CMP_PRIOR,T.BAD_HOUR_PER_CMP_AVG,
+	        T.BAD_CAR_PER_CMP_PRIOR,T.BAD_CAR_PER_CMP_AVG,
+	        T.OIL_PER_CMP_PRIOR,T.OIL_PER_CMP_AVG,
+	        T.OIL_CAR_PER_CMP_PRIOR,T.OIL_CAR_PER_CMP_AVG,
+	        T.VALID_FLAG	
+        FROM (
+			SELECT *
+        	FROM (
+				SELECT QY.REPORT_MONTH,
+					QY.CAR_NUM,QY.TOTAL_MILEAGE,QY.TOTAL_OIL,
+					QY.SPEED_MILEAGE_PER,HY.SPEED_MILEAGE_PER_HY,QY.SPEED_MILEAGE_PER_DESC,
+					QY.SPEED_CAR_PER,HY.SPEED_CAR_PER_HY,QY.SPEED_CAR_PER_DESC,
+					QY.RPM_HOUR_PER,HY.RPM_HOUR_PER_HY,QY.LONG_IDLE_HOUR_PER,HY.LONG_IDLE_HOUR_PER_HY,
+					QY.SPEED_HOUR_PER,HY.SPEED_HOUR_PER_HY,QY.AIR_IDLE_HOUR_PER,HY.AIR_IDLE_HOUR_PER_HY,
+					QY.ECONOMIC_RUN_HOUR_PER,HY.ECONOMIC_RUN_HOUR_PER_HY,
+					QY.BAD_HOUR_PER,HY.BAD_HOUR_PER_HY,QY.BAD_HOUR_PER_DESC,
+					QY.BAD_CAR_PER,HY.BAD_CAR_PER_HY,QY.BAD_CAR_PER_DESC,
+					QY.OIL_PER,HY.OIL_PER_HY,QY.OIL_PER_DESC,
+					QY.OIL_CAR_PER,HY.OIL_CAR_PER_HY,QY.OIL_CAR_PER_DESC,
+					QY.RPM_CAR_PER,QY.LONG_IDLE_CAR_PER,QY.SPEED_CAR_HOUR_PER,
+					QY.AIR_IDLE_CAR_PER,QY.ECONOMIC_RUN_CAR_PER,
+			        QY.SPEED_MILEAGE_PER_CMP_PRIOR,QY.SPEED_MILEAGE_PER_CMP_AVG,
+			        QY.SPEED_CAR_PER_CMP_PRIOR,QY.SPEED_CAR_PER_CMP_AVG,
+			        QY.BAD_HOUR_PER_CMP_PRIOR,QY.BAD_HOUR_PER_CMP_AVG,
+			        QY.BAD_CAR_PER_CMP_PRIOR,QY.BAD_CAR_PER_CMP_AVG,
+			        QY.OIL_PER_CMP_PRIOR,QY.OIL_PER_CMP_AVG,
+			        QY.OIL_CAR_PER_CMP_PRIOR,QY.OIL_CAR_PER_CMP_AVG,
+			        QY.VALID_FLAG			
+				FROM 
+					CLW_M_QY_MONTH_T QY,
+					(
+						SELECT TO_DATE(#{month},'yyyymm') REPORT_MONTH, 
+							ROUND(T.OIL_PER,1) OIL_PER_HY, 
+							ROUND(T.SPEED_MILEAGE_PER,1) SPEED_MILEAGE_PER_HY,
+							ROUND(T.BAD_HOUR_PER,1) BAD_HOUR_PER_HY,
+							ROUND(T.SPEED_CAR_PER,1) SPEED_CAR_PER_HY,
+							ROUND(T.RPM_HOUR_PER,1) RPM_HOUR_PER_HY,
+							ROUND(T.LONG_IDLE_HOUR_PER,1) LONG_IDLE_HOUR_PER_HY,
+							ROUND(T.SPEED_HOUR_PER,1) SPEED_HOUR_PER_HY,
+							ROUND(T.AIR_IDLE_HOUR_PER,1) AIR_IDLE_HOUR_PER_HY,
+							ROUND(T.ECONOMIC_RUN_HOUR_PER,1) ECONOMIC_RUN_HOUR_PER_HY,
+							ROUND(T.BAD_CAR_PER,1) BAD_CAR_PER_HY,
+							ROUND(T.OIL_CAR_PER,1) OIL_CAR_PER_HY
+						FROM CLW_M_HY_MONTH_T T
+						WHERE T.REPORT_MONTH = TO_DATE(#{month},'yyyymm')			
+					) HY
+				WHERE QY.REPORT_MONTH = HY.REPORT_MONTH(+)
+				and QY.ENTERPRISE_ID = #{epid}
+				AND QY.REPORT_MONTH = TO_DATE(#{month},'yyyymm')
+				UNION ALL
+				SELECT QY.REPORT_MONTH,
+					QY.CAR_NUM,QY.TOTAL_MILEAGE,QY.TOTAL_OIL,
+					QY.SPEED_MILEAGE_PER,0 SPEED_MILEAGE_PER_HY,QY.SPEED_MILEAGE_PER_DESC,
+					QY.SPEED_CAR_PER,0 SPEED_CAR_PER_HY,QY.SPEED_CAR_PER_DESC,
+					QY.RPM_HOUR_PER,0 RPM_HOUR_PER_HY,QY.LONG_IDLE_HOUR_PER,0 LONG_IDLE_HOUR_PER_HY,
+					QY.SPEED_HOUR_PER,0 SPEED_HOUR_PER_HY,QY.AIR_IDLE_HOUR_PER,0 AIR_IDLE_HOUR_PER_HY,
+					QY.ECONOMIC_RUN_HOUR_PER,0 ECONOMIC_RUN_HOUR_PER_HY,
+					QY.BAD_HOUR_PER,0 BAD_HOUR_PER_HY,QY.BAD_HOUR_PER_DESC,
+					QY.BAD_CAR_PER,0 BAD_CAR_PER_HY,QY.BAD_CAR_PER_DESC,
+					QY.OIL_PER,0 OIL_PER_HY,QY.OIL_PER_DESC,
+					QY.OIL_CAR_PER,0 OIL_CAR_PER_HY,QY.OIL_CAR_PER_DESC,
+					QY.RPM_CAR_PER,QY.LONG_IDLE_CAR_PER,QY.SPEED_CAR_HOUR_PER,
+					QY.AIR_IDLE_CAR_PER,QY.ECONOMIC_RUN_CAR_PER,
+			        QY.SPEED_MILEAGE_PER_CMP_PRIOR,QY.SPEED_MILEAGE_PER_CMP_AVG,
+			        QY.SPEED_CAR_PER_CMP_PRIOR,QY.SPEED_CAR_PER_CMP_AVG,
+			        QY.BAD_HOUR_PER_CMP_PRIOR,QY.BAD_HOUR_PER_CMP_AVG,
+			        QY.BAD_CAR_PER_CMP_PRIOR,QY.BAD_CAR_PER_CMP_AVG,
+			        QY.OIL_PER_CMP_PRIOR,QY.OIL_PER_CMP_AVG,
+			        QY.OIL_CAR_PER_CMP_PRIOR,QY.OIL_CAR_PER_CMP_AVG,
+			        QY.VALID_FLAG		
+				FROM CLW_M_QY_MONTH_T QY
+				WHERE QY.ENTERPRISE_ID = #{epid}
+		    	AND QY.VALID_FLAG = '0'
+				AND QY.REPORT_MONTH < TO_DATE(#{month},'yyyymm')  					        	
+        	) T
+        	ORDER BY T.REPORT_MONTH DESC
+        ) T
+        WHERE ROWNUM < 4
+        ]]>
+	</select>
+
+	<resultMap id="CarAndOrg" type="epCarDtl">
+		<result property="dataType" column="DATA_TYPE" />
+		<result property="id" column="OID" />
+		<result property="name" column="ONAME" />
+		<result property="pid" column="PID" />
+		<result property="data" column="RS_DATA" />
+	</resultMap>
+	<select id="getCarMonthDtl" resultMap="CarAndOrg">
+		<choose>
+			<when test="rsType == '01'">
+			<![CDATA[ 
+				SELECT '02' DATA_TYPE,R.VEHICLE_VIN OID,CL.VEHICLE_LN ONAME,
+				R.ORGANIZATION_ID PID,R.SPEED_MILEAGE_PER RS_DATA
+				FROM CLW_M_CAR_MONTH_T R,CLW_CL_BASE_INFO_T CL
+				WHERE R.VEHICLE_VIN = CL.VEHICLE_VIN(+)
+				AND R.OVER_SPEED_LINE_FLAG = '1'
+				AND R.REPORT_MONTH = TO_DATE(#{month},'yyyymm')
+				AND R.ENTERPRISE_ID = #{epid}
+				AND R.ORGANIZATION_ID IN
+						(
+						 SELECT ENTERPRISE_ID
+				         FROM CLW_JC_ENTERPRISE_T
+				         WHERE LEFT_NUM >= (SELECT LEFT_NUM
+				                      FROM CLW_JC_ENTERPRISE_T
+				                      WHERE ENTERPRISE_ID = #{orgID})
+				         AND RIGHT_NUM <=(SELECT RIGHT_NUM
+				                      FROM CLW_JC_ENTERPRISE_T
+				                      WHERE ENTERPRISE_ID = #{orgID})
+						)				
+				UNION ALL
+				SELECT DISTINCT '01' DATA_TYPE,R.ORGANIZATION_ID OID,R.ORGANIZATION_NAME
+				ONAME,
+				'' PID,'' RS_DATA
+				FROM CLW_M_CAR_MONTH_T R
+				WHERE R.OVER_SPEED_LINE_FLAG = '1'
+				AND R.REPORT_MONTH = TO_DATE(#{month},'yyyymm')
+				AND R.ENTERPRISE_ID = #{epid}
+				AND R.ORGANIZATION_ID IN
+						(
+						 SELECT ENTERPRISE_ID
+				         FROM CLW_JC_ENTERPRISE_T
+				         WHERE LEFT_NUM >= (SELECT LEFT_NUM
+				                      FROM CLW_JC_ENTERPRISE_T
+				                      WHERE ENTERPRISE_ID = #{orgID})
+				         AND RIGHT_NUM <=(SELECT RIGHT_NUM
+				                      FROM CLW_JC_ENTERPRISE_T
+				                      WHERE ENTERPRISE_ID = #{orgID})
+						)				
+			]]>
+			</when>
+			<when test="rsType == '02'">
+			<![CDATA[ 
+				SELECT '02' DATA_TYPE,R.VEHICLE_VIN OID,CL.VEHICLE_LN ONAME,
+				R.ORGANIZATION_ID PID,R.BAD_HOUR_PER RS_DATA
+				FROM CLW_M_CAR_MONTH_T R,CLW_CL_BASE_INFO_T CL
+				WHERE R.VEHICLE_VIN = CL.VEHICLE_VIN(+)
+				AND R.OVER_BAD_LINE_FLAG = '1'
+				AND R.REPORT_MONTH = TO_DATE(#{month},'yyyymm')
+				AND R.ENTERPRISE_ID = #{epid}
+				AND R.ORGANIZATION_ID IN
+						(
+						 SELECT ENTERPRISE_ID
+				         FROM CLW_JC_ENTERPRISE_T
+				         WHERE LEFT_NUM >= (SELECT LEFT_NUM
+				                      FROM CLW_JC_ENTERPRISE_T
+				                      WHERE ENTERPRISE_ID = #{orgID})
+				         AND RIGHT_NUM <=(SELECT RIGHT_NUM
+				                      FROM CLW_JC_ENTERPRISE_T
+				                      WHERE ENTERPRISE_ID = #{orgID})
+						)				
+				UNION ALL
+				SELECT DISTINCT '01' DATA_TYPE,R.ORGANIZATION_ID OID,R.ORGANIZATION_NAME
+				ONAME,
+				'' PID,'' RS_DATA
+				FROM CLW_M_CAR_MONTH_T R
+				WHERE R.OVER_BAD_LINE_FLAG = '1'
+				AND R.REPORT_MONTH = TO_DATE(#{month},'yyyymm')
+				AND R.ENTERPRISE_ID = #{epid}
+				AND R.ORGANIZATION_ID IN
+						(
+						 SELECT ENTERPRISE_ID
+				         FROM CLW_JC_ENTERPRISE_T
+				         WHERE LEFT_NUM >= (SELECT LEFT_NUM
+				                      FROM CLW_JC_ENTERPRISE_T
+				                      WHERE ENTERPRISE_ID = #{orgID})
+				         AND RIGHT_NUM <=(SELECT RIGHT_NUM
+				                      FROM CLW_JC_ENTERPRISE_T
+				                      WHERE ENTERPRISE_ID = #{orgID})
+						)				
+			]]>
+			</when>
+			<when test="rsType == '03'">
+			<![CDATA[ 
+				SELECT '02' DATA_TYPE,R.VEHICLE_VIN OID,CL.VEHICLE_LN ONAME,
+				R.ORGANIZATION_ID PID,R.OIL_PER RS_DATA
+				FROM CLW_M_CAR_MONTH_T R,CLW_CL_BASE_INFO_T CL
+				WHERE R.VEHICLE_VIN = CL.VEHICLE_VIN(+)
+				AND R.OVER_OIL_LINE_FLAG = '1'
+				AND R.REPORT_MONTH = TO_DATE(#{month},'yyyymm')
+				AND R.ENTERPRISE_ID = #{epid}
+				AND R.ORGANIZATION_ID IN
+						(
+						 SELECT ENTERPRISE_ID
+				         FROM CLW_JC_ENTERPRISE_T
+				         WHERE LEFT_NUM >= (SELECT LEFT_NUM
+				                      FROM CLW_JC_ENTERPRISE_T
+				                      WHERE ENTERPRISE_ID = #{orgID})
+				         AND RIGHT_NUM <=(SELECT RIGHT_NUM
+				                      FROM CLW_JC_ENTERPRISE_T
+				                      WHERE ENTERPRISE_ID = #{orgID})
+						)				
+				UNION ALL
+				SELECT DISTINCT '01' DATA_TYPE,R.ORGANIZATION_ID OID,R.ORGANIZATION_NAME
+				ONAME,
+				'' PID,'' RS_DATA
+				FROM CLW_M_CAR_MONTH_T R
+				WHERE R.OVER_OIL_LINE_FLAG = '1'
+				AND R.REPORT_MONTH = TO_DATE(#{month},'yyyymm')
+				AND R.ENTERPRISE_ID = #{epid}
+				AND R.ORGANIZATION_ID IN
+						(
+						 SELECT ENTERPRISE_ID
+				         FROM CLW_JC_ENTERPRISE_T
+				         WHERE LEFT_NUM >= (SELECT LEFT_NUM
+				                      FROM CLW_JC_ENTERPRISE_T
+				                      WHERE ENTERPRISE_ID = #{orgID})
+				         AND RIGHT_NUM <=(SELECT RIGHT_NUM
+				                      FROM CLW_JC_ENTERPRISE_T
+				                      WHERE ENTERPRISE_ID = #{orgID})
+						)				
+			]]>
+			</when>
+		</choose>
+	</select>
+
+	<!-- 平台监控员行为统计信息-过去结果集 -->
+	<resultMap id="superviseResult"
+		type="com.neusoft.mid.clwapi.entity.statistics.SuperviseInfo">
+		<constructor>
+			<arg column="user_id" javaType="String" />
+		</constructor>
+		<result property="name" column="user_name" />
+		<result property="phone" column="user_mobile" />
+		<result property="duration" column="duration" />
+		<collection property="detail" javaType="ArrayList"
+			ofType="com.neusoft.mid.clwapi.entity.statistics.SuperviseDetailInfo">
+			<result property="time" column="time_interval" />
+			<result property="operate" column="operation_times" />
+			<result property="evaluate" column="evaluate" />
+		</collection>
+	</resultMap>
+	<!-- 从平台监控员行为信息统计中间表中查询某企业某天的统计信息 -->
+	<select id="getPassSuperviseInfo" resultMap="superviseResult">
+	<![CDATA[
+		SELECT   
+			tab1.user_id user_id,   
+			tab3.user_name user_name,
+            FLOOR (TO_CHAR (tab2.sum_seconds / 60 / 60))||'|' || ROUND (TO_CHAR (CEIL (MOD (tab2.sum_seconds / 60, 60)))) DURATION,
+         	tab3.user_mobile, 
+         	tab1.time_interval time_interval,
+         	tab1.operation_times operation_times, 
+         	tab1.evaluate evaluate
+    	FROM 
+    		clw_m_xcpuser_t tab1,
+         	(SELECT   user_id, SUM (on_line_seconds) sum_seconds
+              FROM clw_m_xcpuser_t
+             WHERE enterprise_id = #{entId}
+               AND TO_CHAR (time_date, 'yyyymmdd') = #{dateTime}
+          	GROUP BY user_id) tab2,
+         	clw_jc_user_t tab3
+   		WHERE 
+   			tab1.user_id = tab2.user_id
+     		AND tab1.user_id = tab3.user_id
+     		AND tab1.enterprise_id = #{entId}
+     		AND TO_CHAR (tab1.time_date, 'yyyymmdd') = #{dateTime}
+		ORDER BY user_id,time_interval asc
+    ]]>
+	</select>
+
+	<!-- 从平台监控员行为信息统计原始表中查询某企业当天某时段的统计信息 -->
+	<select id="excuteProcCreatePassSuperviseInfo" statementType="CALLABLE"
+		parameterType="com.neusoft.mid.clwapi.entity.statistics.SuperviseProcInfo">
+	<![CDATA[ 
+		{call STAFF_BEHV_DAY_STAT_PROC (to_date(#{dateTime,mode=IN,jdbcType=VARCHAR},'yyyymmdd'), #{result,mode=OUT,jdbcType=NUMERIC})}
+    ]]>
+	</select>
+
+	<resultMap id="reportDescMap" type="reportDesc">
+		<result property="descId" column="DESC_ID" />
+		<result property="descContent" column="DESC_COMMENT" />
+		<result property="updateTime" column="UPDATE_TIME" />
+		<result property="del" column="DEL" />
+	</resultMap>
+	<!-- 获取企业评语模板 -->
+	<select id="getReportDesc" parameterType="String" resultMap="reportDescMap">
+		SELECT DESC_COMMENT, DESC_ID, TO_CHAR(UPDATE_TIME,'yyyymmddhh24miss')
+		UPDATE_TIME,DEL
+		FROM CLW_M_REPORT_DESC_T
+		ORDER BY UPDATE_TIME DESC
+	</select>
+	<!-- 获取单车最近有效月单车报告数据 -->
+	<select id="getValidCarReport" resultType="carMonthData"
+		resultMap="carMonthInfo">  
+        <![CDATA[ 
+	    SELECT T.VEHICLE_VIN,T.VEHICLE_LN,TO_CHAR(T.REPORT_MONTH,'yyyy-mm') REPORT_MONTH,
+				T.LIMITE_NUMBER,T.TOTAL_MILEAGE,T.TOTAL_OIL,
+				T.OIL_PER,T.OIL_PER_ORDER,T.OIL_PER_DESC,T.OIL_PER_HY,
+				T.SPEED_MILEAGE_PER,T.SPEED_MILEAGE_PER_ORDER,T.SPEED_MILEAGE_PER_DESC,T.SPEED_MILEAGE_PER_HY,
+				T.BAD_HOUR_PER,T.BAD_HOUR_PER_ORDER,T.BAD_HOUR_DESC,T.BAD_HOUR_PER_HY,
+				T.SPEED_MILEAGE_PER_CMP_PRIOR,T.SPEED_MILEAGE_PER_CMP_AVG,
+	       		T.BAD_HOUR_PER_CMP_PRIOR,T.BAD_HOUR_PER_CMP_AVG,
+	       		T.OIL_PER_CMP_PRIOR,T.OIL_PER_CMP_AVG,
+	       		T.DRIVER_NAME,T.VALID_FLAG
+        FROM (
+				SELECT R.VEHICLE_VIN,CL.VEHICLE_LN,R.REPORT_MONTH,
+					CL.LIMITE_NUMBER,R.TOTAL_MILEAGE,R.TOTAL_OIL,
+					R.OIL_PER,R.OIL_PER_ORDER,R.OIL_PER_DESC,
+          			ROUND(HY.OIL_PER,1) OIL_PER_HY,
+					R.SPEED_MILEAGE_PER,R.SPEED_MILEAGE_PER_ORDER,R.SPEED_MILEAGE_PER_DESC,
+          			ROUND(HY.SPEED_MILEAGE_PER,1) SPEED_MILEAGE_PER_HY,
+					R.BAD_HOUR_PER,R.BAD_HOUR_PER_ORDER,R.BAD_HOUR_DESC,
+          			ROUND(HY.BAD_HOUR_PER,1) BAD_HOUR_PER_HY,
+					R.SPEED_MILEAGE_PER_CMP_PRIOR,R.SPEED_MILEAGE_PER_CMP_AVG,
+		       		R.BAD_HOUR_PER_CMP_PRIOR,R.BAD_HOUR_PER_CMP_AVG,
+		       		R.OIL_PER_CMP_PRIOR,R.OIL_PER_CMP_AVG,
+		       		R.DRIVER_NAME,R.VALID_FLAG
+				FROM 
+					CLW_M_CAR_MONTH_T R,
+					CLW_CL_BASE_INFO_T CL,
+          			CLW_M_HY_MONTH_T HY
+				WHERE R.VEHICLE_VIN = CL.VEHICLE_VIN
+        		AND R.REPORT_MONTH = HY.REPORT_MONTH(+)
+				AND CL.VALID_FLAG = '0'
+				AND CL.DEVICE_TYPE = '0' 
+		    	AND R.VALID_FLAG = '0'
+				AND R.VEHICLE_VIN = #{vin}
+        		ORDER BY R.REPORT_MONTH DESC
+        ) T
+        WHERE ROWNUM < 6
+        ]]>
+	</select>	
+</mapper>

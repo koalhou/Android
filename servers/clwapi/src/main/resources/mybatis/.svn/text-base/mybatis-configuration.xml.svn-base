@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 配置mybatis的缓存，延迟加载等等一系列属性 -->
+	<settings>
+		<!-- 全局映射器启用缓存 -->
+		<setting name="cacheEnabled" value="true" />
+		<!-- 查询时，关闭关联对象即时加载以提高性能 -->
+		<setting name="lazyLoadingEnabled" value="true" />
+		<!-- 设置关联对象加载的形态，此处为按需加载字段(加载字段由SQL指 定)，不会加载关联表的所有字段，以提高性能 -->
+		<setting name="aggressiveLazyLoading" value="false" />
+		<!-- 对于未知的SQL查询，允许返回不同的结果集以达到通用的效果 -->
+		<setting name="multipleResultSetsEnabled" value="true" />
+		<!-- 允许使用列标签代替列名 -->
+		<setting name="useColumnLabel" value="true" />
+		<!-- 允许使用自定义的主键值(比如由程序生成的UUID 32位编码作为键值)，数据表的PK生成策略将被覆盖 -->
+		<!-- <setting name="useGeneratedKeys" value="true" /> -->
+		<!-- 给予被嵌套的resultMap以字段-属性的映射支持 -->
+		<setting name="autoMappingBehavior" value="FULL" />
+		<!-- 对于批量更新操作缓存SQL以提高性能 -->
+		<setting name="defaultExecutorType" value="BATCH" />
+		<!-- 数据库超过25000秒仍未响应则超时 -->
+		<setting name="defaultStatementTimeout" value="30" />
+	</settings>
+	<!-- 全局别名设置，在映射文件中只需写别名，而不必写出整个类路径 -->
+	<typeAliases>
+		<typeAlias alias="xcpUsrInfo"
+			type="com.neusoft.mid.clwapi.entity.oauth.UsrInfo" />
+		<typeAlias alias="mobileUsrInfo"
+			type="com.neusoft.mid.clwapi.entity.oauth.MobileUsrAllInfo" />
+		<typeAlias alias="softversion"
+			type="com.neusoft.mid.clwapi.entity.oauth.SoftwareVersion" />
+		<typeAlias alias="monitorCarInfo"
+			type="com.neusoft.mid.clwapi.entity.monitor.CarOrgInfo" />
+		<typeAlias alias="monitorCarNum"
+			type="com.neusoft.mid.clwapi.entity.monitor.MonitorResp" />
+		<typeAlias alias="carInfo"
+			type="com.neusoft.mid.clwapi.entity.monitor.RealTimeInfo" />
+		<typeAlias alias="carMonthData"
+			type="com.neusoft.mid.clwapi.entity.statistics.CarMonthData" />
+		<typeAlias alias="envInfo" type="com.neusoft.mid.clwapi.entity.env.EnvInfo" />
+		<typeAlias alias="epMonthData"
+			type="com.neusoft.mid.clwapi.entity.statistics.EpMonthData" />
+		<typeAlias alias="pushRuleInfo"
+			type="com.neusoft.mid.clwapi.entity.pushRule.PushRuleInfo" />
+		<typeAlias alias="tackListInfo"
+			type="com.neusoft.mid.clwapi.entity.tacks.TackListInfo" />
+		<typeAlias alias="alarmInfo"
+			type="com.neusoft.mid.clwapi.entity.alarm.AlarmInfo" />
+		<typeAlias alias="alarmRequ"
+			type="com.neusoft.mid.clwapi.entity.alarm.AlarmRequ" />
+		<typeAlias alias="phtotoInfo"
+			type="com.neusoft.mid.clwapi.entity.photo.PhotoInfo" />
+		<typeAlias alias="photoRequ"
+			type="com.neusoft.mid.clwapi.entity.photo.PhotoRequ" />
+		<typeAlias alias="ponitInfo"
+			type="com.neusoft.mid.clwapi.entity.tacks.TackDetailInfo" />
+		<typeAlias alias="resourceInfo"
+			type="com.neusoft.mid.clwapi.entity.resource.ResourceInfo" />
+		<typeAlias alias="tackInfo"
+			type="com.neusoft.mid.clwapi.entity.tacks.TackResp" />
+		<typeAlias alias="photoSignInfo"
+			type="com.neusoft.mid.clwapi.entity.photo.PhotoSignInfo" />
+		<typeAlias alias="photoSignRequ"
+			type="com.neusoft.mid.clwapi.entity.photo.PhotoSignRequ" />
+		<typeAlias alias="newsRequ"
+			type="com.neusoft.mid.clwapi.entity.news.NewsRequ" />
+		<typeAlias alias="newsInfo"
+			type="com.neusoft.mid.clwapi.entity.news.NewsInfo" />
+		<typeAlias alias="epCarDtl"
+			type="com.neusoft.mid.clwapi.entity.statistics.EpCarDtl" />
+		<typeAlias alias="msgMold"
+			type="com.neusoft.mid.clwapi.entity.msg.MsgMoldInfo" />
+		<typeAlias alias="reportDesc"
+			type="com.neusoft.mid.clwapi.entity.statistics.ReportDesc" />
+		<typeAlias alias="checkNewsInfo"
+			type="com.neusoft.mid.clwapi.entity.news.CheckNewsInfo" />
+		<typeAlias alias="checkNewsRequ"
+			type="com.neusoft.mid.clwapi.entity.news.CheckNewsRequ" />
+		<!-- yutong add -->	
+		<typeAlias alias="watchSet"
+			type="com.neusoft.mid.clwapi.entity.video.WatchSet" />
+		<typeAlias alias="busVideoStatus"
+			type="com.neusoft.mid.clwapi.entity.video.BusVideoStatus" />
+		<typeAlias alias="videoCarTree"
+			type="com.neusoft.mid.clwapi.entity.video.VideoCarTree" />
+	</typeAliases>
+	<!-- 非注解的sql映射文件配置，如果使用mybatis注解，该mapper无需配置，但是如果mybatis注解中包含@resultMap注解，则mapper必须配置，给resultMap注解使用 -->
+	<mappers>
+		<mapper resource="mapper/OauthMapper.xml" />
+		<mapper resource="mapper/MonitorMapper.xml" />
+		<mapper resource="mapper/HomePageMapper.xml" />
+		<mapper resource="mapper/StatisticsMapper.xml" />
+		<mapper resource="mapper/EnvReportMapper.xml" />
+		<mapper resource="mapper/UsrMapper.xml" />
+		<mapper resource="mapper/TacksMapper.xml" />
+		<mapper resource="mapper/AlarmMapper.xml" />
+		<mapper resource="mapper/PhotoMapper.xml" />
+		<mapper resource="mapper/ResourceMapper.xml" />
+		<mapper resource="mapper/MsgMapper.xml" />
+		<mapper resource="mapper/NewsMapper.xml" />
+		<mapper resource="mapper/AdviseMapper.xml" />
+		<mapper resource="mapper/IssueMapper.xml" />
+		<mapper resource="mapper/PushRuleMapper.xml" />
+		<mapper resource="mapper/CommonMapper.xml" />
+		<mapper resource="mapper/AuthMapper.xml" />
+		<!-- yutong add -->	
+		<mapper resource="mapper/VideoMapper.xml" />
+	</mappers>
+</configuration>

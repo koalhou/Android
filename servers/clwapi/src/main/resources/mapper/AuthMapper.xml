@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mid.clwapi.mapper.AuthMapper">
+	
+	<!-- [接入层关闭使用权限API登录信息]结果集 -->
+	<resultMap id="appConfResult" type="com.neusoft.mid.clwapi.entity.auth.CancelAuthConfInfo">
+		<result property="userName" column="CORE_ID" />
+		<result property="userPwd" column="CORE_PASS" />
+	</resultMap>
+	<!-- 获取[接入层关闭使用权限API登录信息] -->
+	<select id="getConfInfo" resultMap="appConfResult">
+	<![CDATA[ 
+		SELECT   
+			CORE_ID, 
+			CORE_PASS
+    	FROM 
+    		CLW_YW_APP_CFG_T
+   		WHERE 
+   			APP_ID=#{appId}
+    ]]>
+	</select>
+	
+	<!-- 获取需要进行清空缓存的用户token信息 -->
+	<select id="getUserToken" resultType="String">
+		SELECT 
+			access_token
+  		FROM
+  			clw_m_user_info_t
+ 		WHERE 
+ 			((token_expire_time - SYSDATE) * 24 * 60 * 60) > 0
+   			AND able = 1
+   			<if test="enterpriseId != null"> AND  enterprise_id = #{enterpriseId}</if>
+   			<if test="userId != null"> AND  user_id = #{userId}</if>
+	</select>
+	
+	<!-- 根据企业ID清除用户使用权限信息-->
+	<update id="removeUserAuthByEnt">
+		UPDATE 
+			clw_m_user_info_t
+   		SET
+       		token_expire_time = sysdate,
+       		update_time = sysdate,
+       		able = 0,
+       		client_id = '',
+       		user_valid_flag =  '0'
+ 		WHERE
+ 			enterprise_id = #{enterpriseId} 
+	</update>
+	
+	<!-- 根据用户ID清除用户使用权限信息-->
+	<update id="removeUserAuthByUser">
+		UPDATE 
+			clw_m_user_info_t
+   		SET
+       		token_expire_time = sysdate,
+       		update_time = sysdate,
+       		able = 0,
+       		client_id = '',
+       		user_valid_flag =  '0'
+ 		WHERE
+ 			enterprise_id = #{enterpriseId}
+   			AND user_id = #{userId}			
+	</update>
+	
+</mapper>

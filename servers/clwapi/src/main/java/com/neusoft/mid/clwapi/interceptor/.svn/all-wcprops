@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/interceptor
+END
+DiyAbstractLoggingInterceptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/interceptor/DiyAbstractLoggingInterceptor.java
+END
+DiyLoggingInInterceptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/interceptor/DiyLoggingInInterceptor.java
+END
+DiyLoggingOutInterceptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/interceptor/DiyLoggingOutInterceptor.java
+END
+ClientLoggingInInterceptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/interceptor/ClientLoggingInInterceptor.java
+END
+ClientLoggingOutInterceptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/interceptor/ClientLoggingOutInterceptor.java
+END
+OauthTokenCheckInterceptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/interceptor/OauthTokenCheckInterceptor.java
+END

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mid.clwapi.mapper.TacksMapper">
+
+	<resultMap id="tackList" type="tackListInfo">
+		<result property="startTime" column="ON_DATE" />
+		<result property="endTime" column="OFF_DATE" />
+		<result property="totalMile" column="MILEAGE" />	
+	</resultMap>
+
+	<select id="getCarRunRecs" resultType="tackListInfo" resultMap="tackList">  
+        <![CDATA[ 
+		SELECT TO_CHAR(T.ON_DATE,'yyyymmddHH24miss') ON_DATE,
+		       TO_CHAR(T.OFF_DATE,'yyyymmddHH24miss') OFF_DATE,
+		       TO_NUMBER(DECODE(T.MILEAGE,'FFFF',null,T.MILEAGE)) MILEAGE,
+		       CASE WHEN T.MILEAGE >0 THEN 1 ELSE 0 END HAVEMILEAGE
+		FROM CLW_XC_RUN_RECORD_T T
+		WHERE T.VEHICLE_VIN=#{vin}
+		AND T.ON_DATE >=  TO_DATE(#{datetime},'yyyymmdd')
+		AND T.ON_DATE <  TO_DATE(#{datetime},'yyyymmdd')+1
+		ORDER BY HAVEMILEAGE DESC,ON_DATE DESC
+        ]]>
+	</select>
+
+	<resultMap id="ponitList" type="ponitInfo">
+		<result property="id" column="ID" />
+		<result property="time" column="TERMINAL_TIME" />
+		<result property="latitude" column="LATITUDE" />
+		<result property="longitude" column="LONGITUDE" />
+		<result property="alarmId" column="ALARM_ID" />
+		<result property="alarmEventType" column="EVENT_TYPE" />
+		<result property="alarmTypeID" column="ALARM_TYPE_ID" />
+		<result property="alarmOccurTime" column="ALARM_TIME" />
+		<result property="alarmEndTime" column="ALARM_END_TIME" />
+		<result property="speed" column="SPEED" />
+		<result property="angle" column="DIRECTION" />
+		<result property="engSpeed" column="ENGINE_ROTATE_SPEED" />	
+		<result property="accFlg" column="STAT_INFO" />
+		<result property="oil" column="OIL_INSTANT" />
+		<result property="passengerNumber" column="STU_NUM" />
+		<result property="limitNumber" column="LIMITE_NUMBER" />								
+	</resultMap>	
+	<select id="getTackPonits" resultMap="ponitList">  
+        <![CDATA[ 
+        SELECT SUMT.ID,SUMT.TERMINAL_TIME,SUMT.LATITUDE,SUMT.LONGITUDE,     
+			   SUMT.SPEED,SUMT.DIRECTION,SUMT.ENGINE_ROTATE_SPEED,
+			   SUMT.STU_NUM,CL.LIMITE_NUMBER,SUMT.OIL_INSTANT,
+			   SUMT.STAT_INFO,SUMT.ALARM_ID,SUMT.ALARM_TYPE_ID,
+			   SUMT.ALARM_TIME,SUMT.ALARM_END_TIME,SUMT.EVENT_TYPE      
+        FROM
+			(SELECT CJT.ID,TO_CHAR(CJT.TERMINAL_TIME,'yyyymmddhh24miss') TERMINAL_TIME,
+			       CJT.LATITUDE,
+			       CJT.LONGITUDE,     
+			       DECODE(CJT.SPEED_SOURCE_SETTING,'1',
+			       			DECODE(CJT.GPS_SPEEDING,'FFFF','0',CJT.GPS_SPEEDING),
+			       			DECODE(CJT.SPEEDING,'FFFF','0',CJT.SPEEDING)) SPEED,
+			       CJT.DIRECTION,
+			       DECODE(CJT.ENGINE_ROTATE_SPEED,'FFFF','0',CJT.ENGINE_ROTATE_SPEED) ENGINE_ROTATE_SPEED,
+			       CJT.STU_NUM,
+			       DECODE(CJT.OIL_INSTANT,'FFFF','0',CJT.OIL_INSTANT) OIL_INSTANT,
+			       CJT.STAT_INFO,
+			       ALARM.ALARM_ID,
+			       ALARM.ALARM_TYPE_ID,
+			       TO_CHAR(ALARM.ALARM_TIME,'yyyymmddhh24miss') ALARM_TIME,
+			       TO_CHAR(ALARM.ALARM_END_TIME,'yyyymmddhh24miss') ALARM_END_TIME,
+			       ALARM.ALARM_EVENT_TYPE EVENT_TYPE,
+			       CJT.VEHICLE_VIN
+			FROM CLW_YW_TERMINAL_RECORD_T CJT,    
+			     (SELECT A.ALARM_ID,A.RECORD_ID, A.ALARM_TYPE_ID,
+			     		 A.ALARM_TIME,A.ALARM_END_TIME,T1.ALARM_EVENT_TYPE
+			      FROM CLW_YW_ALERM_RECORD_T A,CLW_CL_ALARMTYPE_T T1
+			      WHERE A.ALARM_TYPE_ID = T1.ALARM_TYPE_ID
+			      AND A.ALARM_TYPE_ID != '75'
+			      AND A.RECORD_ID IS NOT NULL
+			      AND A.VEHICLE_VIN = #{vin}
+			      AND A.ALARM_TIME >= TO_DATE(#{sTime}, 'yyyymmddhh24miss')
+			      AND A.ALARM_TIME <= TO_DATE(#{eTime}, 'yyyymmddhh24miss')
+			     ) ALARM
+			WHERE CJT.ID = ALARM.RECORD_ID(+)
+	        AND CJT.LATITUDE IS NOT NULL
+	        AND CJT.LATITUDE != 'FFFF'
+	        AND CJT.LONGITUDE IS NOT NULL
+	        AND CJT.LONGITUDE != 'FFFF'			      
+	        AND CJT.VEHICLE_VIN = #{vin}
+	        AND CJT.TERMINAL_TIME >= TO_DATE(#{sTime}, 'yyyymmddhh24miss')
+	        AND CJT.TERMINAL_TIME <= TO_DATE(#{eTime}, 'yyyymmddhh24miss')	    	
+			UNION ALL
+			SELECT '' ID,TO_CHAR(T.TERMINAL_TIME,'yyyymmddhh24miss')TERMINAL_TIME,
+	           T.LATITUDE,T.LONGITUDE,
+	           '' SPEED, '' DIRECTION, '' ENGINE_ROTATE_SPEED,
+	           TO_CHAR(T.ST_NUM) ST_NUM,
+	           '' OIL_INSTANT, '' STAT_INFO,
+			       T.ID ALARM_ID,T.ALARM_TYPE_ID,
+	           '' ALARM_TIME,'' ALARM_END_TIME,'4' EVENT_TYPE,
+	           T.VEHICLE_VIN
+			FROM CLW_XC_ST_CHECK_RECORD_T T
+			WHERE T.LATITUDE IS NOT NULL
+		    AND T.LATITUDE != 'FFFF'
+		    AND T.LONGITUDE IS NOT NULL
+		    AND T.LONGITUDE != 'FFFF'			
+			AND T.VEHICLE_VIN = #{vin}
+			AND T.TERMINAL_TIME >= TO_DATE(#{sTime}, 'yyyymmddhh24miss')
+			AND T.TERMINAL_TIME <= TO_DATE(#{eTime}, 'yyyymmddhh24miss')
+			AND T.ALARM_TYPE_ID IS NOT NULL
+			) SUMT,
+			CLW_CL_BASE_INFO_T CL
+		WHERE SUMT.VEHICLE_VIN = CL.VEHICLE_VIN
+		ORDER BY SUMT.TERMINAL_TIME, SUMT.ID, SUMT.EVENT_TYPE ASC
+        ]]>
+	</select>	
+
+	<resultMap id="tackinfo" type="tackInfo">
+		<result property="vin" column="VEHICLE_VIN" />
+		<result property="recDate" column="RECDATE" />	
+		<result property="startTime" column="ON_DATE" />
+		<result property="endTime" column="OFF_DATE" />
+		<result property="totalMile" column="MILEAGE" />	
+	</resultMap>	
+	<select id="getRunRecsByTime" resultMap="tackinfo">  
+        <![CDATA[ 
+		SELECT T.VEHICLE_VIN,
+           	   TO_CHAR(T.ON_DATE,'yyyymmdd') RECDATE,
+               TO_CHAR(T.ON_DATE,'yyyymmddHH24miss') ON_DATE,
+		       TO_CHAR(T.OFF_DATE,'yyyymmddHH24miss') OFF_DATE,
+		       TO_NUMBER(DECODE(T.MILEAGE,'FFFF',null,T.MILEAGE)) MILEAGE,
+		       CASE WHEN T.MILEAGE >0 THEN 1 ELSE 0 END HAVEMILEAGE
+		FROM CLW_XC_RUN_RECORD_T T
+		WHERE T.VEHICLE_VIN = #{vin}
+		AND T.ON_DATE <=  TO_DATE(#{datetime},'yyyymmddHH24miss')
+		AND T.OFF_DATE >=  TO_DATE(#{datetime},'yyyymmddHH24miss')
+		ORDER BY HAVEMILEAGE DESC,ON_DATE DESC
+        ]]>
+	</select>				
+</mapper>

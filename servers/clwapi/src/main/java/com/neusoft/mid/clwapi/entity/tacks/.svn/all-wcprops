@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/tacks
+END
+TackDetailResp.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/tacks/TackDetailResp.java
+END
+TackDetailInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/tacks/TackDetailInfo.java
+END
+TackListResp.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/tacks/TackListResp.java
+END
+TackListInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/tacks/TackListInfo.java
+END
+TackResp.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/tacks/TackResp.java
+END
+TackDetailAlarmInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/tacks/TackDetailAlarmInfo.java
+END

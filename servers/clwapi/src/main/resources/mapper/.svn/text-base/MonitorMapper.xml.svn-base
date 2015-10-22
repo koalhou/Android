@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mid.clwapi.mapper.MonitorMapper">
+
+	<resultMap id="CarAndOrg" type="monitorCarInfo">
+		<result property="dataType" column="DATATYPE" />
+		<result property="id" column="OID" />
+		<result property="name" column="ONAME" />
+		<result property="pid" column="PID" />
+		<result property="limitNumber" column="LIMITE_NUMBER" />
+		<result property="attendantName" column="SICHEN_NAME" />
+		<result property="attendantTel" column="SICHEN_TEL" />
+		<result property="driverName" column="DRIVER_NAME" />
+		<result property="driverTel" column="DRIVER_TEL" />
+		<result property="routeName" column="ROUTE_NAME" />
+		<result property="carLatitude" column="LATITUDE" />
+		<result property="carLongitude" column="LONGITUDE" />
+		<result property="passengerNumber" column="STU_NUM" />
+		<result property="speed" column="SPEED" />
+		<result property="carStatus" column="ON_LINE" />
+		<result property="alarmStatus" column="ALARM_FLAG" />	
+		<result property="alarmNoticeFlag" column="NOTICE_ALARM" />	
+	</resultMap>
+	
+	<resultMap id="etCarNum" type="monitorCarNum">
+		<result property="carNum" column="ALL_NUM" />
+		<result property="runNum" column="RUN_NUM" />
+		<result property="stopNum" column="STOP_NUM" />		
+	</resultMap>
+	
+	<resultMap id="CarInfo" type="carInfo">
+		<result property="carVin" column="VEHICLE_VIN" />
+		<result property="carLn" column="VEHICLE_LN" />
+		<result property="orgName" column="ORG_NAME" />
+		<result property="carStatus" column="ON_LINE" />
+		<result property="routeName" column="ROUTE_NAME" />
+		<result property="speed" column="SPEED" />
+		<result property="driverName" column="DRIVER_NAME" />
+		<result property="driverTel" column="DRIVER_TEL" />
+		<result property="attendantName" column="SICHEN_NAME" />
+		<result property="attendantTel" column="SICHEN_TEL" />
+		<result property="limitNumber" column="LIMITE_NUMBER" />
+		<result property="passengerNumber" column="STU_NUM" />
+		<result property="alarmTime" column="TERMINAL_TIME" />
+		<result property="alarmLatitude" column="LATITUDE" />
+		<result property="alarmLongitude" column="LONGITUDE" />
+		<result property="accFlag" column="FIRE_UP_STATE" />
+		<result property="oilInstant" column="OIL_INSTANT" />
+		<result property="engineRotateSpeed" column="ENGINE_ROTATE_SPEED" />
+		<result property="alarmStr" column="ALARM_FLAG" />	
+	</resultMap>
+
+	<select id="getETCarAngOrg" resultType="monitorCarInfo"
+		resultMap="CarAndOrg">  
+        <![CDATA[ 
+		SELECT '02' DATATYPE, CL.VEHICLE_VIN OID, CL.VEHICLE_LN ONAME, CL.ORGANIZATION_ID PID,CL.LIMITE_NUMBER,
+		     CR.SICHEN_NAME,CR.SICHEN_TEL,CR.DRIVER_NAME,CR.DRIVER_TEL,CR.ROUTE_NAME,
+		     CR.LATITUDE,CR.LONGITUDE,CR.STU_NUM,SPEED,
+		     CASE 
+		          WHEN CR.FIRE_UP_STATE='0' AND CR.LAST_TIME>=30*60 THEN '0'
+		          WHEN CR.FIRE_UP_STATE='1' AND CR.LAST_TIME>=5*60 THEN '0'
+		          WHEN CR.FIRE_UP_STATE='0' AND CR.LAST_TIME<30*60 THEN '2'
+		          WHEN CR.FIRE_UP_STATE='1' AND CR.LAST_TIME<5*60 THEN '1'
+		          WHEN CR.LAST_TIME IS NULL THEN '0'
+		     END ON_LINE,
+		     CASE WHEN cr.notice_alarm = '00'
+		          THEN '0'
+		          ELSE '1'
+		     END ALARM_FLAG,
+		     CR.NOTICE_ALARM    
+		FROM CLW_CL_BASE_INFO_T CL,
+		     (
+		     SELECT CJT.VEHICLE_VIN,T.SICHEN_NAME,T.SICHEN_TEL,D.DRIVER_NAME,D.DRIVER_TEL,R.ROUTE_NAME,      
+		        NVL2(CJT.TERMINAL_TIME,DECODE(CJT.LATITUDE,'FFFF','',CJT.LATITUDE),'') LATITUDE,
+		        NVL2(CJT.TERMINAL_TIME,DECODE(CJT.LONGITUDE,'FFFF','',CJT.LONGITUDE),'') LONGITUDE,
+		        CJT.STU_NUM,
+		        DECODE(CJT.SPEED_SOURCE_SETTING,'1',
+		       			DECODE(CJT.GPS_SPEEDING,'FFFF','0',CJT.GPS_SPEEDING),
+		       			DECODE(CJT.SPEEDING,'FFFF','0',CJT.SPEEDING)) SPEED,
+		        NVL(SUBSTRB(CJT.STAT_INFO,32,1),'1') FIRE_UP_STATE,(SYSDATE-CJT.TERMINAL_TIME)*24*60*60 LAST_TIME,
+		        NVL(SUBSTRB(CJT.ALARM_BASE_INFO,63,1),'0')||NVL(CJT.OVERLOAD_FLAG,'0') NOTICE_ALARM
+		     FROM CLW_JC_TERMINAL_T CJT,
+					 (SELECT A.SICHEN_ID,A.SICHEN_NAME,A.SICHEN_TEL FROM CLW_XC_SICHEN_T A WHERE A.VALID_FLAG = '0') T,
+					 (SELECT B.DRIVER_ID,B.DRIVER_NAME,B.DRIVER_TEL FROM CLW_YW_DRIVER_T B WHERE B.VALID_FLAG = '0') D,
+					 (SELECT C.ROUTE_ID,C.ROUTE_NAME FROM CLW_XC_ROUTE_T C WHERE C.VALID_FLAG='0') R
+		     WHERE CJT.DRIVER_ID = D.DRIVER_ID(+)
+		     AND CJT.CURRENT_TEACHER = T.SICHEN_ID(+)
+		     AND CJT.ROUTE_ID = R.ROUTE_ID(+)
+		     AND CJT.ENTERPRISE_ID=#{etID}
+		     ) CR
+		WHERE CL.VEHICLE_VIN = CR.VEHICLE_VIN(+)
+		AND CL.VALID_FLAG='0'
+		AND CL.DEVICE_TYPE='0'
+		AND CL.ENTERPRISE_ID=#{etID}
+		AND CL.ORGANIZATION_ID IN
+				(
+				 SELECT ENTERPRISE_ID
+		         FROM CLW_JC_ENTERPRISE_T
+		         WHERE LEFT_NUM >= (SELECT LEFT_NUM
+		                      FROM CLW_JC_ENTERPRISE_T
+		                      WHERE ENTERPRISE_ID = #{orgID})
+		         AND RIGHT_NUM <=(SELECT RIGHT_NUM
+		                      FROM CLW_JC_ENTERPRISE_T
+		                      WHERE ENTERPRISE_ID = #{orgID})
+				)		
+		UNION ALL
+		SELECT DISTINCT '01' DATATYPE,ET.ENTERPRISE_ID OID,ET.SHORT_NAME ONAME,'' PID,NULL LIMITE_NUMBER,
+		     '' SICHEN_NAME,'' SICHEN_TEL,'' DRIVER_NAME,'' DRIVER_TEL,'' ROUTE_NAME,
+		     '' LATITUDE,'' LONGITUDE,'' STU_NUM,'' SPEED,'' ON_LINE,'' ALARM_FLAG,'' NOTICE_ALARM
+		FROM CLW_CL_BASE_INFO_T CL,CLW_JC_ENTERPRISE_T ET
+		WHERE CL.ORGANIZATION_ID = ET.ENTERPRISE_ID
+		AND ET.VALID_FLAG ='0'
+		AND CL.VALID_FLAG ='0'
+		AND CL.DEVICE_TYPE ='0'
+		AND CL.ENTERPRISE_ID = #{etID}
+		AND CL.ORGANIZATION_ID IN
+				(
+				 SELECT ENTERPRISE_ID
+		         FROM CLW_JC_ENTERPRISE_T
+		         WHERE LEFT_NUM >= (SELECT LEFT_NUM
+		                      FROM CLW_JC_ENTERPRISE_T
+		                      WHERE ENTERPRISE_ID = #{orgID})
+		         AND RIGHT_NUM <=(SELECT RIGHT_NUM
+		                      FROM CLW_JC_ENTERPRISE_T
+		                      WHERE ENTERPRISE_ID = #{orgID})
+				)		
+        ]]>
+	</select>
+	
+	<select id="getETCarsNum" resultType="monitorCarNum"
+		resultMap="etCarNum">  
+        <![CDATA[ 
+        SELECT COUNT(1) ALL_NUM,
+        NVL(SUM(CASE WHEN CR.FIRE_UP_STATE='1' AND CR.LAST_TIME<5*60 THEN 1 ELSE 0 END),0) RUN_NUM,
+        NVL(SUM(CASE WHEN CR.FIRE_UP_STATE='0' AND CR.LAST_TIME<30*60 THEN 1 ELSE 0 END),0) STOP_NUM          
+		FROM CLW_CL_BASE_INFO_T CL,
+		     (
+		     SELECT CJT.VEHICLE_VIN, NVL(SUBSTRB(CJT.STAT_INFO,32,1),'1') FIRE_UP_STATE,
+            		(SYSDATE-CJT.TERMINAL_TIME)*24*60*60 LAST_TIME       
+		     FROM CLW_JC_TERMINAL_T CJT
+		     WHERE CJT.ENTERPRISE_ID=#{etID}
+		     ) CR
+		WHERE CL.VEHICLE_VIN = CR.VEHICLE_VIN(+)
+		AND CL.VALID_FLAG ='0'
+		AND CL.DEVICE_TYPE ='0'
+		AND CL.ENTERPRISE_ID=#{etID}
+		AND CL.ORGANIZATION_ID IN
+				(
+				 SELECT ENTERPRISE_ID
+		         FROM CLW_JC_ENTERPRISE_T
+		         WHERE LEFT_NUM >= (SELECT LEFT_NUM
+		                      FROM CLW_JC_ENTERPRISE_T
+		                      WHERE ENTERPRISE_ID = #{orgID})
+		         AND RIGHT_NUM <=(SELECT RIGHT_NUM
+		                      FROM CLW_JC_ENTERPRISE_T
+		                      WHERE ENTERPRISE_ID = #{orgID})
+				)		
+        ]]>
+	</select>
+
+	<select id="getRealInfobyVIN" resultType="carInfo" resultMap="CarInfo">  
+        <![CDATA[ 
+		SELECT CL.VEHICLE_VIN, CL.VEHICLE_LN, ET.SHORT_NAME ORG_NAME,CL.LIMITE_NUMBER,
+		     CR.SICHEN_NAME,CR.SICHEN_TEL,CR.DRIVER_NAME,CR.DRIVER_TEL,CR.ROUTE_NAME,
+		     CR.STU_NUM,CR.FIRE_UP_STATE,
+		     NVL(DECODE(CR.SPEED,'FFFF','0',CR.SPEED),'0') SPEED,
+		     NVL(DECODE(CR.OIL_INSTANT,'FFFF','0',CR.OIL_INSTANT),'0') OIL_INSTANT,
+		     NVL(DECODE(CR.ENGINE_ROTATE_SPEED,'FFFF','0',CR.ENGINE_ROTATE_SPEED),'0') ENGINE_ROTATE_SPEED, 
+		     CR.LATITUDE,CR.LONGITUDE,
+		     TO_CHAR(CR.TERMINAL_TIME,'yyyy-mm-dd hh24:mi:ss') TERMINAL_TIME,
+		     CASE 
+		          WHEN CR.FIRE_UP_STATE='0' AND CR.LAST_TIME>=30*60 THEN '0'
+		          WHEN CR.FIRE_UP_STATE='1' AND CR.LAST_TIME>=5*60 THEN '0'
+		          WHEN CR.FIRE_UP_STATE='0' AND CR.LAST_TIME<30*60 THEN '2'
+		          WHEN CR.FIRE_UP_STATE='1' AND CR.LAST_TIME<5*60 THEN '1'
+		          WHEN CR.LAST_TIME IS NULL THEN '0'
+		     END ON_LINE,
+		     CR.ALARM_BASE_INFO||CR.ALARM_EXT_INFO||CR.OVERLOAD_FLAG ALARM_FLAG
+		FROM CLW_CL_BASE_INFO_T CL,
+		     (
+		     SELECT CJT.VEHICLE_VIN,T.SICHEN_NAME,T.SICHEN_TEL,D.DRIVER_NAME,D.DRIVER_TEL,R.ROUTE_NAME,      
+		        CJT.STU_NUM,CJT.OIL_INSTANT,CJT.ENGINE_ROTATE_SPEED,
+		        NVL2(CJT.TERMINAL_TIME,DECODE(CJT.LATITUDE,'FFFF','',CJT.LATITUDE),'') LATITUDE,
+		        NVL2(CJT.TERMINAL_TIME,DECODE(CJT.LONGITUDE,'FFFF','',CJT.LONGITUDE),'') LONGITUDE,
+		        DECODE(CJT.SPEED_SOURCE_SETTING,'1',CJT.GPS_SPEEDING,CJT.SPEEDING) SPEED,
+		        NVL(SUBSTRB(CJT.STAT_INFO,32,1),'1') FIRE_UP_STATE,(SYSDATE-CJT.TERMINAL_TIME)*24*60*60 LAST_TIME,
+		        CJT.TERMINAL_TIME,
+		        DECODE(LENGTH(CJT.ALARM_BASE_INFO),64,CJT.ALARM_BASE_INFO,'0000000000000000000000000000000000000000000000000000000000000000') ALARM_BASE_INFO,
+		        DECODE(LENGTH(CJT.ALARM_EXT_INFO),32,CJT.ALARM_EXT_INFO,'00000000000000000000000000000000') ALARM_EXT_INFO,
+		        NVL(CJT.OVERLOAD_FLAG,'0') OVERLOAD_FLAG
+		     FROM CLW_JC_TERMINAL_T CJT,
+					 (SELECT A.SICHEN_ID,A.SICHEN_NAME,A.SICHEN_TEL FROM CLW_XC_SICHEN_T A WHERE A.VALID_FLAG = '0') T,
+					 (SELECT B.DRIVER_ID,B.DRIVER_NAME,B.DRIVER_TEL FROM CLW_YW_DRIVER_T B WHERE B.VALID_FLAG = '0') D,
+					 (SELECT C.ROUTE_ID,C.ROUTE_NAME FROM CLW_XC_ROUTE_T C WHERE C.VALID_FLAG='0') R
+		     WHERE CJT.DRIVER_ID = D.DRIVER_ID(+)
+		     AND CJT.CURRENT_TEACHER = T.SICHEN_ID(+)
+		     AND CJT.ROUTE_ID = R.ROUTE_ID(+)
+		     AND CJT.ENTERPRISE_ID= #{etID}
+         	 AND CJT.VEHICLE_VIN = #{vin}
+		     ) CR,
+        CLW_JC_ENTERPRISE_T ET
+		WHERE CL.VEHICLE_VIN = CR.VEHICLE_VIN(+)
+        AND CL.ORGANIZATION_ID = ET.ENTERPRISE_ID(+)
+        AND ET.VALID_FLAG(+) ='0'
+		AND CL.VALID_FLAG ='0'
+		AND CL.DEVICE_TYPE ='0'
+		AND CL.ENTERPRISE_ID = #{etID}
+        AND CL.VEHICLE_VIN = #{vin}
+        ]]>
+	</select>
+	
+	<select id="getPassengersbyVIN" parameterType="String" resultType="String">  
+        <![CDATA[ 
+		SELECT ST.STU_NAME 
+		FROM CLW_XC_ST_CHECK_T SC,CLW_XC_STUDENT_T ST
+		WHERE SC.STU_ID =  ST.STU_ID
+		AND ST.VALID_FLAG = '0'
+		AND SC.VEHICLE_VIN = #{vin}
+		AND SC.VSS_FLAG = '0'
+        ]]>
+	</select>					
+</mapper>

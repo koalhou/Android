@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/aboutSystem/clwapi/config
+END
+logback.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/aboutSystem/clwapi/config/logback.xml
+END
+systemConfig.properties
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/aboutSystem/clwapi/config/systemConfig.properties
+END
+jdbc.properties
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/aboutSystem/clwapi/config/jdbc.properties
+END

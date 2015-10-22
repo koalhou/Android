@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mid.clwapi.mapper.ResourceMapper">
+
+	<resultMap id="resourceInfoMap" type="resourceInfo">
+		<result property="img" column="MSG_IMG_URL" />
+		<result property="text" column="MSG_TEXT" />
+		<result property="photo" column="PHOTO_FILE" />
+	</resultMap>
+
+	<!-- 获取资源 -->
+	<select id="getResource" resultMap="resourceInfoMap">
+		<choose>
+			<when test="type != null">
+				SELECT MSG_IMG_URL, MSG_TEXT
+				FROM CLW_M_PUSH_MESSAGE_T
+				WHERE MSG_ID = #{resourceId}
+				AND MSG_TYPE = #{type}
+			</when>
+			<otherwise>
+				SELECT PHOTO_FILE
+				FROM CLW_YW_PHOTO_T
+				WHERE PHOTO_ID =
+				#{resourceId}
+				AND 
+				<![CDATA[
+				ROWNUM <= 1
+				]]>
+			</otherwise>
+		</choose>
+	</select>
+</mapper>

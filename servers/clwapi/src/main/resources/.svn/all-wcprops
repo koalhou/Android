@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources
+END
+applicationContext-datasource.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/applicationContext-datasource.xml
+END
+logback.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/logback.xml
+END
+applicationContext-rest-services.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/applicationContext-rest-services.xml
+END
+systemConfig.properties
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/systemConfig.properties
+END
+applicationContext-memcached.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/applicationContext-memcached.xml
+END
+jdbc.properties
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/resources/jdbc.properties
+END

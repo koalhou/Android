@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/service/oauth
+END
+OauthService.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/service/oauth/OauthService.java
+END
+OauthServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/service/oauth/OauthServiceImpl.java
+END
+LoginService.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/service/oauth/LoginService.java
+END
+LoginServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/service/oauth/LoginServiceImpl.java
+END
+IosTokenService.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/service/oauth/IosTokenService.java
+END
+IosTokenServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/service/oauth/IosTokenServiceImpl.java
+END

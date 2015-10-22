@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/statistics
+END
+SuperviseInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/statistics/SuperviseInfo.java
+END
+EpDtlResp.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/statistics/EpDtlResp.java
+END
+MoldStatInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/statistics/MoldStatInfo.java
+END
+ReportDescResp.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/statistics/ReportDescResp.java
+END
+EpMonthData.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/statistics/EpMonthData.java
+END
+CarMonthData.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/statistics/CarMonthData.java
+END
+ReportDesc.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/statistics/ReportDesc.java
+END
+SuperviseResp.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/statistics/SuperviseResp.java
+END
+SuperviseDetailInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/statistics/SuperviseDetailInfo.java
+END
+SuperviseProcInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/statistics/SuperviseProcInfo.java
+END
+EpStatReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/statistics/EpStatReport.java
+END
+MonthStatInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/statistics/MonthStatInfo.java
+END
+CarStatReport.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/statistics/CarStatReport.java
+END
+BadBehaviorPerp.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/statistics/BadBehaviorPerp.java
+END
+EpCarDtl.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/datas/!svn/ver/27/other/work_spaces/workspace_xc/clwapi/src/main/java/com/neusoft/mid/clwapi/entity/statistics/EpCarDtl.java
+END

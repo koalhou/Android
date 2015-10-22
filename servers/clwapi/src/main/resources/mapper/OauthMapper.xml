@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neusoft.mid.clwapi.mapper.OauthMapper">
+
+	<!-- 终端用户全部管理信息结果集 -->
+	<resultMap id="mbluserResultMap" type="mobileUsrInfo">
+		<id property="usrId" column="USER_ID" />
+		<id property="enterpriseId" column="ENTERPRISE_ID" />
+		<id property="organizationId" column="ORGANIZATION_ID" />
+		<id property="accessToken" column="ACCESS_TOKEN" />
+		<id property="refreshToken" column="REFRESH_TOKEN" />
+		<id property="tokenExpireTime" column="TOKEN_EXPIRE_TIME" />
+		<id property="validSeconds" column="VALID_SECONDS" />
+		<id property="createTime" column="CREATE_TIME" />
+		<id property="updateTime" column="UPDATE_TIME" />
+		<id property="able" column="ABLE" />
+		<id property="clientId" column="CLIENT_ID" />
+		<id property="userQuesEtag" column="USER_QUES_ETAG" />
+		<id property="userMsgEtag" column="USER_MSG_ETAG" />
+		<id property="userTemplateEtag" column="USER_TEMPLATE_ETAG" />
+		<id property="userSendRuleEtag" column="USER_SEND_RULE_ETAG" />
+		<id property="entReportDscEtag" column="ENTERPRISE_REPORT_DESC_ETAG" />
+		<id property="entReportDscEtag" column="ENTERPRISE_REPORT_DESC_ETAG" />
+		<id property="isMobileAllow" column="IS_MOBILE_ALLOW" />
+	</resultMap>
+
+	<!-- 校车平台用户基本信息 -->
+	<resultMap id="xcpUserResultMap" type="xcpUsrInfo">
+		<id property="usrId" column="USER_ID" />
+		<id property="usrAlias" column="ALIAS" />
+		<id property="usrSex" column="USER_SEX" />
+		<id property="enId" column="ENTERPRISE_ID" />
+		<id property="orgId" column="ORGANIZATION_ID" />
+		<id property="usrEnName" column="SHORT_NAME" />
+		<id property="enProv" column="PROVINCE" />
+		<id property="enCity" column="CITY" />
+		<id property="usrInfoETag" column="MODIFY_TIME" />
+		<id property="accessToken" column="ACCESS_TOKEN" />
+		<id property="isMobileAllow" column="IS_MOBILE_ALLOW" />
+		<id property="validFlag" column="VALID_FLAG" />
+	</resultMap>
+
+	<!-- 软件版本信息 -->
+	<resultMap id="softwareVersionInfo" type="softversion">
+		<id property="targetVersion" column="VERSION_NAME" />
+		<id property="changeDesc" column="VERSION_DESC" />
+		<id property="uri" column="SOFTWARE_URI" />
+		<id property="force" column="FORCE_UPGRADE_FLAG" />			
+		<id property="size" column="file_size" />
+	</resultMap>
+
+	<!-- 根据用户令牌信息获取终端用户全部管理信息 -->
+	<select id="getMblUsrInfoByToken" resultMap="mbluserResultMap">
+	<![CDATA[ 
+		SELECT 
+			mb.user_id, 
+			mb.enterprise_id,
+			mb.organization_id, 
+			mb.access_token, 
+			mb.refresh_token,
+       		TO_CHAR (mb.token_expire_time, 'yyyymmddhh24miss') token_expire_time,
+       		(mb.token_expire_time - SYSDATE) * 24 * 60 * 60 valid_seconds,
+       		TO_CHAR (mb.create_time, 'yyyymmddhh24miss') create_time,
+       		TO_CHAR (mb.update_time, 'yyyymmddhh24miss') update_time, 
+       		mb.able,
+       		mb.client_id, 
+       		mb.user_ques_etag, 
+       		mb.user_msg_etag, 
+       		mb.user_template_etag,
+       		mb.user_send_rule_etag, 
+       		mb.enterprise_report_desc_etag,
+       		en.is_mobile_allow
+  		FROM 
+  			clw_jc_user_t us, 
+  			clw_jc_enterprise_t en, 
+  			clw_m_user_info_t mb
+ 		WHERE 
+ 			us.enterprise_id = en.enterprise_id
+   			AND en.valid_flag = '0'
+   			AND us.user_id = mb.user_id
+   			AND us.valid_flag = '0'
+   			AND us.user_type = '1'
+   			AND mb.able = 1
+   			AND mb.access_token = #{token}
+    ]]>
+	</select>
+
+	<!-- 根据终端用户登录信息获取校车平台用户基本信息 -->
+	<select id="getXcpUsrInfo" resultMap="xcpUserResultMap">
+	<![CDATA[ 
+		SELECT
+			US.USER_ID,
+			DECODE(US.ALIAS,NULL,US.USER_NAME,US.ALIAS) ALIAS,
+			DECODE(US.USER_SEX,NULL,'0',US.USER_SEX) USER_SEX,
+			US.ENTERPRISE_ID,
+			US.ORGANIZATION_ID,
+			EN.SHORT_NAME,
+       		(SELECT zone_name FROM clw_jc_zone_t WHERE zone_id = en.enterprise_province) province,
+       		(SELECT zone_name FROM clw_jc_zone_t WHERE zone_id = en.enterprise_city) city,
+			DECODE(US.MODIFY_TIME,NULL,TO_CHAR(SYSDATE,'YYYYMMDDHH24MISS'),TO_CHAR(US.MODIFY_TIME,'YYYYMMDDHH24MISS')) MODIFY_TIME,
+			MB.ACCESS_TOKEN,
+			EN.IS_MOBILE_ALLOW,
+			US.VALID_FLAG
+		FROM
+			CLW_JC_USER_T US, 
+			CLW_JC_ENTERPRISE_T EN, 
+			CLW_M_USER_INFO_T MB
+		WHERE
+			US.ENTERPRISE_ID = EN.ENTERPRISE_ID
+			AND EN.ISUSED = '0'
+			AND EN.VALID_FLAG = '0'
+			AND US.USER_ID=MB.USER_ID(+)
+			AND US.USER_TYPE = '1'
+			AND US.LOGIN_NAME = #{loginName}
+			AND US.LOGIN_PWD = #{loginPwd}
+			AND EN.ENTERPRISE_CODE = #{enCode}
+    ]]>
+	</select>
+
+	<!-- 根据用户ID获取校车平台用户基本信息 -->
+	<select id="getXcpUsrInfoByUsrId" resultMap="xcpUserResultMap">
+	<![CDATA[ 
+		SELECT
+			US.USER_ID,
+			DECODE(US.ALIAS,NULL,US.USER_NAME,US.ALIAS) ALIAS,
+			DECODE(US.USER_SEX,NULL,'0',US.USER_SEX) USER_SEX,
+			US.ENTERPRISE_ID,
+			US.ORGANIZATION_ID,
+			EN.SHORT_NAME,
+			MB.IOS_TOKEN,
+       		(SELECT zone_name FROM clw_jc_zone_t WHERE zone_id = en.enterprise_province) province,
+       		(SELECT zone_name FROM clw_jc_zone_t WHERE zone_id = en.enterprise_city) city,
+			DECODE(US.MODIFY_TIME,NULL,TO_CHAR(SYSDATE,'YYYYMMDDHH24MISS'),TO_CHAR(US.MODIFY_TIME,'YYYYMMDDHH24MISS')) MODIFY_TIME
+		FROM
+			CLW_JC_USER_T US, 
+			CLW_JC_ENTERPRISE_T EN, 
+			CLW_M_USER_INFO_T MB
+		WHERE
+			US.ENTERPRISE_ID = EN.ENTERPRISE_ID
+			AND EN.VALID_FLAG = '0'
+   			AND EN.IS_MOBILE_ALLOW = '1'
+			AND US.VALID_FLAG = '0'
+			AND US.USER_TYPE = '1'
+			AND US.USER_ID = #{userId}
+			AND US.USER_ID=MB.USER_ID(+)
+    ]]>
+	</select>
+
+	<!-- 根据终端用户获取其终端软件权限列表信息 -->
+	<select id="getUserLimit" resultType="String">
+	<![CDATA[ 
+		SELECT
+			MODULE_ID
+		FROM
+			CLW_JC_MODULE_T
+		WHERE
+			MODULE_ID !='111_M'
+			AND APPLY_ID='M'
+    ]]>
+	</select>
+
+	<!-- modified by houjh 2014-02-25日修正后，该方法不变，依旧作为升级Android终端的查询版本方法 ，IOS版本信息同表，但是APPLY_ID字段为：'I' -->
+	<!-- 获取当前最大客户端软件版本号 -->
+	<select id="getMaxVersion" resultMap="softwareVersionInfo">
+	<![CDATA[ 
+		SELECT
+			VERSION_NAME,
+			VERSION_DESC,
+			SOFTWARE_URI,
+			FORCE_UPGRADE_FLAG,
+			file_size
+		FROM
+			CLW_CL_SYSVERSION_T
+		WHERE
+			VALID_FLAG = '0'
+			AND APPLY_ID = 'M'
+			AND OS_NAME='android'
+			AND VERSION_NAME > #{version}
+		ORDER BY VERSION_NAME DESC
+    ]]>
+	</select>
+	<!-- added by houjh 兼容IOS升级提示-->
+	<select id="getMaxVersionIos" resultMap="softwareVersionInfo">
+	<![CDATA[ 
+		SELECT
+			VERSION_NAME,
+			VERSION_DESC,
+			SOFTWARE_URI,
+			FORCE_UPGRADE_FLAG,
+			file_size
+		FROM
+			CLW_CL_SYSVERSION_T
+		WHERE
+			VALID_FLAG = '0'
+			AND APPLY_ID = 'M'
+			AND OS_NAME='ios'
+			AND VERSION_NAME > #{version}
+		ORDER BY VERSION_NAME DESC
+    ]]>
+	</select>
+	
+	<!-- 更新用户企业报告评语模板标记信息-->
+	<update id="clearIosToken">
+		UPDATE 
+			CLW_M_USER_INFO_T
+		SET
+			IOS_TOKEN = '0'
+		WHERE 
+			USER_ID=#{userId}
+	</update>
+	
+	<!-- 添加终端用户授权信息 -->
+	<insert id="insertMblUserInfo" parameterType="java.util.Map">
+		INSERT INTO CLW_M_USER_INFO_T (
+			USER_ID,
+			ENTERPRISE_ID,
+			ORGANIZATION_ID,
+			ACCESS_TOKEN,
+			REFRESH_TOKEN,
+			TOKEN_EXPIRE_TIME,
+			CREATE_TIME,
+			UPDATE_TIME,
+			ABLE,
+			USER_VALID_FLAG)
+		VALUES (#{userId},
+		#{enterpriseId},
+		#{organizationId},
+		#{accessToken},
+		#{refreshToken},
+		SYSDATE + (#{expireTime,javaType=java.lang.Long,jdbcType=NUMERIC}/24/60/60),
+		SYSDATE,
+		SYSDATE,
+		1,
+		'1')
+	</insert>
+
+	<!-- 原有终端用户重新登录 -->
+	<update id="userLoginOnceMore">
+		UPDATE 
+			CLW_M_USER_INFO_T
+		SET
+			ENTERPRISE_ID=#{enterpriseId},
+			ORGANIZATION_ID=#{organizationId},
+			ACCESS_TOKEN=#{token},
+			REFRESH_TOKEN=#{refreshToken},
+			TOKEN_EXPIRE_TIME=SYSDATE + (#{expireTime,javaType=java.lang.Long,jdbcType=NUMERIC}/24/60/60),
+			ABLE= 1,
+			UPDATE_TIME=SYSDATE,
+			USER_VALID_FLAG ='1'
+		WHERE 
+			USER_ID=#{userId}
+	</update>
+	<!-- 若非IOS用户登录，则清除IOS推送TOKEN -->
+	<update id="updateIosFlag">
+		UPDATE 
+			CLW_M_USER_INFO_T
+		SET
+			IOS_TOKEN = ''
+		WHERE 
+			USER_ID=#{userId}
+	</update>
+	<!-- 将等于token的用户，更新其token，使其IOS_token等于'0' -->
+	<update id="clearIosTokenByToken">
+		UPDATE 
+			CLW_M_USER_INFO_T
+		SET
+			IOS_TOKEN = '0'
+		WHERE 
+			IOS_TOKEN=#{ios_token}
+	</update>
+	<!-- 更新IOS用户推送TOKEN -->
+	<update id="refreshIosToken">
+		UPDATE 
+			CLW_M_USER_INFO_T
+		SET
+			IOS_TOKEN = #{ios_token}
+		WHERE 
+			USER_ID=#{userId}
+	</update>
+
+	<!-- 更新用户token过期时间 -->
+	<update id="refreshTokenExpireTime">
+		UPDATE 
+			CLW_M_USER_INFO_T
+		SET
+			TOKEN_EXPIRE_TIME=SYSDATE + (#{expireTime,javaType=java.lang.Long,jdbcType=NUMERIC}/24/60/60),
+			ABLE= 1,
+			UPDATE_TIME=SYSDATE,
+			USER_VALID_FLAG ='1',
+			ORGANIZATION_ID =#{organizationId}
+		WHERE 
+			USER_ID=#{userId}
+	</update>
+
+	<!-- 用户登出操作 -->
+	<update id="logoutUsrOauth">
+		UPDATE 
+			CLW_M_USER_INFO_T
+		SET
+			UPDATE_TIME=SYSDATE,
+			TOKEN_EXPIRE_TIME=SYSDATE,
+			ABLE=0,
+			CLIENT_ID=''
+		WHERE USER_ID=#{userId}
+	</update>
+
+	<!-- 更新用户个人消息模板标记信息-->
+	<update id="updateUserTemplateEtag">
+		UPDATE 
+			CLW_M_USER_INFO_T
+		SET
+			USER_TEMPLATE_ETAG=#{templateEtag}
+		WHERE 
+			USER_ID=#{userId}
+	</update>
+
+	<!-- 更新用户个人推送规则标记信息-->
+	<update id="updateUserRuleEtag">
+		UPDATE 
+			CLW_M_USER_INFO_T
+		SET
+			USER_SEND_RULE_ETAG=#{ruleEtag}
+		WHERE 
+			USER_ID=#{userId}
+	</update>
+
+	<!-- 更新用户企业报告评语模板标记信息-->
+	<update id="updateUserReportETag">
+		UPDATE 
+			CLW_M_USER_INFO_T
+		SET
+			ENTERPRISE_REPORT_DESC_ETAG=#{reportETag}
+		WHERE 
+			USER_ID=#{userId}
+	</update>
+	
+	<!-- 根据用户令牌信息获取有效终端绑定用户信息 -->
+	<select id="getValidUsrBindInfo" resultMap="mbluserResultMap">
+	<![CDATA[ 
+		SELECT 
+			mb.user_id,
+       		mb.client_id
+  		FROM 
+  			clw_jc_user_t us, 
+  			clw_jc_enterprise_t en, 
+  			clw_m_user_info_t mb
+ 		WHERE 
+ 			us.enterprise_id = en.enterprise_id
+   			AND en.valid_flag = '0'
+   			AND en.is_mobile_allow = '1'
+   			AND us.user_id = mb.user_id
+   			AND us.valid_flag = '0'
+   			AND us.user_type = '1'
+   			AND ((mb.token_expire_time - SYSDATE) * 24 * 60 * 60) > 0
+   			AND mb.able = 1
+   			AND mb.access_token = #{token}
+    ]]>
+	</select>
+	
+	<!-- 净新增用户时-更新接收问卷预定用户数+1-->
+	<update id="updateQuesUserNum">
+	<![CDATA[ 
+		UPDATE 
+			clw_m_q_question_t
+   		SET
+       		user_num = user_num + 1
+ 		WHERE 
+ 			ques_status = 1
+     		AND publish_time <= SYSDATE
+     		AND SYSDATE < end_time
+    ]]>
+	</update>
+	
+	<!-- 净新增用户时-更新推送预定用户数+1-->
+	<update id="updatePushMsgNum">
+	<![CDATA[ 
+		UPDATE 
+			clw_m_push_message_t
+   		SET
+       		user_num = user_num + 1
+ 		WHERE 
+ 			msg_status = 1
+     		AND publish_time <= SYSDATE
+     		AND SYSDATE < end_time
+    ]]>
+	</update>
+	
+	<!-- 查询所属企业是否有权使用终端软件 -->
+	<select id="getEnAllowByEnCode" resultType="String">
+	<![CDATA[ 
+		SELECT
+			EN.IS_MOBILE_ALLOW
+		FROM
+			CLW_JC_ENTERPRISE_T EN
+		WHERE EN.VALID_FLAG = '0'
+			AND EN.ENTERPRISE_CODE = #{enCode}
+    ]]>
+	</select>
+	
+	<!-- 查询所属企业是否有权使用终端软件 -->
+	<select id="getEnAllowByEnId" resultType="String">
+	<![CDATA[ 
+		SELECT
+			EN.IS_MOBILE_ALLOW
+		FROM
+			CLW_JC_ENTERPRISE_T EN
+		WHERE EN.VALID_FLAG = '0'
+			AND EN.ENTERPRISE_ID = #{enterpriseId}
+    ]]>
+	</select>
+</mapper>
