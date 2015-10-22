@@ -1,0 +1,611 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout
+END
+activity_main_outoffactory_search_stationsearch.xml
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_main_outoffactory_search_stationsearch.xml
+END
+control_mappop_stations.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_mappop_stations.xml
+END
+control_notification_content.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_notification_content.xml
+END
+control_mappop_car.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_mappop_car.xml
+END
+activity_feedback_adapter_listitem_header.xml
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_feedback_adapter_listitem_header.xml
+END
+control_floatdialog.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_floatdialog.xml
+END
+control_exhlv.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_exhlv.xml
+END
+activity_main_outoffactory_search_stationlist.xml
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_main_outoffactory_search_stationlist.xml
+END
+control_exedittext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_exedittext.xml
+END
+include_map_zoom_btn.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/include_map_zoom_btn.xml
+END
+activity_setting_feedback_list.xml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_setting_feedback_list.xml
+END
+activity_login_findpass_succ.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_login_findpass_succ.xml
+END
+control_mappop_remind.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_mappop_remind.xml
+END
+component_calendar.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/component_calendar.xml
+END
+activity_setting_feedback.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_setting_feedback.xml
+END
+control_toggleradio.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_toggleradio.xml
+END
+activity_setting_announce_detail.xml
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_setting_announce_detail.xml
+END
+activity_main_outoffactory_singlestation_lines.xml
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_main_outoffactory_singlestation_lines.xml
+END
+activity_setting_remindcollection.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_setting_remindcollection.xml
+END
+listitem_recommandsite.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/listitem_recommandsite.xml
+END
+control_checkeditem.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_checkeditem.xml
+END
+activity_setting_userguide.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_setting_userguide.xml
+END
+control_dialog_gps_tips.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_dialog_gps_tips.xml
+END
+component_calendar_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/component_calendar_item.xml
+END
+activity_guide.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_guide.xml
+END
+activity_login_factoryselect.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_login_factoryselect.xml
+END
+refresh_footer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/refresh_footer.xml
+END
+activity_login_login.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_login_login.xml
+END
+control_stationlist.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_stationlist.xml
+END
+activity_setting_about_serviceterms.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_setting_about_serviceterms.xml
+END
+activity_setting_recommand.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_setting_recommand.xml
+END
+listitem_bus_schedule.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/listitem_bus_schedule.xml
+END
+activity_setting_announce.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_setting_announce.xml
+END
+control_carlist_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_carlist_item.xml
+END
+activity_login_findpass_eidsubmit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_login_findpass_eidsubmit.xml
+END
+listitem_recommandsite_footer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/listitem_recommandsite_footer.xml
+END
+control_popmenu.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_popmenu.xml
+END
+activity_main_outoffactory_singlestationschedule.xml
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_main_outoffactory_singlestationschedule.xml
+END
+activity_driver_info_image.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_driver_info_image.xml
+END
+activity_datatest.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_datatest.xml
+END
+activity_setting_changephone.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_setting_changephone.xml
+END
+control_dialog_custom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_dialog_custom.xml
+END
+include_title_horizontal.xml
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/include_title_horizontal.xml
+END
+activity_main_betweenfactory.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_main_betweenfactory.xml
+END
+control_popmenu_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_popmenu_item.xml
+END
+control_dialog_clock_custom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_dialog_clock_custom.xml
+END
+activity_main_outoffactory.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_main_outoffactory.xml
+END
+activity_login_findpass_defaultpass.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_login_findpass_defaultpass.xml
+END
+activity_driver_image.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_driver_image.xml
+END
+cover_outfactory_guide.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/cover_outfactory_guide.xml
+END
+activity_main_outoffactory_search_mapsearch.xml
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_main_outoffactory_search_mapsearch.xml
+END
+date_test.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/date_test.xml
+END
+control_queryresultlist_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_queryresultlist_item.xml
+END
+control_loadingoverlay.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_loadingoverlay.xml
+END
+control_stationlist_headerview.xml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_stationlist_headerview.xml
+END
+activity_main_outoffactory_search_stationsearch_adapter.xml
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_main_outoffactory_search_stationsearch_adapter.xml
+END
+activity_setting_about.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_setting_about.xml
+END
+include_title.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/include_title.xml
+END
+include_map_reset_btn.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/include_map_reset_btn.xml
+END
+listitem_news.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/listitem_news.xml
+END
+custom_dialog_test.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/custom_dialog_test.xml
+END
+control_remindlist_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_remindlist_item.xml
+END
+activity_setting.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_setting.xml
+END
+activity_setting_changepassword_new.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_setting_changepassword_new.xml
+END
+activity_login_findpass_smscheck.xml
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_login_findpass_smscheck.xml
+END
+activity_test.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_test.xml
+END
+activity_main_outoffactory_singlevehicle_lines.xml
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_main_outoffactory_singlevehicle_lines.xml
+END
+groupitem_site.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/groupitem_site.xml
+END
+activity_debugtool.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_debugtool.xml
+END
+activity_main.xml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_main.xml
+END
+control_main_outoffactory_recommandsite.xml
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_main_outoffactory_recommandsite.xml
+END
+control_exdropdownlistitem.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_exdropdownlistitem.xml
+END
+view_guide_1.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/view_guide_1.xml
+END
+view_guide_2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/view_guide_2.xml
+END
+activity_setting_ring.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_setting_ring.xml
+END
+view_guide_3.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/view_guide_3.xml
+END
+view_guide_4.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/view_guide_4.xml
+END
+activity_feedback_adapter_listitem.xml
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_feedback_adapter_listitem.xml
+END
+control_main_outoffactory_favoritesite.xml
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_main_outoffactory_favoritesite.xml
+END
+activity_setting_changepassword_old.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_setting_changepassword_old.xml
+END
+activity_setting_about_qrcode.xml
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_setting_about_qrcode.xml
+END
+activity_main_outoffactory_singlestation_remindset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_main_outoffactory_singlestation_remindset.xml
+END
+cover_main.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/cover_main.xml
+END
+activity_main_outoffactory_search_calendar.xml
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_main_outoffactory_search_calendar.xml
+END
+control_linelist.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_linelist.xml
+END
+activity_setting_refreshset.xml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_setting_refreshset.xml
+END
+include_map_location_details_zoom_btn.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/include_map_location_details_zoom_btn.xml
+END
+activity_setting_changefactory.xml
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_setting_changefactory.xml
+END
+control_weekselectview.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_weekselectview.xml
+END
+activity_main_outoffactory_search_stationmap.xml
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_main_outoffactory_search_stationmap.xml
+END
+activity_test_activity2.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_test_activity2.xml
+END
+activity_main_outoffactory_driver_contact.xml
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_main_outoffactory_driver_contact.xml
+END
+control_stationlist_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_stationlist_item.xml
+END
+control_linelist_item.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_linelist_item.xml
+END
+activity_main_outoffactory_stationmap.xml
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_main_outoffactory_stationmap.xml
+END
+refresh_header.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/refresh_header.xml
+END
+activity_splash.xml
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_splash.xml
+END
+control_remindlist_item_infactory.xml
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/control_remindlist_item_infactory.xml
+END
+activity_login_phonebind.xml
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_login_phonebind.xml
+END
+activity_login_findpass_newpass.xml
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_login_findpass_newpass.xml
+END
+activity_main_infactory.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/res/layout/activity_main_infactory.xml
+END

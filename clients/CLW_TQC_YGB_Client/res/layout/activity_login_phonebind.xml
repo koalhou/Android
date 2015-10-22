@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:axygb="http://schemas.android.com/apk/res/com.yutong.clw.ygbclient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/maincolor"
+    android:orientation="vertical" >
+
+    
+
+    <RelativeLayout
+        android:id="@+id/contentRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/im_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/im_phonebind" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tiplabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/im_logo"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="设定您的手机号码"
+            android:textColor="#90ffffff" android:textSize="20sp" />
+
+        <LinearLayout
+            android:id="@+id/phoneLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tiplabel"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal" >
+
+            <com.yutong.clw.ygbclient.view.widget.ExEditText
+                android:id="@+id/phone_ET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                axygb:hintText="请输入正确的手机号"
+                axygb:paddingLeft="15dp" />
+
+            <Button
+                android:id="@+id/sendcodebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_yellowbtn"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="短信验证"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <com.yutong.clw.ygbclient.view.widget.ExEditText
+            android:id="@+id/code_ET"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/phoneLL"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            axygb:hintText="验证码"
+            axygb:paddingLeft="15dp" />
+
+        <Button
+            android:id="@+id/nextbtn"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/code_ET"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_yellowbtn"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="下一步"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</LinearLayout>

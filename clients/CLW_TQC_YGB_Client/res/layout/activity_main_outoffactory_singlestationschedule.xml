@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:anxin="http://schemas.android.com/apk/res/com.yutong.clw.ygbclient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_title" />
+
+    <FrameLayout
+        android:id="@+id/bodyFL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:id="@+id/ll_root"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+				
+                <Button
+                    android:id="@+id/btn_amb_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_calendar"
+                    android:text="" 
+                    android:visibility="gone"
+                    />
+				<!-- android:textColor="@color/grayfont_dark" -->
+                <TextView
+                    android:id="@+id/tv_amb_time"
+                    android:textSize="16sp"
+                    android:textColor="@drawable/bg_color_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:drawableLeft="@drawable/bg_calendar"
+                    android:text="2013/09/01" />
+                
+            </LinearLayout>
+
+            <com.yutong.clw.ygbclient.view.widget.PullToRefreshView
+                android:id="@+id/pullToRefreshView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/list_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:listSelector="@android:color/transparent"
+                    android:scrollbars="none"
+                    android:scrollingCache="false" />
+            </com.yutong.clw.ygbclient.view.widget.PullToRefreshView>
+        </LinearLayout>
+
+      <com.yutong.clw.ygbclient.view.widget.DraggableContainerLayout
+        android:id="@+id/rl_filter"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        anxin:dockside="right"
+        anxin:draggable="true" >
+
+            <TextView
+                android:id="@+id/tv_filter"
+                android:layout_width="40dp"
+                android:layout_height="100dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/bg_filter_rigtht"
+                android:ems="1"
+                android:gravity="center"
+                android:text="筛\r\n选"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </com.yutong.clw.ygbclient.view.widget.DraggableContainerLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="#dd606060"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rl_amosl_bottomleft"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_color_remind"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/iv_amosl_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_favor_white" />
+
+            <TextView
+                android:id="@+id/collecting_stations"
+                style="@style/text_main_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/iv_amosl_left"
+                android:text="收藏站点" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_amosl_bottomright"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_color_remind"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/iv_amosl_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/bg_clock_white" />
+
+            <TextView
+                style="@style/text_main_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/iv_amosl_right"
+                android:text="到站提醒" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:axygb="http://schemas.android.com/apk/res/com.yutong.clw.ygbclient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_maincolor" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/include_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:layout_below="@+id/title" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:id="@+id/tv_old_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="35dp"
+                android:paddingLeft="10dp"
+                android:text="@string/input_old_phone"
+                android:textColor="#333333"
+                android:textSize="18sp" />
+
+            <com.yutong.clw.ygbclient.view.widget.ExEditText
+                android:id="@+id/et_old_phone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tv_old_phone"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_input"
+                android:ems="10"
+                axygb:hintText="原手机号码"
+                axygb:paddingLeft="15dp" >
+            </com.yutong.clw.ygbclient.view.widget.ExEditText>
+
+            <TextView
+                android:id="@+id/tv_new_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_old_phone"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="25dp"
+                android:paddingLeft="10dp"
+                android:text="@string/input_new_phone"
+                android:textColor="#333333"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_verify_code"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tv_new_phone"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center" >
+
+                <com.yutong.clw.ygbclient.view.widget.ExEditText
+                    android:id="@+id/et_new_phone"
+                    android:layout_width="180dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:ems="10"
+                    axygb:hintText="新手机号码"
+                    axygb:paddingLeft="15dp" >
+                </com.yutong.clw.ygbclient.view.widget.ExEditText>
+
+                <Button
+                    android:id="@+id/btn_get_verify_code"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/et_new_phone"
+                    android:background="@drawable/bg_bluebtn"
+                    android:gravity="center"
+                    android:enabled="false"
+                    android:text="@string/btn__get_verify_code"
+                    android:textColor="@color/password_confirm" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_phone_verify_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_verify_code"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="25dp"
+                android:paddingLeft="10dp"
+                android:text="@string/input_phone_verify_code"
+                android:textColor="#333333"
+                android:textSize="18sp" />
+
+            <com.yutong.clw.ygbclient.view.widget.ExEditText
+                android:id="@+id/et_phone_verify_code"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/tv_phone_verify_code"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_input"
+                android:ems="10"
+                axygb:hintText="验证码"
+                axygb:paddingLeft="15dp" >
+            </com.yutong.clw.ygbclient.view.widget.ExEditText>
+
+            <Button
+                android:id="@+id/btn_subimt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/et_phone_verify_code"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/bg_bluebtn"
+                android:gravity="center"
+                android:text="@string/btn__submit_verify_phone"
+                android:enabled="false" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

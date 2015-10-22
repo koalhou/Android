@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans
+END
+VersionInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans/VersionInfo.java
+END
+VehicleRealtime.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans/VehicleRealtime.java
+END
+ResourceInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans/ResourceInfo.java
+END
+ReportExceptionInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans/ReportExceptionInfo.java
+END
+PushMsgRule.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans/PushMsgRule.java
+END
+EnvironmentInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans/EnvironmentInfo.java
+END
+StationAreaInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans/StationAreaInfo.java
+END
+ResourceDesc.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans/ResourceDesc.java
+END
+VehicheInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans/VehicheInfo.java
+END
+AdviseReply.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans/AdviseReply.java
+END
+UserInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans/UserInfo.java
+END
+RemindInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans/RemindInfo.java
+END
+ClientInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans/ClientInfo.java
+END
+VehicleDriver.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans/VehicleDriver.java
+END
+StationInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans/StationInfo.java
+END
+CollectionStation.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans/CollectionStation.java
+END
+UriAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans/UriAction.java
+END
+VerifyAccountInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/beans/VerifyAccountInfo.java
+END

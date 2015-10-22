@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="36dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@+id/ll_cmr_name"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:background="@drawable/bg_mappop_remind_left"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/iv_cmr_star"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/bg_clock_attention"
+            android:visibility="visible" />
+       
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cmr_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_mappop_remind_right"
+        android:orientation="vertical" 
+        android:gravity="center_vertical" 
+        >
+
+         <TextView
+            android:id="@+id/tv_cmr_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+			style="@style/text_mappop_remind"
+            android:text="淋雨房站" />
+         
+    </LinearLayout>
+
+</LinearLayout>

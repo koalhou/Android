@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.yutong.clw.ygbclient.view.widget.WidthFitListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lv_cl"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_linelist"
+    android:divider="@null"
+    android:listSelector="@drawable/bg_poplist_selector" >
+
+</com.yutong.clw.ygbclient.view.widget.WidthFitListView>

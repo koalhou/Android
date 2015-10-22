@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/title_asr"
+        layout="@layout/include_title" />
+
+    <com.yutong.clw.ygbclient.view.widget.ToggleRadio
+        android:id="@+id/cr_asr"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/title_asr" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cr_asr" >
+
+        <com.yutong.clw.ygbclient.view.widget.PullToRefreshView
+            android:id="@+id/pullToRefreshView_out"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/pullToRefreshView_in"
+            android:orientation="vertical" >
+
+            <com.yutong.clw.ygbclient.view.widget.HintListView
+                android:id="@+id/lv_asr_out"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E8E8E8"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:hint="未设置厂外到站提醒"
+                android:textSize="20sp" >
+            </com.yutong.clw.ygbclient.view.widget.HintListView>
+        </com.yutong.clw.ygbclient.view.widget.PullToRefreshView>
+
+        <com.yutong.clw.ygbclient.view.widget.PullToRefreshView
+            android:id="@+id/pullToRefreshView_in"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_asr_edit"
+            android:orientation="vertical" >
+
+            <com.yutong.clw.ygbclient.view.widget.HintListView
+                android:id="@+id/lv_asr_in"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E8E8E8"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:hint="未设置厂内到站提醒"
+                android:textSize="20sp" >
+            </com.yutong.clw.ygbclient.view.widget.HintListView>
+        </com.yutong.clw.ygbclient.view.widget.PullToRefreshView>
+
+        <LinearLayout
+            android:id="@+id/ll_asr_edit"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:background="#5D5D5D"
+            android:baselineAligned="false"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_asr_allselect"
+                    style="@style/content_font_18"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_graybtn"
+                    android:gravity="center"
+                    android:text="全选"
+                    android:textColor="#444444" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_asr_delete"
+                    style="@style/content_font_18"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bg_redbtn"
+                    android:gravity="center"
+                    android:text="删除"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

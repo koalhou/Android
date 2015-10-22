@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/common
+END
+AppCrashHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/common/AppCrashHandler.java
+END
+ImageUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/common/ImageUtils.java
+END
+MediaManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/common/MediaManager.java
+END
+BaiduMapManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/common/BaiduMapManager.java
+END
+DataValidationUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/common/DataValidationUtil.java
+END
+ActivityCommConstant.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/common/ActivityCommConstant.java
+END
+VersionUpdateManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/common/VersionUpdateManager.java
+END
+PrefDataUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/common/PrefDataUtil.java
+END
+PushMessageRouter.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/common/PushMessageRouter.java
+END
+NotificationListenService.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/common/NotificationListenService.java
+END
+ActivityCoverManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/common/ActivityCoverManager.java
+END
+ActivityManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/common/ActivityManager.java
+END
+YtHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/common/YtHandler.java
+END
+PhoneUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/common/PhoneUtils.java
+END
+TimeUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/common/TimeUtil.java
+END
+AnimCommon.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/common/AnimCommon.java
+END

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemRL"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+     >
+
+    <LinearLayout
+        android:id="@+id/itemLL"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal" >
+		
+		<!-- 收藏 -->
+
+        <RelativeLayout
+            android:id="@+id/leftRL"
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bg_recommandsite_item_favorite" >
+
+            <LinearLayout
+                android:id="@+id/iconLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/clockiconIV"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_favor_blue" />
+
+                <TextView
+                    android:id="@+id/setfavorTV"
+                    style="@style/text_setting_list_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收藏"
+                    android:textColor="@color/grayfont"
+                    android:textSize="11sp" />
+            </LinearLayout>
+            
+        </RelativeLayout>
+		
+		<!-- 站点 -->
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="fill_parent"
+            android:background="@color/divider_color_blue" />
+
+        <RelativeLayout
+            android:id="@+id/rightRL"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bg_recommandsite_item_site"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/siteTV"
+                style="@style/text_favor_site_list_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="绿都城"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/siteArrowIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_more_gray" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/baselineIV"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/divider_color" />
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/pop_menu_width"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal" >
+
+    <RelativeLayout
+        android:layout_width="@dimen/pop_menu_width"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" >
+		
+        <!-- 班车号 -->
+        <TextView
+            android:id="@+id/driver_phone_num_prefix_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/driver_bus_str"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/driver_phone_num_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/driver_phone_num_prefix_TV"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/driver_phone_num_prefix_TV"
+            android:text="" />
+
+        <!-- 司机 -->
+        <TextView
+            android:id="@+id/driver_name_prefix_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/driver_phone_num_prefix_TV"
+            android:layout_below="@+id/driver_phone_num_prefix_TV"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dip"
+            android:text="@string/driver_name_str"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/driver_name_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/driver_name_prefix_TV"
+            android:layout_alignLeft="@+id/driver_phone_num_TV"
+            android:layout_toRightOf="@id/driver_name_prefix_TV"
+            android:text=""
+            android:textColor="@color/black" />
+
+        <!-- 电话 -->
+        <TextView
+            android:id="@+id/driver_phone_prefix_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/driver_phone_num_prefix_TV"
+            android:layout_below="@id/driver_name_prefix_TV"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dip"
+            android:text="@string/driver_phone_str"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/driver_phone_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/driver_phone_prefix_TV"
+            android:layout_alignLeft="@+id/driver_phone_num_TV"
+            android:layout_toRightOf="@id/driver_phone_prefix_TV"
+            android:text=""
+            android:textColor="@color/bg_blue_dark" />
+
+        <ImageView
+            android:id="@+id/arrowIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/driver_arrowIV_str"
+            android:src="@drawable/activity_infactory_arrow_driverinfo" />
+    </RelativeLayout>
+
+</RelativeLayout>

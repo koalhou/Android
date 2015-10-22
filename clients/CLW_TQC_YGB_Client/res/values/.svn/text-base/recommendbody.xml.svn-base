@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="recommend_body">安芯员工版——让早上出门前的时间不再匆匆忙忙，点这里下载“从容”：http://61.163.211.129:8030/version/opt/m2mfile/ftp/ygbapk/CLW_TQC_YGB_Client.apk</string>
+    <string name="recommend_body1">安芯员工版——“每天少等待22分钟”，每个月就可以“多休息1天”，点这里下载“高效”：http://61.163.211.129:8030/version/opt/m2mfile/ftp/ygbapk/CLW_TQC_YGB_Client.apk</string>
+    <string name="recommend_body2">安芯员工版——工作再忙也不能错过回家的末班车，点这里下载“温馨”：http://61.163.211.129:8030/version/opt/m2mfile/ftp/ygbapk/CLW_TQC_YGB_Client.apk</string>
+
+</resources>

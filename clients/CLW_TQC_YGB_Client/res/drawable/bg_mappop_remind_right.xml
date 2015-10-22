@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/in_station_right_normal" android:state_pressed="false">
+        <!--
+ <shape>
+            <solid android:color="#DD3F3F3F" />
+
+            <corners android:bottomLeftRadius="0dp" android:bottomRightRadius="5dp" android:topLeftRadius="0dp" android:topRightRadius="5dp" />
+        </shape>
+        -->
+    </item>
+    <item android:drawable="@drawable/in_station_right_active" android:state_pressed="true"></item>
+
+</selector>

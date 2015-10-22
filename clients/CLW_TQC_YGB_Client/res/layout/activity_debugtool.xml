@@ -1,0 +1,76 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_ad_bottomcontent"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <EditText
+                android:id="@+id/et_ad_querytxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/sbar_ad_location"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:text="help /all" />
+
+            <SeekBar
+                android:id="@+id/sbar_ad_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:maxHeight="5dp"
+                android:minHeight="5dp"
+                android:paddingRight="8dp"
+                android:progress="20"
+                android:progressDrawable="@drawable/bg_progress_line"
+                android:secondaryProgress="50"
+                android:thumb="@drawable/ic_sound_point"
+                android:thumbOffset="20px" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btn_ad_shortcut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="快捷" />
+
+            <Button
+                android:id="@+id/btn_ad_query"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="执行" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_ad_topcontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_ad_bottomcontent"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/lv_ad_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+	<string name="firstFactory_summer_body">【一厂运营时间】:上午08:20&#8211;11:30，下午13:30&#8211;18:30，非运营时间段可能无法乘坐班车。</string>
+    <string name="firstFactory_winter_body">【一厂运营时间】:上午08:20&#8211;11:30，下午13:00&#8211;18:00，非运营时间段可能无法乘坐班车。</string>
+    
+	<string name="secondFactory_summer_body">【二厂运营时间】:上午09:00&#8211;12:00，下午13:30&#8211;18:30，非运营时间段可能无法乘坐班车。</string>
+    <string name="secondFactory_winter_body">【二厂运营时间】:上午09:00&#8211;12:00，下午13:00&#8211;18:00，非运营时间段可能无法乘坐班车。</string>
+    
+</resources>

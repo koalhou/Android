@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="grayfont">#929292</color>
+    <color name="grayfont_dark">#404040</color>
+    <color name="divider_color">#eeeeee</color>
+    <color name="divider_color_blue">#7ab7ff</color>
+    <color name="sel_bottom_color">#3f7fc9</color>
+    <color name="main_barcolor">#393939</color>
+    <color name="bg_pagecover">#33333333</color>
+    <color name="bg_commoncheckbox">#222222</color>
+    <color name="bg_gray">#f5f6f5</color>
+    <color name="bg_gray_dark">#c7c7c7</color>
+    <color name="bg_sitecolor_gray">#dadada</color>
+    <color name="listview_press">#ffeeeeee</color>
+    <color name="listview_normal">#00ffffff</color>
+    <color name="gray">#5d5d5d</color>
+    
+    <!-- 主题颜色 -->
+    <color name="maincolor">#3f7fc9</color>
+    <color name="bg_maincolor">#e8e8e8</color>
+    <color name="darkgray">#d3d3d3</color>
+    <color name="fontcolor_weekday">#000000</color>
+    <color name="fontcolor_weekend">#808080</color>
+
+    <!-- 地图选点颜色 -->
+    <color name="mapgrayPressed">#b9b9b9</color>
+    <color name="body_bg">#f0ece1</color>
+    <color name="date_bg">#e9e9e9</color>
+    <color name="date_gray">#a0a0a0</color>
+    <color name="red">#ff0000</color>
+    <!-- 刷新时间文字颜色 -->
+    <color name="flush_time_bg">#989898</color>
+	
+	 <color name="remind_pressed">#494949</color>
+	 <color name="bg_select_click_normal">#00ffffff</color>
+	 <color name="bg_select_click_pressed">#50000000</color>
+	 
+	 <color name="listview_diver">#e1e1e1</color>
+	 <color name="password_confirm">#5b5b5b</color>
+	 <color name="black_light">#454545</color>
+	 
+	 <color name="bright_foreground_dark">#ffffffff</color>  
+	 <color name="bg_blue">#407ec9</color> 
+	 <color name="bg_blue_dark">#0033cc</color>  
+	 
+	 <color name="backColor">#2000</color>
+	 
+	 <color name="bg_feed_back_normal">#d2d2d2</color>  
+	 <color name="bg_feed_back_pressed">#c8c8c8</color>
+</resources>

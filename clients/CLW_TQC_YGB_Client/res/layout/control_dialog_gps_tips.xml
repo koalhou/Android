@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background = "#80000000"
+    android:minWidth="280dip"
+    android:orientation="vertical" >
+    
+    <!-- TITLE -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginTop="20dip"
+        android:layout_marginLeft="25dip"
+        android:layout_marginRight="25dip"
+        
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/DialogText.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:text=""
+            android:textColor="#ffffff"
+            android:textSize="20dip" />
+    </LinearLayout>
+    
+	<!-- 在位置设置中打开GPS -->
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:layout_marginLeft="25dip"
+        android:layout_marginRight="25dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/message"
+            style="@style/DialogText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff" />
+        
+    </LinearLayout>
+	
+	<!-- 不再显示此内容 -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:layout_marginBottom="20dip"
+        
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/positiveButton"
+            android:layout_width="50dip"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="3dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="5dip"
+            android:paddingTop="10dip"
+            android:paddingBottom="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/bg_bluebtn"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/negativeButton"
+            android:layout_width="50dip"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="3dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="20dip"
+            android:paddingTop="10dip"
+            android:paddingBottom="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/bg_graybtn"
+            android:singleLine="true" 
+            style="@style/dialogStyle"
+            android:text=""
+            />
+        
+    </LinearLayout>
+
+</LinearLayout>

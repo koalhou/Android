@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/main_barcolor" >
+
+    <Button
+        android:id="@+id/btn_it_left"
+        style="@style/text_title_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="22dp"
+        android:background="@drawable/bg_settingbtn" />
+
+    <Button
+        android:id="@+id/btn_it_right"
+        style="@style/text_title_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="22dp"
+        android:background="@drawable/bg_bluebtn"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_it_center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true" 
+        android:clickable="true"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/rl_it_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:clickable="true" >
+
+            <TextView
+                android:id="@+id/tv_it_centerup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:singleLine="true"
+                android:text="一厂站点搜索"
+                android:textColor="#FBFBFB"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_it_centerdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_it_centerup"
+                android:layout_alignBottom="@+id/tv_it_centerup"
+                
+                android:clickable="true"
+                android:text="晚班"
+                android:textColor="#BFBFBF"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/iv_it_triangle"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@+id/tv_it_centerdown"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@+id/tv_it_centerdown"
+                android:src="@drawable/ic_title_center_triangle" />
+            
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_maincolor" >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/include_title" />
+
+    <LinearLayout
+        android:id="@+id/timeLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_block"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/firstFactoryRL"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_settingitem_topround" >
+
+            <TextView
+                style="@style/text_setting_list_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="第一工厂"
+                android:textAppearance="@style/content_font_16"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/firstFactoryIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:src="@drawable/bg_listselected" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/divider_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/secondFactoryRL"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_settingitem_bottomround" >
+
+            <TextView
+                style="@style/text_setting_list_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:text="第二工厂"
+                android:textAppearance="@style/content_font_16"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/secondFactoryIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:src="@drawable/bg_listselected"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/divider_color" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

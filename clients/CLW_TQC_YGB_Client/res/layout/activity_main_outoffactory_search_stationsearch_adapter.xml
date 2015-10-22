@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#e8e8e8"
+    android:orientation="vertical" >
+
+    
+      <Button 
+	    android:id="@+id/stationBtn"
+	    android:layout_width="90dip"
+	    android:layout_height="wrap_content"
+	    android:paddingTop="10dip"
+	    android:paddingBottom="10dip"
+	    android:background="@drawable/bg_bluebtn"
+	    android:text="远大"
+		android:layout_centerHorizontal="true"
+		android:textColor="@color/white"
+		android:textSize="15sp"
+		android:focusable="false"
+		android:clickable="false"
+	    />
+   
+
+    <!-- <TextView
+        android:id="@+id/stationBtn"
+        android:layout_width="90dip"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bluebtn"
+        android:paddingBottom="10dip"
+        android:paddingTop="10dip"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="远大"
+        android:textColor="@color/white"
+        android:textSize="15sp" /> -->
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/station_search_header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:visibility="visible"
+        >   
+		
+        <TextView
+            android:id="@+id/tv_cli_name"
+            style="@style/text_station_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:text="搜索提示" 
+            android:textStyle="bold"
+            android:textColor="@color/grayfont_dark"
+            />
+        
+        <Button 
+            android:id="@+id/clearBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="清空"
+            android:paddingTop="3dip"
+            android:paddingBottom="3dip"
+            android:paddingLeft="12dip"
+            android:paddingRight="12dip"
+            android:background="@drawable/bg_clearbtn"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

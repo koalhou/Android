@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        >
+
+        <CheckBox
+            android:id="@+id/cb_cli_flag"
+            android:layout_width="48px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:button="@drawable/bg_listselected_pop"
+            android:checked="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_cli_name"
+            style="@style/text_pop_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/cb_cli_flag"
+            android:text="一厂厂内环线" />
+        
+        	<LinearLayout 
+        	    android:layout_toRightOf="@+id/tv_cli_name"
+        	    android:layout_width="10dp"
+        	    android:layout_height="1dp"
+        	    ></LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_maincolor"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/contacts_tips_RL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_block"
+        android:paddingBottom="4dip"
+        android:paddingLeft="12dip"
+        android:paddingRight="12dip" >
+
+        <TextView
+            android:id="@+id/contacts_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:padding="10dp"
+            android:text="@string/contacts_tips_text"
+            android:textSize="17sp" />
+
+        <!-- 第1个联系人 -->
+
+        <TextView
+            android:id="@+id/contacts_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contacts_tips"
+            android:gravity="left"
+            android:paddingBottom="2dip"
+            android:paddingLeft="15dip"
+            android:paddingTop="2dip"
+            android:text="魏珂-车联网研究部"
+            android:textColor="@color/grayfont_dark" />
+
+        <TextView
+            android:id="@+id/contacts_0_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contacts_0"
+            android:gravity="left"
+            android:paddingBottom="2dip"
+            android:paddingLeft="15dip"
+            android:paddingTop="2dip"
+            android:text="电话：66714977（内线84977）"
+            android:textColor="@color/grayfont_dark" />
+
+        <TextView
+            android:id="@+id/contacts_0_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contacts_0_phone"
+            android:gravity="left"
+            android:paddingBottom="10dip"
+            android:paddingLeft="15dip"
+            android:paddingTop="2dip"
+            android:text="邮箱：weike@yutong.com"
+            android:textColor="@color/grayfont_dark" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

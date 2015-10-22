@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E8E8" >
+
+    <include
+        android:id="@+id/include1"
+        layout="@layout/include_title" />
+
+    <com.yutong.clw.ygbclient.view.widget.CommonCheckBox
+        android:id="@+id/cb_amosr_open"
+        android:layout_width="72dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="9dp"
+        android:background="#ffffff"
+        android:checked="false"
+        android:focusable="true"
+        android:textSize="16sp" />
+
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/include1"
+        android:layout_centerHorizontal="true"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/content_font_19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提醒站点：" />
+
+        <TextView
+            android:id="@+id/tv_amosr_stationname"
+            style="@style/content_font_19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textView1"
+            android:text="绿都城" />
+
+        <TextView
+            android:id="@+id/tv_amosr_range"
+            style="@style/content_font_16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_amosr_stationname"
+            android:layout_toRightOf="@+id/tv_amosr_stationname"
+            android:text="早班" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginBottom="10dp"
+        android:fadingEdge="vertical"
+        android:fadingEdgeLength="0dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_block"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    style="@style/content_font_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="车辆" />
+
+                <TextView
+                    android:id="@+id/tv_amosr_cars"
+                    style="@style/content_font_17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textView4"
+                    android:text="58号"
+                    android:textColor="#7C7C7C" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#C1C1C1" >
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/textView6"
+                    style="@style/content_font_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="方式" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignLeft="@+id/textView6"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textView6"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp" >
+
+                    <RelativeLayout
+                        android:id="@+id/ll_amosr_remindtype"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_dropcontent_blue"
+                        android:clickable="true"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_amosr_remindtype"
+                            style="@style/content_font_16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="按距离"
+                            android:textColor="#ffffff" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/ic_tri_down_white" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ll_amosr_reminddetail"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_dropcontent_gray"
+                        android:clickable="true"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_amosr_reminddetail"
+                            style="@style/content_font_16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:text="提前500米"
+                            android:textColor="#7D7D7D" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/ic_tri_down_gray" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#C1C1C1" >
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/textView7"
+                    style="@style/content_font_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="重复" />
+
+                <TextView
+                    style="@style/content_font_18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView7"
+                    android:layout_alignBottom="@+id/textView7"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/textView7"
+                    android:text="(不重复则仅限今日有效)"
+                    android:textColor="#606060" />
+
+                <com.yutong.clw.ygbclient.view.widget.WeekSelectView
+                    android:id="@+id/wsv_amosr_weeks"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/textView7"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal" >
+                </com.yutong.clw.ygbclient.view.widget.WeekSelectView>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#C1C1C1" >
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_amosr_ringset"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_settingitem_bottomround"
+                android:clickable="true"
+                android:padding="10dp" >
+
+                <TextView
+                    style="@style/content_font_20"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="响铃方式" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:focusable="false"
+                    android:src="@drawable/ic_more_gray" />
+            </RelativeLayout>
+            
+           
+        </LinearLayout>
+        
+        
+        
+        
+    </ScrollView>
+    
+    <LinearLayout 
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/scrollView1"
+        >
+             <TextView 
+       		 android:id="@+id/remind_tips"
+       		 android:layout_width="match_parent"
+       		 android:layout_height="wrap_content"
+       		 android:layout_marginLeft="15dip"
+       		 android:layout_marginRight="15dip"
+       		 android:text="@string/station_tips_str"
+       		 android:textColor="@color/grayfont"
+      		 android:textSize="12sp" />
+            
+        </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_include_title_center" >
+
+        <Button
+            android:id="@+id/btn_amosr_cancel"
+            style="@style/content_font_18"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="-10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_cbtn"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="#ffffff" />
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#a19d9d"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_amosr_confirm"
+            style="@style/content_font_18"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="-10dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_cbtn"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</RelativeLayout>

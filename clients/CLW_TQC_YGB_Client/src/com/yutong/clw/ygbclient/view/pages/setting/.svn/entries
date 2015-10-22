@@ -1,0 +1,129 @@
+10
+
+dir
+46
+http://192.168.175.105/svn/datas/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/pages/setting
+http://192.168.175.105/svn/datas
+
+
+
+2014-10-07T08:35:06.591989Z
+24
+test
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+f81c60f4-19e2-fb44-8912-2fbc0516ba03
+
+changePhone
+dir
+
+ring
+dir
+
+feedback
+dir
+
+recommand
+dir
+
+changePassword
+dir
+
+about
+dir
+
+announcement
+dir
+
+remindCollection
+dir
+
+SettingActivity.java
+file
+
+
+
+
+2015-01-14T01:17:48.812780Z
+1370696644def6fe455f1839e3de1b68
+2014-10-07T08:35:06.591989Z
+24
+test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+21066
+
+ViewPagerAdapter.java
+file
+
+
+
+
+2015-01-14T01:17:48.825780Z
+847be42ff44f648890350f857d92e09e
+2014-10-07T08:35:06.591989Z
+24
+test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4159
+
+refreshSetting
+dir
+
+userguide
+dir
+
+changeFactory
+dir
+

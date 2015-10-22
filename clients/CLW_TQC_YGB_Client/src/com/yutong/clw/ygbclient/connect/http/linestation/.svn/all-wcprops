@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation
+END
+VehicheRealTimeDataReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/VehicheRealTimeDataReq.java
+END
+VehicheRealTimeDataRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/VehicheRealTimeDataRes.java
+END
+GetStationAreasReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/GetStationAreasReq.java
+END
+RecommendStationsReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/RecommendStationsReq.java
+END
+GetVehichesReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/GetVehichesReq.java
+END
+StationRealTimeDataReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/StationRealTimeDataReq.java
+END
+GetStationAreasRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/GetStationAreasRes.java
+END
+StationRealTimeDataRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/StationRealTimeDataRes.java
+END
+GetVehichesRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/GetVehichesRes.java
+END
+RecommendStationsRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/RecommendStationsRes.java
+END
+SetFavoritesStationsReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/SetFavoritesStationsReq.java
+END
+GetAreaLinesReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/GetAreaLinesReq.java
+END
+GetRemindStationsReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/GetRemindStationsReq.java
+END
+StationFavoritesReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/StationFavoritesReq.java
+END
+SetFavoritesStationsRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/SetFavoritesStationsRes.java
+END
+GetAreaLinesRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/GetAreaLinesRes.java
+END
+GetRemindStationsRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/GetRemindStationsRes.java
+END
+GetSingleRemindStationsReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/GetSingleRemindStationsReq.java
+END
+StationFavoritesRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/StationFavoritesRes.java
+END
+GetSingleRemindStationsRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/GetSingleRemindStationsRes.java
+END
+GetIdsLinesReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/GetIdsLinesReq.java
+END
+GetIdsLinesRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/GetIdsLinesRes.java
+END
+SetRemindStationsReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/SetRemindStationsReq.java
+END
+VehicheDriverDataReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/VehicheDriverDataReq.java
+END
+SetRemindStationsRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/SetRemindStationsRes.java
+END
+GetStationReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/GetStationReq.java
+END
+VehicheDriverDataRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/VehicheDriverDataRes.java
+END
+GetStationRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/linestation/GetStationRes.java
+END

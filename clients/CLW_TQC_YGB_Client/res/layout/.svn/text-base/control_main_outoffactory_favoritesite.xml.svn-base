@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:anxin="http://schemas.android.com/apk/res/com.yutong.clw.ygbclient"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_amb_calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_calendar"
+                android:text=""
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_amb_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:drawableLeft="@drawable/bg_calendar"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="2013/09/01"
+                android:textColor="@drawable/bg_color_calendar"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <com.yutong.clw.ygbclient.view.widget.PullToRefreshView
+            android:id="@+id/pullToRefreshView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#BEBCBD"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <ExpandableListView
+                android:id="@+id/explistview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:childDivider="@color/bg_gray"
+                android:divider="#AAA8A9"
+                android:dividerHeight="0.5dip"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none"
+                android:scrollingCache="false" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#BEBCBD"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </com.yutong.clw.ygbclient.view.widget.PullToRefreshView>
+    </LinearLayout>
+
+    <com.yutong.clw.ygbclient.view.widget.DraggableContainerLayout
+        android:id="@+id/rl_filter"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        anxin:dockside="right"
+        anxin:draggable="true" >
+
+        <TextView
+            android:id="@+id/tv_filter"
+            android:layout_width="40dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/bg_filter_rigtht"
+            android:ems="1"
+            android:gravity="center"
+            android:text="筛\r\n选"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </com.yutong.clw.ygbclient.view.widget.DraggableContainerLayout>
+
+</RelativeLayout>

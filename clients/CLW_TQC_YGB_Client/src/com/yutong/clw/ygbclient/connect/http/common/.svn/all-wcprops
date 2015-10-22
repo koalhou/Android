@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/common
+END
+HttpRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/common/HttpRes.java
+END
+AbstractReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/common/AbstractReq.java
+END
+AbstractRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/common/AbstractRes.java
+END
+HttpMsgSendUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/connect/http/common/HttpMsgSendUtil.java
+END

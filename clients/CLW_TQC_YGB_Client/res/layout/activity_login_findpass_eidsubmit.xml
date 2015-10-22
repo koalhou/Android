@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:axygb="http://schemas.android.com/apk/res/com.yutong.clw.ygbclient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_maincolor"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_title" />
+
+    <RelativeLayout
+        android:id="@+id/contentRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/inputphonelabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="请输入您的员工号"
+            android:textColor="#333333" />
+
+        <com.yutong.clw.ygbclient.view.widget.ExEditText
+            android:id="@+id/findpwd_empnumber_ET"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/inputphonelabel"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            axygb:hintText="员工号"
+            axygb:paddingLeft="15dp" />
+    </RelativeLayout>
+
+</LinearLayout>

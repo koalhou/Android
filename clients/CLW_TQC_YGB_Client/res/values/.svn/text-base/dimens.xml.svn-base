@@ -1,0 +1,21 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+        <!-- 刷新相关 -->
+    <dimen name="refreshProgressHeight">16dp</dimen>
+    <dimen name="refreshProgressWidth">16dp</dimen>
+    <dimen name="refreshProgressMarginLeft">71dp</dimen>
+    <dimen name="refreshImageMarginLeft">71dp</dimen>
+    <dimen name="refreshHeight">53dp</dimen>
+    
+    <dimen name="title_rightButton_padding">8dp</dimen>
+    
+    <!-- 地图按钮相关 -->
+    <dimen name="map_margin_left_btn">10dip</dimen>
+    <dimen name="map_margin_bottom_btn">24dip</dimen>
+    <dimen name="map_margin_top_btn">15dip</dimen>
+    <dimen name="pop_menu_width">200dp</dimen>
+</resources>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_weekselect_parent"
+    android:orientation="horizontal"
+    android:paddingBottom="0dp"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    android:paddingTop="0dp" >
+
+    <CheckBox
+        android:id="@+id/cb_cw_1"
+        style="@style/weekSelectItemStyleFrist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:button="@null"
+        android:gravity="center"
+        android:text="一" />
+
+    <LinearLayout
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#BBBBBB"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cb_cw_2"
+        style="@style/weekSelectItemStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:button="@null"
+        android:checked="true"
+        android:gravity="center"
+        android:text="二" />
+
+    <LinearLayout
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#BBBBBB"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cb_cw_3"
+        style="@style/weekSelectItemStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:button="@null"
+        android:gravity="center"
+        android:text="三" />
+
+    <LinearLayout
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#BBBBBB"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cb_cw_4"
+        style="@style/weekSelectItemStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:button="@null"
+        android:checked="true"
+        android:gravity="center"
+        android:text="四" />
+
+    <LinearLayout
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#BBBBBB"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cb_cw_5"
+        style="@style/weekSelectItemStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:button="@null"
+        android:gravity="center"
+        android:text="五" />
+
+    <LinearLayout
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#BBBBBB"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cb_cw_6"
+        style="@style/weekSelectItemStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:button="@null"
+        android:gravity="center"
+        android:text="六" />
+
+    <LinearLayout
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#BBBBBB"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/cb_cw_7"
+        style="@style/weekSelectItemStyleLast"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:button="@null"
+        android:checked="true"
+        android:gravity="center"
+        android:text="日" />
+
+</LinearLayout>

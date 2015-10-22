@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/date_bg"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" >
+			
+            <TextView
+                android:id="@+id/tv_timeshow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:text="2013/08"
+                android:textColor="#4F4F4F"
+                android:textSize="20sp"
+                android:textStyle="bold" 
+                android:layout_centerVertical="true"
+                />
+            
+            <Button 
+                android:id="@+id/taday_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/today"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_calendar_today"
+                android:layout_marginTop="5dip"
+                android:layout_marginLeft="10dip"
+                android:padding="5dip"
+                android:layout_toRightOf="@+id/tv_timeshow"
+                android:layout_centerVertical="true"
+                />
+            
+            <ImageView
+                android:id="@+id/btn_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="23dp"
+                android:src="@drawable/bg_calendar" 
+                />
+
+            
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp" >
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/sunday"
+                    android:textSize="15sp" 
+                    android:textStyle="bold"
+                    android:textColor="@color/date_gray"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_mdia_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/monday"
+                    android:textColor="#4F4F4F"
+                    android:textSize="15sp" 
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_sco_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/tuesday"
+                    android:textColor="#4F4F4F"
+                    android:textSize="15sp" 
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_scpi_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/wednesday"
+                    android:textColor="#4F4F4F"
+                    android:textSize="15sp" 
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_sco_schoolname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/thursday"
+                    android:textColor="#4F4F4F"
+                    android:textSize="15sp" 
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/friday"
+                    android:textColor="#4F4F4F"
+                    android:textSize="15sp" 
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/saturday"
+                    android:textSize="15sp" 
+                    android:textStyle="bold"
+                    android:textColor="@color/date_gray"
+                    />
+
+            </LinearLayout>
+
+            <GridView
+                android:id="@+id/gridView_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:listSelector="@color/body_bg"
+                android:numColumns="7" >
+            </GridView>
+
+            <!-- <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/tv_fd_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择红圈勾选的日期即可查看当天乘车记录"
+                    android:textSize="14sp" />
+
+            </LinearLayout> -->
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

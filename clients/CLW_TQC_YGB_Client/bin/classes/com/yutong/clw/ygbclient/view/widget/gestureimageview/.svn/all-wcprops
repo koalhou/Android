@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/datas/!svn/ver/24/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/widget/gestureimageview
+END
+Animation.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/datas/!svn/ver/24/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/widget/gestureimageview/Animation.java
+END
+FlingAnimation.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/datas/!svn/ver/24/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/widget/gestureimageview/FlingAnimation.java
+END
+GestureImageViewListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/datas/!svn/ver/24/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/widget/gestureimageview/GestureImageViewListener.java
+END
+ZoomAnimation.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/datas/!svn/ver/24/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/widget/gestureimageview/ZoomAnimation.java
+END
+FlingAnimationListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/datas/!svn/ver/24/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/widget/gestureimageview/FlingAnimationListener.java
+END
+FlingListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/datas/!svn/ver/24/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/widget/gestureimageview/FlingListener.java
+END
+GestureImageViewTouchListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/svn/datas/!svn/ver/24/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/widget/gestureimageview/GestureImageViewTouchListener.java
+END
+MoveAnimation.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/datas/!svn/ver/24/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/widget/gestureimageview/MoveAnimation.java
+END
+VectorF.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/datas/!svn/ver/24/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/widget/gestureimageview/VectorF.java
+END
+Animator.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/datas/!svn/ver/24/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/widget/gestureimageview/Animator.java
+END
+MathUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/datas/!svn/ver/24/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/widget/gestureimageview/MathUtils.java
+END
+ZoomAnimationListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/datas/!svn/ver/24/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/widget/gestureimageview/ZoomAnimationListener.java
+END
+GestureImageView.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/datas/!svn/ver/24/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/widget/gestureimageview/GestureImageView.java
+END
+MoveAnimationListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/datas/!svn/ver/24/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/widget/gestureimageview/MoveAnimationListener.java
+END

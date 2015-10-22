@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_maincolor" >
+
+    <include
+        android:id="@+id/titlebar"
+        layout="@layout/include_title" />
+
+    <RelativeLayout
+        android:id="@+id/contentRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titlebar"
+        android:padding="15dp"
+        android:visibility="visible" >
+
+        <EditText
+            android:id="@+id/inputET"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/bg_input"
+            android:gravity="top"
+            android:hint="您的建议非常重要"
+            android:maxLength="500"
+            android:padding="10dp" />
+        
+        <!-- 输入字数提示 -->
+        <TextView
+            android:id="@+id/word_Tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/inputET"
+            android:layout_marginTop="10dip"
+            android:layout_marginRight="5dip"
+            android:gravity="center" 
+            android:text="字"
+            />
+        
+        <TextView
+            android:id="@+id/leftCharacterNum_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/word_Tips"
+            android:layout_alignBottom="@+id/word_Tips"
+            android:gravity="center" 
+            android:text="500"
+            />
+        
+        <TextView
+            android:id="@+id/leftCharacterTips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/word_Tips"
+            android:layout_toLeftOf="@id/leftCharacterNum_TV"
+            android:gravity="center" 
+            android:text="您还可以输入"
+            />
+        
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contacts_tips_RL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contentRL"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/contacts_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:padding="10dp"
+            android:text="@string/contacts_tips_text"
+            android:textSize="17sp" />
+
+        <!-- 第1个联系人 -->
+
+        <TextView
+            android:id="@+id/contacts_0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contacts_tips"
+            android:gravity="left"
+            android:paddingBottom="2dip"
+            android:paddingLeft="15dip"
+            android:paddingTop="2dip"
+            android:text="刘乐乐-车联网研究部"
+            android:textColor="@color/grayfont_dark" />
+
+        <TextView
+            android:id="@+id/contacts_0_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contacts_0"
+            android:gravity="left"
+            android:paddingBottom="2dip"
+            android:paddingLeft="15dip"
+            android:paddingTop="2dip"
+            android:text="电话：66714946（内线84946）"
+            android:textColor="@color/grayfont_dark" />
+
+        <TextView
+            android:id="@+id/contacts_0_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contacts_0_phone"
+            android:gravity="left"
+            android:paddingBottom="2dip"
+            android:paddingLeft="15dip"
+            android:paddingTop="2dip"
+            android:text="邮箱：liulla@yutong.com"
+            android:textColor="@color/grayfont_dark" />
+
+        <!-- 第2个联系人 -->
+
+        <TextView
+            android:id="@+id/contacts_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contacts_0_mail"
+            android:gravity="left"
+            android:paddingBottom="2dip"
+            android:paddingLeft="15dip"
+            android:paddingTop="12dip"
+            android:text="侯俊虎-车联网研究部"
+            android:textColor="@color/grayfont_dark" />
+
+        <TextView
+            android:id="@+id/contacts_1_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contacts_1"
+            android:gravity="left"
+            android:paddingBottom="2dip"
+            android:paddingLeft="15dip"
+            android:paddingTop="2dip"
+            android:text="电话：66714958（内线84958）"
+            android:textColor="@color/grayfont_dark" />
+
+        <TextView
+            android:id="@+id/contacts_1_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contacts_1_phone"
+            android:gravity="left"
+            android:paddingBottom="2dip"
+            android:paddingLeft="15dip"
+            android:paddingTop="2dip"
+            android:text="邮箱：houjh@yutong.com"
+            android:textColor="@color/grayfont_dark" />
+    </RelativeLayout>
+
+</RelativeLayout>

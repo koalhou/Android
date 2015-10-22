@@ -1,0 +1,112 @@
+<TabHost 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:clickable="true" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.0"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/main_tab_group"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:background="@color/main_barcolor"
+            android:baselineAligned="false"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <!-- 厂内通勤 -->
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <RadioButton
+                    android:id="@+id/rbtn_main_infactory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_main_tab"
+                    android:button="@null"
+                    android:checked="true"
+                    android:text="" />
+
+                <TextView
+                    style="@style/text_main_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:drawableTop="@drawable/bg_inside"
+                    android:text="@string/main_activity_infacory_tab_str" />
+            </RelativeLayout>
+
+            <!-- 厂外通勤 -->
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <RadioButton
+                    android:id="@+id/rbtn_main_outfactory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_main_tab"
+                    android:button="@null"
+                    android:text="" />
+
+                <TextView
+                    style="@style/text_main_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:drawableTop="@drawable/bg_outside"
+                    android:text="@string/main_activity_outfacory_tab_str" />
+            </RelativeLayout>
+
+            <!-- 厂间通勤 -->
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <RadioButton
+                    android:id="@+id/rbtn_main_betweenfactory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_main_tab"
+                    android:button="@null"
+                    android:text="" />
+
+                <TextView
+                    style="@style/text_main_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:drawableTop="@drawable/bg_between"
+                    android:text="@string/main_activity_betweenfacory_tab_str" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</TabHost>

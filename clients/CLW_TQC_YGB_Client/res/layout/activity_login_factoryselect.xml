@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:axygb="http://schemas.android.com/apk/res/com.yutong.clw.ygbclient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/maincolor"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/contentRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp" >
+
+        <ImageView
+            android:id="@+id/im_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/im_factoryset" >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tiplabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/im_logo"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="设定您所在的厂区"
+            android:textColor="#90ffffff"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/facradioRG"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tiplabel"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/factory1RB"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_selectbtn_left"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/button_selectbtn"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="第一工厂"
+                android:textColor="@color/color_radiobutton"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/factory2RB"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_selectbtn_right"
+                android:button="@null"
+                android:drawableLeft="@drawable/button_selectbtn"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="第二工厂"
+                android:textColor="@color/color_radiobutton"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/nextbtn"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/facradioRG"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_yellowbtn"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="开始使用"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</LinearLayout>

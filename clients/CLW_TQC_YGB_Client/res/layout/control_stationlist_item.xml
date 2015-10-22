@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp" >
+
+    <RelativeLayout
+        android:id="@+id/hintRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        >
+
+       <!--  <CheckBox
+            android:id="@+id/cb_cli_flag"
+            android:layout_width="48px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:button="@drawable/bg_listselected"
+            android:checked="true"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            android:text="" /> -->
+            
+		<ImageView 
+			android:id="@+id/flagImage"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentLeft="true"    
+			android:layout_marginLeft="5dp"
+			android:background="@drawable/ic_search_history"
+		    />
+		
+        <TextView
+            android:id="@+id/tv_cli_name"
+            style="@style/text_station_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/flagImage"
+            android:text="一厂厂内环线" />
+    </RelativeLayout>
+
+</RelativeLayout>

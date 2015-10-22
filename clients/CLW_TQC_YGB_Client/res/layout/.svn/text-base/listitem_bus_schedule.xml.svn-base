@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/itemRL"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp" >
+
+        <LinearLayout
+            android:id="@+id/itemLL"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bg_recommandsite_item_site"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:id="@+id/leftRL"
+                android:layout_width="60dp"
+                android:layout_height="fill_parent" >
+
+                <TextView
+                    android:id="@+id/busNumberTV"
+                    style="@style/text_setting_list_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="187"
+                    android:textColor="@color/maincolor"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/divider_color" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rightRL"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/statusLL"
+                    android:layout_width="70dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="left"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/statusTV"
+                        style="@style/text_favor_site_list_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="已进站"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tipTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="直达技术北楼"
+                        android:textColor="@color/grayfont"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/planTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="坐满发车"
+                    android:textColor="@color/grayfont" />
+
+                <RelativeLayout
+                    android:id="@+id/clocktipRL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/clocktipTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/bg_map_stationname"
+                        android:text="提前10分钟提醒"
+                        android:textColor="@color/grayfont_dark"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/baselineIV"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/divider_color" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/opLL"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/itemRL"
+        android:background="@color/bg_gray_dark"
+        android:baselineAligned="false"
+        android:weightSum="3"
+        android:orientation="horizontal" >
+		
+		<!-- 联系司机 -->
+        <LinearLayout
+            android:id="@+id/contact_driver_LL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+             >
+
+            <RelativeLayout
+                android:id="@+id/contact_driver_RL"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bluebtn"
+                android:gravity="center|center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <ImageView
+                    android:id="@+id/driverIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/driver_set_TV"
+                    android:src="@drawable/contact_driver" 
+                    android:contentDescription="@string/main_activity_outfacory_driverIV_str"
+                    />
+
+                <TextView
+                    android:id="@+id/driver_set_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/main_activity_outfacory_driverIV_str"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+       
+       <!--  到站提醒 -->
+        <LinearLayout
+            android:id="@+id/opleftLL"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            >
+
+            <RelativeLayout
+                android:id="@+id/opclockbtnRL"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bluebtn"
+                android:gravity="center|center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <ImageView
+                    android:id="@+id/clocksetIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/clocksetTV"
+                    android:src="@drawable/ic_clock_white" 
+                    android:contentDescription="@string/main_activity_outfacory_clocksetIV_str"
+                    />
+
+                <TextView
+                    android:id="@+id/clocksetTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/main_activity_outfacory_clocksetIV_str"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- 位置详情 -->
+        <LinearLayout
+            android:id="@+id/oprightLL"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            >
+
+            <RelativeLayout
+                android:id="@+id/opmapbtnRL"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_bluebtn"
+                android:gravity="center|center_vertical"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp" >
+
+                <ImageView
+                    android:id="@+id/mapIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_toLeftOf="@+id/mapTV"
+                    android:src="@drawable/ic_map_white" 
+                    android:contentDescription="@string/main_activity_outfacory_mapIV_str"
+                    />
+
+                <TextView
+                    android:id="@+id/mapTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/main_activity_outfacory_mapIV_str"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/tipRL"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/opLL"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@color/white" >
+        
+        <TextView
+            android:id="@+id/tiptextTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:text="@string/searching_str"
+            android:textColor="@color/grayfont"
+            android:textSize="18sp" />
+        
+        <ProgressBar
+            android:id="@+id/searching_ProgressBar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginRight="15dp"
+            android:scrollbarStyle="outsideOverlay" 
+            android:layout_toLeftOf="@+id/tiptextTV"
+            android:layout_centerVertical="true"
+            
+            android:visibility="gone"
+            />
+        
+    </RelativeLayout>
+
+</RelativeLayout>

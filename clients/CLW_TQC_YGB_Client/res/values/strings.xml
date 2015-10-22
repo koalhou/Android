@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">安芯通勤车员工版</string>
+    <string name="action_settings">Settings</string>
+    <string name="loginouttext">注销账号</string>
+    <string name="login">登&#160;&#160;&#160;&#160;录</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="submit">提交</string>
+    <string name="forgotpwd">忘记密码</string>
+    <string name="settings_logout">注销当前登录账户</string>
+    <string name="settings_logout_hint">注销不会删除或更改您的任何数据</string>
+    <string name="title_activity_test_activity2">TestActivity2</string>
+    <string name="menu_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="search">搜索</string>
+    <string name="searchHint">输入乘车站点</string>
+    <string name="mapChoosePointTxt">地图选点</string>
+
+    <!-- 下拉刷新，上拉加载更多 -->
+    <string name="pull_to_refresh_pull_label">向下拖动可以刷新</string>
+    <string name="pull_to_refresh_release_label">松开立即刷新</string>
+    <string name="pull_to_refresh_refreshing_label">加载中\u2026</string>
+    <string name="pull_to_refresh_footer_pull_label">上拉加载更多</string>
+    <string name="pull_to_refresh_footer_release_label">松开后加载</string>
+    <string name="pull_to_refresh_footer_refreshing_label">加载中\u2026</string>
+
+    <!-- zhouzechen add -->
+    <string name="monday">周一</string>
+    <string name="tuesday">周二</string>
+    <string name="wednesday">周三</string>
+    <string name="thursday">周四</string>
+    <string name="friday">周五</string>
+    <string name="saturday">周六</string>
+    <string name="sunday">周日</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="today">今</string>
+    <string name="reflushWait">正在刷新，请稍后</string>
+
+    <!-- 系统设置 -->
+    <!-- 密码修改 -->
+    <string name="input_old_pwd">请输入旧密码</string>
+    <string name="input_new_pwd">请输入新密码</string>
+    <!-- 手机号修改 -->
+    <string name="input_old_phone">请输入之前设定的手机号码</string>
+    <string name="input_new_phone">请输入新的手机号码</string>
+    <string name="input_phone_verify_code">请输入验证码</string>
+    <string name="btn__get_verify_code"> 短信验证 </string>
+    <string name="btn__submit_verify_phone"> 提交 </string>
+    <string name="textView_no_stations">暂无站点</string>
+    <string name="networktip">网络连接异常，请检查网络设置。</string>
+
+    <!-- 闪屏 -->
+    <string name="splash_try">立即体验</string>
+    <string name="splash_back">返回</string>
+    <string name="station_tips_str">没收到提醒？有可能是发车安排临时变动，或者网络原因哦。请以实际乘车情况为准。</string>
+    <string name="sation_arrive_tips">未收藏到站提醒</string>
+    <string name="searching_str">正在查询&#8230; </string>
+    <string name="contacts_tips_text">您还可以通过电话或邮件方式反馈</string>
+    <string name="contacts_0_text">刘乐乐-车联网研究部</string>
+    <string name="support_department">技术支持：车联网研究部</string>
+    <string name="wuliubu_department">物流部通勤车单元</string>
+    <string name="support_group">宇通集团</string>
+    <string name="rights_reserved">Copyright©2013 YuTong.All Rights Reserved</string>
+    <string name="news_infos_none"> 暂无公告信息</string>
+
+    <!-- 登陆 -->
+    <string name="login_password">密码</string>
+    <string name="login_password_hints">初始密码为身份证后6位</string>
+    <string name="time">--:--</string>
+    <string name="num">--</string>
+    <string name="gps_checkbox_tipStr">不再显示此内容</string>
+    <string name="main_activity_infacory_tab_str">厂内通勤</string>
+    <string name="main_activity_outfacory_tab_str">厂外通勤</string>
+    <string name="main_activity_betweenfacory_tab_str">厂间通勤</string>
+    <string name="main_activity_outfacory_mapIV_str">位置详情</string>
+    <string name="main_activity_outfacory_clocksetIV_str">到站提醒</string>
+    <string name="main_activity_outfacory_driverIV_str">联系司机</string>
+    <string name="main_activity_outfacory_drivertips_IV_str">联系司机</string>
+    <string name="main_activity_outfacory_drivertips_TV_str">为了您和他人的安全，班车运行时间请勿打电话给司机，感谢配合！</string>
+
+    <!-- 【设置】-【意见反馈】 -->
+    <string name="activity_feedback_sugession">建议增加司机联系方式，方便东西落在车上时进行联系！</string>
+    <string name="activity_feedback_sugession_replay">感谢您的意见，新版本将在3月份发布！</string>
+    <string name="driver_phone_num_str">1589005635</string>
+    <string name="pop_triangle_IV">pop_triangle_IV</string>
+    <string name="driverImage_str">driverImage</string>
+    <string name="driver_bus_str">班&#160;车&#160;号:</string>
+    <string name="driver_name_str">司&#160;&#160;&#8201;&#160;&#160;&#160;机:</string>
+    <string name="driver_phone_str">电&#160;&#160;&#8201;&#160;&#160;&#160;话:</string>
+    <string name="driver_arrowIV_str">arrowIV</string>
+
+    <!-- <string name="board_floor"> 登 \u0020机\u0020楼\u0020 :</string>  &#160;&#160;&#160;&#160;-->
+	<string name="triangleIV_str">triangleIV_str</string>
+	<string name="favorIV_str">favorIV_str</string>
+	<string name="clockIV_str">clockIV_str</string>
+	<string name="mapIV_str">mapIV_str</string>
+	
+	
+</resources>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+	<!-- android:background="@color/bg_maincolor" -->
+    
+    <include layout="@layout/include_title" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toptitle" >
+
+        <RelativeLayout
+            android:id="@+id/contentRL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toptitle"
+            android:background="@color/white"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/NewDetail_Title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|left"
+                android:singleLine="false"
+                android:text=""
+                android:textColor="#302E31"
+                android:textSize="20dip" />
+
+            <LinearLayout
+                android:id="@+id/newscontentHost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/NewDetail_Desc"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/NewDetail_Image"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="fitCenter" />
+            </LinearLayout>
+
+            <!--
+                 <TextView
+                android:id="@+id/NewDetail_Content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newscontentHost"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:lineSpacingExtra="3dp"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="false"
+                android:text=""
+                android:textColor="#2D2E30"
+                android:textSize="14sp" />
+            -->
+
+            <WebView
+                android:id="@+id/NewDetail_Content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/newscontentHost"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="10dp"
+                android:lineSpacingExtra="3dp"
+                android:lineSpacingMultiplier="1.2"
+                android:singleLine="false" 
+                />
+
+            <TextView
+                android:id="@+id/NewDetail_Desc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/NewDetail_Title"
+                android:layout_below="@+id/NewDetail_Title"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="#A0A09E"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/title_amb"
+        layout="@layout/include_title" />
+
+    <LinearLayout
+        android:id="@+id/calendar_busStartArrange_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_amb"
+        android:clickable="false"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/calendar_LL"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#E8E8E8"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_amb_calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_calendar"
+                android:text=""
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_amb_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:drawableLeft="@drawable/bg_calendar"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="2013/09/01"
+                android:textColor="@drawable/bg_color_calendar"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/faCheAnPai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dip"
+        	android:paddingBottom="3dip"
+        	android:paddingLeft="1dip"
+        	android:paddingRight="1dip" 
+            android:background="@color/bg_blue"
+        	android:orientation="horizontal" 
+            >
+
+            <com.yutong.clw.ygbclient.view.widget.HorizontalListView
+                android:id="@+id/hl_amb_list"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_gravity="center_vertical"
+                android:textColorHint="@color/white"
+                android:textSize="16sp" >
+                
+            </com.yutong.clw.ygbclient.view.widget.HorizontalListView>
+				
+            <TextView
+                android:id="@+id/tipsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="正在查询数据"
+                android:textColor="@color/white" />
+
+            <ProgressBar
+                android:id="@+id/loadingBar"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dip"
+                android:layout_toLeftOf="@id/tipsTV" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/calendar_busStartArrange_LL"
+        android:background="@null" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmv_amb_map"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true" />
+
+        <Button
+            android:id="@+id/btn_amb_refresh"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/map_margin_left_btn"
+            android:layout_marginTop="@dimen/map_margin_top_btn"
+            android:background="@drawable/bg_refreshbtn"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btn_amb_resize"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignLeft="@+id/btn_amb_refresh"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/map_margin_bottom_btn"
+            android:background="@drawable/ic_map_reset" />
+        
+        <include
+        android:id="@+id/title_amb"
+        layout="@layout/include_map_zoom_btn"
+         />
+        
+        <LinearLayout
+            android:id="@+id/ll_amb_mapcover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

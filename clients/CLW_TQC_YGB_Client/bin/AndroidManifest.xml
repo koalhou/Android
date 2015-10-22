@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yutong.clw.ygbclient"
+    android:versionCode="30"
+    android:versionName="AXCBYA1.1.0.0B140804" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="29" />
+	
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" /> 
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 文件访问权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- 修改GPS设置状态 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.UPDATE_DEVICE_STATS" >
+    </uses-permission>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="false"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <!-- 应用 -->
+    <application
+        android:name=".YtApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme" >
+
+        <!-- 百度地图定位服务 -->
+        <!-- android:process=":remote" -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+        <!-- 推送侦听服务 -->
+        <service
+            android:name="com.yutong.axxc.xmpp.client.NotificationService"
+            android:enabled="true"
+            android:label="NotificationService" >
+            <intent-filter>
+                <action android:name="com.yutong.axxc.xmpp.client.NotificationService" />
+            </intent-filter>
+        </service>
+        
+        <service android:name="com.yutong.clw.ygbclient.view.common.NotificationListenService" />
+        <!-- 闪屏活动 -->
+        <activity
+            android:name=".view.pages.splash.SplashActivity"
+            android:screenOrientation="portrait" 
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 登录相关活动 -->
+
+        <activity
+            android:name=".view.pages.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name=".view.pages.login.PhoneBindActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.login.FactorySelectActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.login.findPassword.DefaultPasswordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.login.findPassword.EmployeeIDSubmitActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.login.findPassword.NewPasswordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.login.findPassword.SMSCodeCheckActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.login.findPassword.SuccActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 主界面相关活动 -->
+        <activity
+            android:name=".view.pages.main.MainActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.main.betweenFactory.BetweenFactoryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.main.inFactory.InFactoryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.main.outOfFactory.OutOfFactoryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.main.outOfFactory.singleStation.SingleStationScheduleActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.main.outOfFactory.StationMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.main.outOfFactory.search.MapSearchActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.main.outOfFactory.search.StationSearchActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.yutong.clw.ygbclient.view.pages.main.outOfFactory.singleStation.SingleStationLinesActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.yutong.clw.ygbclient.view.pages.main.outOfFactory.singleStation.StationRemindSettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.yutong.clw.ygbclient.view.pages.main.outOfFactory.singleVehicle.SingleVehicleLinesActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 设置相关活动 -->
+        <activity
+            android:name=".view.pages.setting.SettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.setting.about.AboutActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.setting.about.ServiceTermsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.setting.about.QRCodeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.setting.announcement.AnnounceListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.setting.announcement.AnnounceDetailActivity"
+            android:screenOrientation="portrait"
+			
+             >
+        </activity>
+        <activity
+            android:name=".view.pages.setting.changePassword.OldPasswordSubmitActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.setting.changePassword.NewPasswordSubmitActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.setting.changePhone.ChangeBindPhoneActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.setting.changeFactory.ChangeFactoryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.setting.feedback.FeedbackActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 意见反馈 -->
+        <activity
+            android:name=".view.pages.setting.feedback.FeedBackListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".view.pages.setting.recommand.RecommandActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.setting.refreshSetting.RefreshSettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.setting.remindCollection.RemindCollectionActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.setting.ring.RingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.setting.userguide.UserGuideActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.main.outOfFactory.search.StationListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 日期选择界面 -->
+        <activity
+            android:name=".view.pages.main.outOfFactory.search.DateChooseActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.test.DateTestActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 厂外搜索、站点地图 -->
+        <activity
+            android:name=".view.pages.main.outOfFactory.search.StationMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.debugtool.DebugToolActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name=".view.pages.main.outOfFactory.driver.BusDriverDetailsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.pages.main.outOfFactory.driver.DriverImgeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        
+        
+        <!-- 测试 -->
+        <activity
+            android:name=".view.test.TestActivity"
+            android:screenOrientation="portrait" >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+    </application>
+
+</manifest>

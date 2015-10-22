@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/groupitemRL"
+    android:layout_width="fill_parent"
+    android:layout_height="60dp"
+    android:background="@color/maincolor"
+    android:paddingLeft="5dp"
+    android:paddingTop="10dip"
+    android:paddingRight="5dip"
+    android:paddingBottom="10dip"
+     >
+
+    <ImageView
+        android:id="@+id/triangleIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_triangle_expand_white" 
+        android:contentDescription="@string/triangleIV_str"
+        />
+
+    <TextView
+        android:id="@+id/siteTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/favorIV"
+        android:layout_toRightOf="@+id/triangleIV"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/favorIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/clockIV"
+        android:src="@drawable/ic_favored_white"
+        android:contentDescription="@string/favorIV_str"
+       />
+
+    <ImageView
+        android:id="@+id/clockIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/mapIV"
+        android:src="@drawable/ic_clock_white" 
+        android:contentDescription="@string/clockIV_str"
+        />
+
+    <ImageView
+        android:id="@+id/mapIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_map_white" 
+        android:contentDescription="@string/mapIV_str"
+        />
+
+</RelativeLayout>

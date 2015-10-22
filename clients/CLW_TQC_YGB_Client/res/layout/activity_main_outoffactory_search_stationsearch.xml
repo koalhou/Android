@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8e8e8"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top_title"
+        layout="@layout/include_title" />
+
+    <RelativeLayout
+        android:id="@+id/stationSearchRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_title"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="10dip"
+        android:focusable="true"
+        android:focusableInTouchMode="true" >
+
+        <!-- 输入组织或车牌号 -->
+
+        <EditText
+            android:id="@+id/stationSearchEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_search"
+            android:hint="@string/searchHint"
+            android:inputType="textPhonetic"
+            android:maxLength="16"
+            android:paddingBottom="10dip"
+            android:paddingLeft="45dp"
+            android:paddingRight="30dp"
+            android:paddingTop="10dip"
+            android:singleLine="true"
+            android:textAppearance="@style/content_font_20"
+            android:textColorHint="#9e9e9e" 
+            />
+
+        <!-- 放大镜 -->
+
+        <ImageView
+            android:id="@+id/searchIma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/stationSearchEdit"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/stationSearchEdit"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/search"
+            android:paddingBottom="9dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="30dp"
+            android:paddingTop="9dp"
+            android:src="@drawable/ic_search_current" 
+            android:clickable="false"
+            />
+
+        <!-- 删除按钮 -->
+
+        <ImageView
+            android:id="@+id/deleteIma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/stationSearchEdit"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/stationSearchEdit"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:contentDescription="@string/search"
+            android:src="@drawable/ic_input_clear"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <!-- 自动提示列表 -->
+
+    <ListView
+        android:id="@+id/searchResultList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stationSearchRL"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/darkgray"
+        android:dividerHeight="1dp"
+        android:focusable="true"
+        android:headerDividersEnabled="true"
+        android:visibility="visible" >
+    </ListView>
+
+    <!-- 站点区域划分 -->
+
+    <ScrollView
+        android:id="@+id/scrollView_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stationSearchRL"
+        >
+
+        <LinearLayout
+            android:id="@+id/linearLayout_gridtableLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:orientation="vertical" >
+
+            <com.yutong.clw.ygbclient.view.widget.MyGridView
+                android:id="@+id/stationAreas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_marginRight="15dip"
+                android:layout_marginTop="15dip"
+                android:gravity="center"
+                android:horizontalSpacing="20dip"
+                android:listSelector="@color/transparent"
+                android:numColumns="3"
+                android:scrollbarAlwaysDrawHorizontalTrack="true"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbars="vertical"
+                android:verticalSpacing="20dip" />
+
+            <RelativeLayout
+                android:id="@+id/mapChoosePointRL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/color_map_choose_point"
+                android:layout_marginBottom="5dip"
+                android:visibility="visible" >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="0dip"
+                    android:layout_marginTop="20dip" >
+
+                    <ImageView
+                        android:id="@+id/mapIma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@string/mapChoosePointTxt"
+                        android:src="@drawable/ic_map_selection" />
+
+                    <TextView
+                        android:id="@+id/mapChoosePointTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/mapIma"
+                        android:text="@string/mapChoosePointTxt"
+                        android:textColor="#6e6e6e"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </RelativeLayout>
+            
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

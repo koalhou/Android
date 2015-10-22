@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- 填充 -->
+    <!-- <solid android:color="#ff000000" /> -->
+    <solid android:color="#aa282828" />
+	
+    <!-- 描边 -->
+    <stroke
+        android:width="0dp"
+        android:color="#333" />
+
+    <!-- 圆角 -->
+    <corners android:radius="7dp" />
+
+    <!--
+    gradient   对应颜色渐变
+    android:angle 是指从哪个角度开始变。
+    -->
+	
+</shape>

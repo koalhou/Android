@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_maincolor"
+    android:orientation="vertical" >
+
+    <include layout="@layout/include_title" />
+
+    <RelativeLayout
+        android:id="@+id/contentRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/numberlabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="员工号：xxxxxx"
+            android:textColor="#333333" />
+
+        <TextView
+            android:id="@+id/tiplabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/numberlabel"
+            android:gravity="center"
+            android:text="您的密码为您的身份证后6位"
+            android:textColor="#333333" />
+
+        <com.yutong.clw.ygbclient.view.widget.UnderlineTextView
+            android:id="@+id/loginTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tiplabel"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="立即登录"
+            android:textColor="#333333"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</LinearLayout>

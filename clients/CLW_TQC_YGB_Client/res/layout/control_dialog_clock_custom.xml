@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background = "@drawable/bg_background"
+    android:minWidth="320dip"
+    android:orientation="vertical" >
+    
+    <com.yutong.clw.ygbclient.view.widget.ShakeImageView
+        android:id="@+id/clock"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:layout_marginTop="15dip"
+        android:background="@drawable/bg_clock_attention"
+        android:layout_gravity="center_horizontal"
+        />
+    
+    <TextView 
+        android:id="@+id/clock_remind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text=""
+        android:textSize="15dip"
+        />
+   
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+        android:orientation="vertical" >
+        
+		<!-- 发往一厂的58号班车距离“绿都城站”还有1000米 -->
+        <TextView
+            android:id="@+id/station_hint"
+            style="@style/DialogText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text=""
+            android:textColor="#ffffff" 
+           	android:textSize="15dip"
+            />
+       
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="20dip"
+       
+        android:orientation="horizontal" 
+        android:visibility="visible"
+        >
+        
+        <Button
+            android:id="@+id/positiveButton"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            
+            android:layout_marginTop="3dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+           
+            android:layout_weight="1"
+            android:background="@drawable/bg_bluebtn"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:singleLine="true" 
+            android:text= "123"
+            />
+ 			<!--  
+            android:paddingTop="2dip"
+            android:paddingBottom="2dip"
+            android:layout_gravity="center_vertical"
+            -->
+        <Button
+            android:id="@+id/negativeButton"
+            android:layout_width="0dip"
+            android:layout_height="40dip"
+            
+            android:layout_marginTop="3dip"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="20dip"
+            
+            android:layout_weight="1"
+            android:background="@drawable/bg_graybtn"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:singleLine="true" 
+            android:visibility="visible"
+            />
+        
+    </LinearLayout>
+    
+    <!-- 
+	<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:layout_marginTop="15dip"
+        android:orientation="vertical" 
+        android:visibility="gone"
+        >
+        
+        
+        <Button 
+            android:id="@+id/close_Button"
+            android:layout_width="200dip"
+            android:minWidth="150dip"
+            android:layout_height="40dip"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@drawable/bg_bluebtn"
+            />
+        
+     </LinearLayout>
+      -->
+      
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#E8E8E8"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_cri_body"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/bg_block"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="10dp" >
+
+        <CheckBox
+            android:id="@+id/cb_cri_checked"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/ic_radio"
+            android:button="@null"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_cri_tl1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/cb_cri_checked"
+            android:text=""
+            android:textColor="#454545"
+            android:textSize="16sp"
+             />
+
+        <TextView
+            android:id="@+id/tv_cri_tr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="提前1000米"
+            android:textColor="#454545"
+            android:textSize="14sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tv_cri_br"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="已关闭"
+            android:textColor="#878787"
+            android:textSize="11sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tv_cri_tl2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_cri_tl1"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/tv_cri_tl1"
+            android:text="早班"
+            android:textColor="#878787"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tv_cri_bl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_cri_tl1"
+            android:layout_centerVertical="true"
+            android:text="提醒车辆:经过该站点的所有车辆"
+            android:textColor="#757575"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

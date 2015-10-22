@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common
+END
+Logger.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/Logger.java
+END
+Tools.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/Tools.java
+END
+ThreadCommUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/ThreadCommUtil.java
+END
+OnNetworkChangeListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/OnNetworkChangeListener.java
+END
+MessageRouter.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/MessageRouter.java
+END
+UriFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/UriFactory.java
+END
+ListHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/ListHelper.java
+END
+YtAsyncTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/YtAsyncTask.java
+END
+DeviceUuidFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/common/DeviceUuidFactory.java
+END

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/title_amosvl"
+        layout="@layout/include_title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_amosvl" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmv_amosvl_map"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="#ff0000"
+            android:clickable="true" />
+
+        <Button
+            android:id="@+id/btn_amosvl_refresh"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/map_margin_left_btn"
+            android:layout_marginTop="@dimen/map_margin_top_btn"
+            android:background="@drawable/bg_refreshbtn"
+            android:text="" />
+		
+        <!-- 线路居中 按钮 -->
+        <include
+            android:id="@+id/line_center_inlude"
+            layout="@layout/include_map_reset_btn" />
+        
+		<!-- 放大、缩小按钮 -->
+        <include
+            android:id="@+id/title_amb"
+            layout="@layout/include_map_location_details_zoom_btn" />
+        
+        <LinearLayout
+            
+            android:id="@+id/panel_remind"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#dd606060"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ll_amosvl_remind"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bg_bluebtn"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp" >
+
+                <ImageView
+                    android:id="@+id/iv_amosvl_remind"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_clock_white" />
+
+                <TextView
+                    style="@style/text_main_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:focusable="false"
+                    android:text="到站提醒" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

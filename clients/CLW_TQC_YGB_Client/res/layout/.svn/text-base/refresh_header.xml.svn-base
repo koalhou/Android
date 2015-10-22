@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pull_to_refresh_header"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/refreshHeight"
+    android:background="#00000000" >
+
+    <ImageView
+        android:id="@+id/pull_to_refresh_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/pull_to_refresh_text"
+        android:src="@drawable/ic_pulltorefresh_arrow" />
+
+    <TextView
+        android:id="@+id/pull_to_refresh_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_pulltorefresh_arrow"
+        android:text="@string/pull_to_refresh_pull_label"
+        android:textAppearance="@style/content_font_20"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/pull_to_refresh_updated_at"
+        android:layout_width="fill_parent"
+        android:layout_height="30dip"
+        android:layout_below="@+id/pull_to_refresh_text"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="更新于：07-28 15:32"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/pull_to_refresh_progress"
+        android:layout_width="@dimen/refreshProgressWidth"
+        android:layout_height="@dimen/refreshProgressHeight"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/pull_to_refresh_text"
+        android:layout_marginRight="10dp"
+        android:indeterminateDrawable="@drawable/refresh_progress"
+        android:visibility="gone" />
+
+</RelativeLayout>

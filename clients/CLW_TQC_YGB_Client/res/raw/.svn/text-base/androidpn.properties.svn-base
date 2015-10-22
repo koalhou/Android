@@ -1,0 +1,12 @@
+apiKey=1234567890
+xmppPort = 5222
+
+
+#localhost
+#xmppHost=10.0.2.2
+
+#ceshi
+#xmppHost=125.46.82.44
+
+#zhengshi
+xmppHost = 61.163.211.129

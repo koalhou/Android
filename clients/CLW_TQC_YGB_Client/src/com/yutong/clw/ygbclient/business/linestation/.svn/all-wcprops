@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/business/linestation
+END
+GetIdsLinesBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/business/linestation/GetIdsLinesBiz.java
+END
+StationAreasBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/business/linestation/StationAreasBiz.java
+END
+GetVehichesBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/business/linestation/GetVehichesBiz.java
+END
+RecommendStationsBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/business/linestation/RecommendStationsBiz.java
+END
+StationRealTimeDataBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/business/linestation/StationRealTimeDataBiz.java
+END
+SetRemindStationsBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/business/linestation/SetRemindStationsBiz.java
+END
+SetStationFavoritesBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/business/linestation/SetStationFavoritesBiz.java
+END
+GetStationBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/business/linestation/GetStationBiz.java
+END
+VehicheDriverDataBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/business/linestation/VehicheDriverDataBiz.java
+END
+GetAreaLinesBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/business/linestation/GetAreaLinesBiz.java
+END
+GetRemindStationsBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/business/linestation/GetRemindStationsBiz.java
+END
+GetStationFavoritesBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/business/linestation/GetStationFavoritesBiz.java
+END
+GetSingleRemindStationsBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/business/linestation/GetSingleRemindStationsBiz.java
+END
+VehicheRealTimeDataBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/business/linestation/VehicheRealTimeDataBiz.java
+END

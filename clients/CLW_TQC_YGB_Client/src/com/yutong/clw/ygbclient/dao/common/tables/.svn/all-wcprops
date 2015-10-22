@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/dao/common/tables
+END
+DriverInfoTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/dao/common/tables/DriverInfoTable.java
+END
+CahceItemConfigTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/dao/common/tables/CahceItemConfigTable.java
+END
+NewsInfoTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/dao/common/tables/NewsInfoTable.java
+END
+ResRouterTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/dao/common/tables/ResRouterTable.java
+END
+StationAreaTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/dao/common/tables/StationAreaTable.java
+END
+RecommendStationTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/dao/common/tables/RecommendStationTable.java
+END
+RemindStationInfoTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/dao/common/tables/RemindStationInfoTable.java
+END
+StationInfoTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/dao/common/tables/StationInfoTable.java
+END
+PushMsgRuleTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/dao/common/tables/PushMsgRuleTable.java
+END
+PushAnnouncementMsgTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/dao/common/tables/PushAnnouncementMsgTable.java
+END
+FavoritesTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/dao/common/tables/FavoritesTable.java
+END
+LineInfoTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/dao/common/tables/LineInfoTable.java
+END
+LoginInfoTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/dao/common/tables/LoginInfoTable.java
+END

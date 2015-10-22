@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/title_amosl"
+        layout="@layout/include_title" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_amosl" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmv_amosl_map"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true" />
+
+        <Button
+            android:id="@+id/btn_amosl_refresh"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/map_margin_left_btn"
+            android:layout_marginTop="@dimen/map_margin_top_btn"
+            android:background="@drawable/bg_refreshbtn"
+            android:text="" />
+		
+         <!-- 线路居中 按钮 -->
+        <include
+            android:id="@+id/line_center_inlude"
+            layout="@layout/include_map_reset_btn" />
+        
+        <!-- 放大、缩小按钮 -->
+        <include
+            android:id="@+id/title_amb"
+            android:layout_above="@+id/bottom_btn"
+            layout="@layout/include_map_location_details_zoom_btn" />
+        
+        <LinearLayout
+            android:id="@+id/bottom_btn"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:background="#dd606060"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" 
+            android:baselineAligned="false"
+            >
+
+            <RelativeLayout
+                android:id="@+id/rl_amosl_bottomleft"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/iv_amosl_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_favor_white" />
+
+                <TextView
+                    android:id="@+id/collecting_stations"
+                    style="@style/text_main_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/iv_amosl_left"
+                    android:text="收藏站点" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_amosl_bottomright"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/iv_amosl_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/bg_clock_white" />
+
+                <TextView
+                    style="@style/text_main_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/iv_amosl_right"
+                    android:text="到站提醒" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

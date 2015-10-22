@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="tag_station" type="id"></item>
+    <item name="tag_realtimeinfo" type="id"></item>
+    <item name="tag_grouppos" type="id"></item>
+    <item name="tag_childpos" type="id"></item>
+
+    <item name="tag_viewposition" type="id"></item>
+       <item name="tag_touchposition" type="id"></item>
+</resources>

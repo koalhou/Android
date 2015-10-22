@@ -1,0 +1,18 @@
+
+consol_level = 1
+
+save_level =6
+
+save_path = /sdcard/yutong/ybgclient/log/applog.log
+
+log_tag = com.yutong.clw.ygbclient
+
+IS_SAVE_LOG_FILE=false
+
+LOG_FILE_LOCATION=/sdcard/yutong/ygbclient/log/
+
+LOG_FILE_NAME=applog.log
+
+LOG_LEVEL=5
+
+LOG_TAG=com.yutong.clw.ygbclient

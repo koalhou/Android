@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rl_it_parent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/main_barcolor" >
+        
+        <Button
+            android:id="@+id/btn_it_left"
+            style="@style/text_title_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22dip"
+            android:background="@drawable/bg_settingbtn"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp" />
+
+        <Button
+            android:id="@+id/btn_it_right"
+            style="@style/text_title_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="22dip"
+            android:background="@drawable/bg_bluebtn"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip" />
+
+        <RelativeLayout
+            android:id="@+id/rl_it_center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" >
+
+            <RelativeLayout
+                android:id="@+id/rl_it_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:clickable="false" >
+
+                <TextView
+                    android:id="@+id/tv_it_centerup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="false"
+                    android:singleLine="true"
+                    android:text="大标题"
+                    android:textColor="@drawable/bg_forget_password"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_it_centerdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_it_centerup"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="false"
+                    android:singleLine="true"
+                    android:text="小标题"
+                    android:textColor="@drawable/bg_forget_password"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_it_triangle"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/rl_it_txt"
+                android:src="@drawable/ic_title_center_triangle" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_it_tipcontainer"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#fffbe0"
+        android:gravity="center_vertical|center_horizontal"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/iv_it_tipicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_speeker" />
+
+        <TextView
+            android:id="@+id/tv_it_tiptext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/iv_it_tipicon"
+            android:text="@string/networktip"
+            android:textColor="#e37f1e" />
+
+        <com.yutong.clw.ygbclient.view.widget.UnderlineTextView
+            android:id="@+id/tv_it_tipop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/tv_it_tiptext"
+            android:text="操作"
+            android:textColor="#e37f1e"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+</LinearLayout>

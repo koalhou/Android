@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8e8e8"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top_title"
+        layout="@layout/include_title" />
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmv_ami_map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/top_title"
+        android:background="#ff0000"
+        android:clickable="true" />
+
+    <!-- 放大、缩小按钮 -->
+
+    <include
+        android:id="@+id/map_zoom_layout"
+        layout="@layout/include_map_zoom_btn" />
+
+</RelativeLayout>

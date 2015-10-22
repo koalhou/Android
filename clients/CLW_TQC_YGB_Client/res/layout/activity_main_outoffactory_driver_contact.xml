@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_maincolor" >
+
+    <include
+        android:id="@+id/title_amosvl"
+        layout="@layout/include_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_amosvl" >
+
+        <!-- 司机照片 -->
+
+        <com.yutong.clw.ygbclient.view.widget.CircleImageView
+            android:id="@+id/driverImage"
+            android:layout_width="110dip"
+            android:layout_height="110dip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+            CircleImageView_border_color="@color/grayfont"
+            CircleImageView_border_width="30dip"
+            android:src="@drawable/activity_main_outfactory_default_driver" >
+        </com.yutong.clw.ygbclient.view.widget.CircleImageView>
+
+        <TextView
+            android:id="@+id/driver_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/driverImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dip"
+            android:text=""
+            android:textAppearance="@style/DialogText.Title"
+            android:textColor="@color/grayfont_dark"
+            android:textSize="23sp"  />
+
+        <!-- 司机信息 -->
+
+        <LinearLayout
+            android:id="@+id/driver_infos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/driver_name"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_block"
+            android:orientation="vertical" >
+
+            <!-- 班车号 -->
+
+            <RelativeLayout
+                android:id="@+id/busNum_RL"
+                android:layout_width="match_parent"
+                android:layout_height="70dip"
+                android:background="@drawable/bg_settingitem_topround" >
+
+                <TextView
+                    android:id="@+id/busNum_Title_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="5dip"
+                    android:paddingLeft="5dp"
+                    android:text="班车号"
+                    android:textAppearance="@style/driver_title_style"
+                    />
+
+                <TextView
+                    android:id="@+id/busNum_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/busNum_Title_TV"
+                    android:layout_marginBottom="5dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="5dip"
+                    android:paddingLeft="5dp"
+                    android:textAppearance="@style/driver_content_style"
+                    />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider_color" />
+            </RelativeLayout>
+
+            <!-- 员工号 -->
+
+            <RelativeLayout
+                android:id="@+id/empNum_RL"
+                android:layout_width="match_parent"
+                android:layout_height="70dip"
+                android:background="@drawable/bg_settingitem_topround" >
+
+                <TextView
+                    android:id="@+id/empNum_Title_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="5dip"
+                    android:paddingLeft="5dp"
+                    android:text="员工号"
+                    android:textAppearance="@style/driver_title_style"
+                    />
+
+                <TextView
+                    android:id="@+id/empNum_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/empNum_Title_TV"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="5dip"
+                    android:paddingLeft="5dp"
+                    android:textAppearance="@style/driver_content_style"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/divider_color" />
+            </RelativeLayout>
+
+            <!-- 电话 -->
+
+            <RelativeLayout
+                android:id="@+id/phoneNum_RL"
+                android:layout_width="match_parent"
+                android:layout_height="70dip"
+                android:background="@drawable/bg_settingitem_topround" >
+
+                <TextView
+                    android:id="@+id/phoneNum_Title_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="5dip"
+                    android:paddingLeft="5dp"
+                    android:text="手机号"
+                    android:textAppearance="@style/driver_title_style"
+                    />
+
+                <TextView
+                    android:id="@+id/phoneNum_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/phoneNum_Title_TV"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="5dip"
+                    android:paddingLeft="5dp"
+                   	android:textAppearance="@style/driver_content_style"
+                   />
+
+                <Button
+                    android:id="@+id/dialPhone_Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:background="@drawable/activity_outfactory_dial_phone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- 提示信息 -->
+
+        <RelativeLayout
+            android:id="@+id/tips_driver_Contact_RL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/driver_infos"
+            android:layout_alignRight="@id/driver_infos"
+            android:layout_below="@id/driver_infos"
+            android:layout_marginTop="10dip" >
+
+            <ImageView
+                android:id="@+id/tips_IV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:contentDescription="@string/main_activity_outfacory_drivertips_IV_str"
+                android:src="@drawable/tips_round" />
+
+            <TextView
+                android:id="@+id/drivertips_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="15dip"
+                android:layout_toRightOf="@id/tips_IV"
+                android:text="@string/main_activity_outfacory_drivertips_TV_str"
+                android:textColor="@color/grayfont_dark" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

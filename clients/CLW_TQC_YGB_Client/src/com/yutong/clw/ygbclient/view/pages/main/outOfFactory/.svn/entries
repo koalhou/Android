@@ -1,0 +1,77 @@
+10
+
+dir
+46
+http://192.168.175.105/svn/datas/other/work_spaces/workspace_android/CLW_TQC_YGB_Client/src/com/yutong/clw/ygbclient/view/pages/main/outOfFactory
+http://192.168.175.105/svn/datas
+
+
+
+2014-10-07T08:35:06.591989Z
+24
+test
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+f81c60f4-19e2-fb44-8912-2fbc0516ba03
+
+control
+dir
+
+singleVehicle
+dir
+
+OutOfFactoryActivity.java
+file
+
+
+
+
+2015-01-14T01:17:45.442587Z
+43f6c0981a24118f787ce41bad57c088
+2014-10-07T07:56:24.668311Z
+23
+test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+41211
+
+singleStation
+dir
+
+search
+dir
+
+driver
+dir
+
