@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_griditem2_bg"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_margin="3dp"
+        android:background="@drawable/userimg_bg_current"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <com.yutong.axxc.parents.view.common.MarkCircularImage
+            android:id="@+id/circularImage_head"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="2dp"
+            android:src="@drawable/default_gril" />
+        
+    </LinearLayout>
+
+</LinearLayout>

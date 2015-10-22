@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<msgconfig>
+	<msgs>
+		<msg srvmsg="01_002" call="true" dot="2" gps="true" >
+			<body>
+				${student_name}乘坐的校车${vehicle_plate}即将到达${remind_station_name}。
+			</body>
+		</msg>
+		<msg srvmsg="01_004" call="true" dot="2" gps="true" >
+			<body>
+				${student_name}上车已刷卡。
+			</body>
+		</msg>
+		<msg srvmsg="01_007" call="true" dot="2" gps="true" >
+			<body>
+				${student_name}乘坐的校车${vehicle_plate}已到达${station_name}，并已下车刷卡。
+			</body>
+		</msg>
+
+		<msg srvmsg="01_102" call="true" dot="2" gps="true" >
+			<body>
+				${student_name}已在${station_name}刷卡上车。
+			</body>
+		</msg>
+		<msg srvmsg="01_105" call="true" dot="2" gps="true" >
+			<body>
+				${student_name}乘坐的校车将要到达${remind_station_name}下车站点。
+			</body>
+		</msg>
+		<msg srvmsg="01_107" call="true" dot="2" gps="true" >
+			<body>
+				${student_name}已到达${station_name}，并已下车刷卡。
+			</body>
+		</msg>
+	</msgs>
+	<curmsgs>
+		<curmsg curstate="-1" call="false" busdetail="false" gps="false">
+			<body>
+				今天的气温是${temp}，风向是${wind}。
+			</body>
+		</curmsg>
+		<curmsg curstate="0" call="false" busdetail="false" gps="false">
+			<body>
+				今天的气温是${temp}，风向是${wind}。
+			</body>
+		</curmsg>
+		<curmsg curstate="1" call="true" busdetail="true" gps="true">
+			<body>
+				${student_name}乘坐的校车${vehicle_plate}预计&lt;big&gt;${predict_value}&lt;/big&gt;后抵达${station_name}。
+			</body>
+		</curmsg>
+		<curmsg curstate="2" call="false" busdetail="false" gps="false">
+			<body>
+				${student_name}已经在学校上课啦。
+			</body>
+		</curmsg>
+		<curmsg curstate="3" call="true" busdetail="true" gps="true">
+			<body>
+				${student_name}乘坐的校车${vehicle_plate}预计&lt;big&gt;${predict_value}&lt;/big&gt;后抵达${station_name}。
+			</body>
+		</curmsg>
+		<curmsg curstate="4" call="false" busdetail="false" gps="false">
+			<body>
+				${student_name}放学已下车了。
+			</body>
+		</curmsg>
+				<curmsg curstate="5" call="true" busdetail="true" gps="true">
+			<body>
+				${student_name}乘坐的校车${vehicle_plate}预计&lt;big&gt;${predict_value}&lt;/big&gt;后抵达${station_name}。
+			</body>
+		</curmsg>
+				<curmsg curstate="6" call="true" busdetail="true" gps="true">
+			<body>
+				${student_name}乘坐的校车${vehicle_plate}预计&lt;big&gt;${predict_value}&lt;/big&gt;后抵达${station_name}。
+			</body>
+		</curmsg>
+	</curmsgs>
+	
+</msgconfig>

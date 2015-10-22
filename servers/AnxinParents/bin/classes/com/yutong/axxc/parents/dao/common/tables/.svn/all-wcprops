@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/dao/common/tables
+END
+NewsInfoTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/dao/common/tables/NewsInfoTable.java
+END
+StudentMsgRecordTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/dao/common/tables/StudentMsgRecordTable.java
+END
+PushMsgRuleTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/dao/common/tables/PushMsgRuleTable.java
+END
+LoginInfoTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/dao/common/tables/LoginInfoTable.java
+END
+PunchCardDateRecordTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/dao/common/tables/PunchCardDateRecordTable.java
+END

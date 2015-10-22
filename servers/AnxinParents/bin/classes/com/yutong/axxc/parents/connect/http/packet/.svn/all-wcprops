@@ -1,0 +1,581 @@
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet
+END
+GetCertigierInfoReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetCertigierInfoReq.java
+END
+SetPushMsgRuleReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/SetPushMsgRuleReq.java
+END
+FindPwdReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/FindPwdReq.java
+END
+VehicleInfoReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/VehicleInfoReq.java
+END
+GetStudentCustomInfoRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetStudentCustomInfoRes.java
+END
+OldPasswordCheckReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/OldPasswordCheckReq.java
+END
+GetNewRemindInfoRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetNewRemindInfoRes.java
+END
+NewsSummaryInfoReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/NewsSummaryInfoReq.java
+END
+AccessTokenUpdateRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/AccessTokenUpdateRes.java
+END
+LoginRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/LoginRes.java
+END
+SetStudentCustomInfoRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/SetStudentCustomInfoRes.java
+END
+VerifyEmailReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/VerifyEmailReq.java
+END
+WeatherInfoRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/WeatherInfoRes.java
+END
+GetStudentRedingRecordReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetStudentRedingRecordReq.java
+END
+GetRealTimeInfoReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetRealTimeInfoReq.java
+END
+VerifyProtocolPhoneReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/VerifyProtocolPhoneReq.java
+END
+UserBindStudentReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/UserBindStudentReq.java
+END
+AddCertigierUserReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/AddCertigierUserReq.java
+END
+MobileEnvUploadReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/MobileEnvUploadReq.java
+END
+GetStudentStatusReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetStudentStatusReq.java
+END
+GetStudentMsgRecordReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetStudentMsgRecordReq.java
+END
+ResourceUploadReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/ResourceUploadReq.java
+END
+VehicleRealInfoReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/VehicleRealInfoReq.java
+END
+DeleteCertigierUserReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/DeleteCertigierUserReq.java
+END
+UserInfoUpdateRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/UserInfoUpdateRes.java
+END
+SetUserSalutationRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/SetUserSalutationRes.java
+END
+VerifyPhoneRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/VerifyPhoneRes.java
+END
+AutoLoginReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/AutoLoginReq.java
+END
+GetStudentInfoReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetStudentInfoReq.java
+END
+AbstractReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/AbstractReq.java
+END
+SearchCertigierUserRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/SearchCertigierUserRes.java
+END
+UserBehaviorUploadRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/UserBehaviorUploadRes.java
+END
+UserUsedDurationRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/UserUsedDurationRes.java
+END
+PasswordUpdateRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/PasswordUpdateRes.java
+END
+GetSationRemindInfoRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetSationRemindInfoRes.java
+END
+GetStudentLineInfoReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetStudentLineInfoReq.java
+END
+GetSationInfoRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetSationInfoRes.java
+END
+VersionChkReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/VersionChkReq.java
+END
+AdviseReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/AdviseReq.java
+END
+PushBindingRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/PushBindingRes.java
+END
+NewsDetailInfoRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/NewsDetailInfoRes.java
+END
+GetStudentPunchCardDateRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetStudentPunchCardDateRes.java
+END
+GetPushMsgRuleRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetPushMsgRuleRes.java
+END
+ResourceDownloadRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/ResourceDownloadRes.java
+END
+SendPhoneReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/SendPhoneReq.java
+END
+RegisterReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/RegisterReq.java
+END
+SetSationRemindInfoRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/SetSationRemindInfoRes.java
+END
+GetCertigierInfoRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetCertigierInfoRes.java
+END
+SetPushMsgRuleRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/SetPushMsgRuleRes.java
+END
+GetStudentCustomInfoReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetStudentCustomInfoReq.java
+END
+VehicleInfoRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/VehicleInfoRes.java
+END
+FindPwdRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/FindPwdRes.java
+END
+GetStudentMsgRecordReq.rar
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetStudentMsgRecordReq.rar
+END
+OldPasswordCheckRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/OldPasswordCheckRes.java
+END
+GetNewRemindInfoReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetNewRemindInfoReq.java
+END
+AccessTokenUpdateReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/AccessTokenUpdateReq.java
+END
+NewsSummaryInfoRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/NewsSummaryInfoRes.java
+END
+LoginReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/LoginReq.java
+END
+SetStudentCustomInfoReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/SetStudentCustomInfoReq.java
+END
+LogoutReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/LogoutReq.java
+END
+WeatherInfoReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/WeatherInfoReq.java
+END
+VerifyEmailRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/VerifyEmailRes.java
+END
+GetRealTimeInfoRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetRealTimeInfoRes.java
+END
+GetStudentRedingRecordRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetStudentRedingRecordRes.java
+END
+VerifyProtocolPhoneRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/VerifyProtocolPhoneRes.java
+END
+UserBindStudentRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/UserBindStudentRes.java
+END
+MobileEnvUploadRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/MobileEnvUploadRes.java
+END
+AddCertigierUserRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/AddCertigierUserRes.java
+END
+GetStudentStatusRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetStudentStatusRes.java
+END
+UserInfoUpdateReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/UserInfoUpdateReq.java
+END
+VerifyPhoneReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/VerifyPhoneReq.java
+END
+GetStudentMsgRecordRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetStudentMsgRecordRes.java
+END
+SetUserSalutationReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/SetUserSalutationReq.java
+END
+ResourceUploadRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/ResourceUploadRes.java
+END
+VehicleRealInfoRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/VehicleRealInfoRes.java
+END
+DeleteCertigierUserRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/DeleteCertigierUserRes.java
+END
+SearchCertigierUserReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/SearchCertigierUserReq.java
+END
+AutoLoginRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/AutoLoginRes.java
+END
+UserBehaviorUploadReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/UserBehaviorUploadReq.java
+END
+GetStudentInfoRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetStudentInfoRes.java
+END
+PasswordUpdateReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/PasswordUpdateReq.java
+END
+AbstractRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/AbstractRes.java
+END
+UserUsedDurationReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/UserUsedDurationReq.java
+END
+GetSationRemindInfoReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetSationRemindInfoReq.java
+END
+GetSationInfoReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetSationInfoReq.java
+END
+PushBindingReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/PushBindingReq.java
+END
+NewsDetailInfoReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/NewsDetailInfoReq.java
+END
+GetStudentLineInfoRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetStudentLineInfoRes.java
+END
+GetStudentPunchCardDateReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetStudentPunchCardDateReq.java
+END
+AdviseRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/AdviseRes.java
+END
+VersionChkRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/VersionChkRes.java
+END
+GetPushMsgRuleReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/GetPushMsgRuleReq.java
+END
+ResourceDownloadReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/ResourceDownloadReq.java
+END
+SetSationRemindInfoReq.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/SetSationRemindInfoReq.java
+END
+SendPhoneRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/SendPhoneRes.java
+END
+RegisterRes.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/connect/http/packet/RegisterRes.java
+END

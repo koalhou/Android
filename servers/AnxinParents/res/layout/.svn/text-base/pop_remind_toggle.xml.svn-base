@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical" 
+ >
+
+    <TextView
+        android:id="@+id/et_station_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="该站点未设置提醒，是否开启？"
+        android:textSize="18sp"
+        android:textColor="#000000" />
+
+    <com.yutong.axxc.parents.view.common.CommonCheckBox
+        android:id="@+id/remind_toggle"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="25dip"
+        android:checked="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:paddingRight="15dp"
+        android:textSize="18sp" />
+
+</LinearLayout>

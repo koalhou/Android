@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:id="@+id/inputET"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/input_bg"
+        android:maxLines="1"
+        android:maxLength="50"
+        android:paddingLeft="20dp"
+        android:singleLine="true" />
+
+    <ImageView
+        android:id="@+id/labelIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:gravity="center"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/alertIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/inputET"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/inputET"
+        android:gravity="center"
+        android:paddingRight="20dp"
+        android:src="@drawable/input_alert"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/clearIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/inputET"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/inputET"
+        android:gravity="center"
+        android:paddingRight="20dp"
+        android:src="@drawable/input_clear"
+        android:visibility="invisible" />
+
+</RelativeLayout>

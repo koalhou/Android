@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/body_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/toptitle"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toptitle"
+        android:scrollbars="vertical" >
+
+        <!-- 设置项总容器 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:background="@color/body_bg"
+            android:orientation="vertical"
+            android:padding="20dp" >
+
+            <!-- 杂项section -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/block_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/RelativeLayout05"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginBottom="3dp" >
+
+                    <TextView
+                        android:id="@+id/TextView05"
+                        style="@style/font_setting_list_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="15dp"
+                        android:text="到站提醒" />
+
+                    <com.yutong.axxc.parents.view.common.CommonCheckBox
+                        android:id="@+id/cb_scpr_stationremind"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="14dp"
+                        android:checked="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:paddingRight="15dp"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider_color" />
+
+                <RelativeLayout
+                    android:id="@+id/RelativeLayout02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="3dp" >
+
+                    <TextView
+                        android:id="@+id/TextView02"
+                        style="@style/font_setting_list_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="15dp"
+                        android:text="刷卡提醒" />
+
+                    <com.yutong.axxc.parents.view.common.CommonCheckBox
+                        android:id="@+id/cb_scpr_checkcard"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="14dp"
+                        android:checked="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:paddingRight="15dp"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

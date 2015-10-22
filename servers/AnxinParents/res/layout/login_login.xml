@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:axxc="http://schemas.android.com/apk/res/com.yutong.axxc.parents"
+    android:id="@+id/body"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/maincolor" >
+
+    <ImageView
+        android:id="@+id/logo_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/userNameET"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo" />
+
+    <!-- 账号 -->
+
+    <com.yutong.axxc.parents.view.common.ExEditText
+        android:id="@+id/userNameET"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/passwordET"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        
+        axxc:hintText="安芯号/手机号/用户名"
+        axxc:labelIcon="@drawable/accountlable"
+        axxc:paddingLeft="40dp" />
+
+    <!-- 密码 -->
+
+    <com.yutong.axxc.parents.view.common.ExEditText
+        android:id="@+id/passwordET"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/loginButton"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        
+        axxc:hintText="密码"
+        axxc:labelIcon="@drawable/pwdlabel"
+        axxc:paddingLeft="40dp" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/registerTV"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/login_login_button"
+        android:text="@string/logintext"
+        android:textAppearance="@style/content_font_30" >
+    </Button>
+    <!-- 注册 -->
+
+    <com.yutong.axxc.parents.view.common.UnderlineTextView
+        android:id="@+id/registerTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/yutonglogo_iv"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="40dp"
+        android:gravity="center"
+        android:text="@string/registertext"
+        android:textColor="#fff" />
+    <!-- 找回密码 -->
+
+    <com.yutong.axxc.parents.view.common.UnderlineTextView
+        android:id="@+id/findpwdTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/yutonglogo_iv"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:text="@string/forgotpwdtext"
+        android:textColor="#fff" />
+
+    <ImageView
+        android:id="@+id/yutonglogo_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/yutonglogo" />
+
+    <com.yutong.axxc.parents.view.common.LoadingOverlay
+        android:id="@+id/loadingoverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

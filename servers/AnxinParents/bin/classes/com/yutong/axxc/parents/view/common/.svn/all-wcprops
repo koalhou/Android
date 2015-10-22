@@ -1,0 +1,269 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common
+END
+ScrollDirection.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/ScrollDirection.java
+END
+RoundedCornersImage.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/RoundedCornersImage.java
+END
+StudentStateConstant.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/StudentStateConstant.java
+END
+MaskedImage.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/MaskedImage.java
+END
+UserGridSelectItemListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/UserGridSelectItemListener.java
+END
+TransactionDataManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/TransactionDataManager.java
+END
+CustomerDatePickerDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/CustomerDatePickerDialog.java
+END
+HSVBottomLinearLayout.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/HSVBottomLinearLayout.java
+END
+SingleSelectChildrenBar.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/SingleSelectChildrenBar.java
+END
+MHorizontalScrollView.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/MHorizontalScrollView.java
+END
+ActivityCommConstant.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/ActivityCommConstant.java
+END
+MarkCircularImage.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/MarkCircularImage.java
+END
+VersionUpdateManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/VersionUpdateManager.java
+END
+ActivityCoverManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/ActivityCoverManager.java
+END
+ISelectChildrenBar.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/ISelectChildrenBar.java
+END
+ExEditText.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/ExEditText.java
+END
+FlowDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/FlowDialog.java
+END
+ResourcesUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/ResourcesUtils.java
+END
+MessageBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/MessageBuilder.java
+END
+AppCrashHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/AppCrashHandler.java
+END
+MHScrollChangeListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/MHScrollChangeListener.java
+END
+CommonCheckBox.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/CommonCheckBox.java
+END
+VConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/VConstants.java
+END
+NotificationTestActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/NotificationTestActivity.java
+END
+ImageUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/ImageUtils.java
+END
+WeatherIconUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/WeatherIconUtil.java
+END
+CircularImage.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/CircularImage.java
+END
+ActivityUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/ActivityUtils.java
+END
+TokenInvalidAlert.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/TokenInvalidAlert.java
+END
+LoadingOverlay.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/LoadingOverlay.java
+END
+YtApplication.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/YtApplication.java
+END
+ImageHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/ImageHandler.java
+END
+CustomAlertDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/CustomAlertDialog.java
+END
+GlobalDataManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/GlobalDataManager.java
+END
+UnderlineTextView.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/UnderlineTextView.java
+END
+UserGridAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/UserGridAdapter.java
+END
+ActivityManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/ActivityManager.java
+END
+ChildCustomConfigs.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/ChildCustomConfigs.java
+END
+MultiSelectChildrenBar.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/MultiSelectChildrenBar.java
+END
+PullToRefreshView.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/PullToRefreshView.java
+END
+YtHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/YtHandler.java
+END
+UserBehaviorConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/UserBehaviorConstants.java
+END
+UserGridExchangeListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/UserGridExchangeListener.java
+END
+YtAbstractActivity.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/view/common/YtAbstractActivity.java
+END

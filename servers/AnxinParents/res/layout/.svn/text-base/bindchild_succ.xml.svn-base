@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/toptitle"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/contentRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toptitle"
+        android:background="@color/body_bg"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" >
+
+        <ImageView
+            android:id="@+id/succicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/succ" />
+
+        <TextView
+            android:id="@+id/succtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/succicon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="关联成功"
+            android:textColor="@color/maincolor"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/succtip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/succtitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            
+            android:lineSpacingMultiplier="1.5"
+            android:text="@string/bindsucctip"
+            android:textColor="#333333" />
+
+
+
+            <ListView
+                android:id="@+id/list_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/succtip"
+                android:listSelector="@android:color/transparent"
+                android:scrollbars="none"
+                android:scrollingCache="false" />
+        
+
+<!--         <Button -->
+<!--             android:id="@+id/btn_confirm" -->
+<!--             android:layout_width="match_parent" -->
+<!--             android:layout_height="wrap_content" -->
+<!--             android:layout_below="@+id/listLL" -->
+<!--             android:layout_centerHorizontal="true" -->
+<!--             android:layout_marginTop="10dp" -->
+<!--             android:background="@drawable/login_login_button" -->
+<!--             android:paddingBottom="14dp" -->
+<!--             android:paddingTop="14dp" -->
+<!--             android:text="@string/registerFillProfile" -->
+<!--             android:textSize="25sp" /> -->
+    </RelativeLayout>
+
+    <com.yutong.axxc.parents.view.common.LoadingOverlay
+        android:id="@+id/loadingoverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

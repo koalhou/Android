@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/remindLL"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/newsbg" >
+
+    <TextView
+        android:id="@+id/tv_remind"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="left"
+        android:lineSpacingMultiplier="1.2"
+        android:text="正在计算..."
+        android:textColor="#fff"
+        android:textSize="15sp" />
+
+</LinearLayout>

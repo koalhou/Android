@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:axxc="http://schemas.android.com/apk/res/com.yutong.axxc.parents"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/toptitle"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/contentRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toptitle"
+        android:background="@color/body_bg"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/titlelabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.5"
+            android:text="@string/registerfillprofiletitle"
+            android:textColor="#333333" />
+
+        <com.yutong.axxc.parents.view.common.ExEditText
+            android:id="@+id/register_realname_ET"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/titlelabel"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            axxc:hintText="真实姓名"
+            axxc:paddingLeft="15dp" />
+
+        <com.yutong.axxc.parents.view.common.ExEditText
+            android:id="@+id/register_sex_ET"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/register_realname_ET"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            axxc:hintText="性别"
+            axxc:paddingLeft="15dp" />
+        <!-- 性别点击区域 -->
+
+        <ImageView
+            android:id="@+id/arrowIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/register_sex_ET"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/register_sex_ET"
+            android:gravity="center"
+            
+            android:layout_marginRight="50dp"
+            android:src="@drawable/arrowdown" />
+
+        <TextView
+            android:id="@+id/sexclickoverlay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/register_realname_ET"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:background="#00ffffff"
+            android:gravity="center" />
+        <!-- 性别点击区域，由于edittext设置成只读后，无法获取点击事件，所以先权衡做法。 -->
+
+        <com.yutong.axxc.parents.view.common.ExEditText
+            android:id="@+id/register_mail_ET"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/register_sex_ET"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            axxc:hintText="电子邮件"
+            axxc:paddingLeft="15dp" />
+
+        <com.yutong.axxc.parents.view.common.ExEditText
+            android:id="@+id/register_addr_ET"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/register_mail_ET"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            axxc:hintText="家庭地址"
+            axxc:paddingLeft="15dp" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/register_addr_ET"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/login_login_button"
+            android:text="@string/submittext"
+            android:textAppearance="@style/content_font_30" />
+
+        <TextView
+            android:id="@+id/titletip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/submitButton"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.5"
+            android:text="@string/registerfillprofiletip"
+            android:textColor="#bbb" />
+    </RelativeLayout>
+
+    <com.yutong.axxc.parents.view.common.LoadingOverlay
+        android:id="@+id/loadingoverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

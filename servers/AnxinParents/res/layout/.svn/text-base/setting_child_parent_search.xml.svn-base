@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:axxc="http://schemas.android.com/apk/res/com.yutong.axxc.parents"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/body_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/toptitle"
+        layout="@layout/title_bar" />
+
+    <com.yutong.axxc.parents.view.common.ExEditText
+        android:id="@+id/et_scps_search"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/tv_scps_searchhost"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="29dp"
+        axxc:hintText="安芯号/手机号/用户名"
+        axxc:labelIcon="@drawable/accountlable"
+        axxc:paddingLeft="40dp" />
+
+    <TextView
+        android:id="@+id/tv_scps_searchhost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toptitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="请输入被授权家长的识别码"
+        android:textColor="#505050" />
+
+    <com.yutong.axxc.parents.view.common.LoadingOverlay
+        android:id="@+id/loadingoverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

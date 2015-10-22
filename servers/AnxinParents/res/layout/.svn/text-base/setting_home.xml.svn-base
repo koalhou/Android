@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/body_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/toptitle"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/toptitle"
+        android:scrollbars="vertical" >
+
+        <!-- 设置项总容器 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/body_bg"
+            android:orientation="vertical"
+            android:padding="20dp" >
+
+            <!-- 学生信息 section -->
+
+            <LinearLayout
+                android:id="@+id/studentsLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 一个学生信息 -->
+
+            </LinearLayout>
+            <!-- 我的账户section -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/block_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/accounthomeRL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/settingitem_bg_allround" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_sh_ivhost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/position_active"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <com.yutong.axxc.parents.view.common.CircularImage
+                            android:id="@+id/accounthomeiconIV"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_margin="2dp"
+                            android:scaleType="center"
+                            android:src="@drawable/user_head_default" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/accounthometextTV"
+                        style="@style/font_setting_list_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/ll_sh_ivhost"
+                        android:paddingLeft="10dp"
+                        android:text="我的账户"
+                        android:textAppearance="@style/content_font_16"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/accoutnhomeArrowIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/more_gray" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- 杂项section -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/block_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/newsRL"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/settingitem_bg_topround"
+                    android:layout_height="60dp" >
+
+                    <ImageView
+                        android:id="@+id/newsiconIV"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/setting_news" />
+
+                    <TextView
+                        android:id="@+id/newstextTV"
+                        style="@style/font_setting_list_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/newsiconIV"
+                        android:paddingLeft="5dp"
+                        android:text="新闻"
+                        android:textAppearance="@style/content_font_16"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/newsArrowIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/more_gray" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/divider_color" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_sh_newcount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/newsArrowIV"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_sh_newsnum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dp"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/attentionbg"
+                            android:gravity="center"
+                            android:minWidth="20dp"
+                            android:text="3"
+                            android:textColor="#9B642B"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/guidRL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/settingitem_bg" >
+
+                    <ImageView
+                        android:id="@+id/guidiconIV"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/setting_help" />
+
+                    <TextView
+                        android:id="@+id/guidtextTV"
+                        style="@style/font_setting_list_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/guidiconIV"
+                        android:paddingLeft="5dp"
+                        android:text="使用引导"
+                        android:textAppearance="@style/content_font_16"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/guidArrowIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/more_gray" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/divider_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/feedbackRL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/settingitem_bg" >
+
+                    <ImageView
+                        android:id="@+id/feedbackiconIV"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/setting_suggestion" />
+
+                    <TextView
+                        android:id="@+id/feedbacktextTV"
+                        style="@style/font_setting_list_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/feedbackiconIV"
+                        android:paddingLeft="5dp"
+                        android:text="建议或反馈"
+                        android:textAppearance="@style/content_font_16"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/feedbackArrowIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/more_gray" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/divider_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/aboutRL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/settingitem_bg_bottomround" >
+
+                    <ImageView
+                        android:id="@+id/abouticonIV"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/setting_anxin" />
+
+                    <TextView
+                        android:id="@+id/abouttextTV"
+                        style="@style/font_setting_list_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/abouticonIV"
+                        android:paddingLeft="5dp"
+                        android:text="关于安芯"
+                        android:textAppearance="@style/content_font_16"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/aboutArrowIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/more_gray" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.yutong.axxc.parents.view.common.LoadingOverlay
+        android:id="@+id/loadingoverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

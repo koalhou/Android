@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yutong.axxc.parents"
+    android:versionCode="1"
+    android:versionName="V0.9.1-13101004" >
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 使用网络功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- SDK离线地图和cache功能需要读写外部存储器 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 使用定位功能所需权限,demo已集成百度定位SDK,不使用定位功能可去掉以下6项 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <!-- 文件访问权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <!-- 文件访问权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="8" />
+
+    <application
+        android:name=".view.common.YtApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@android:style/Theme.NoTitleBar" >
+
+        <!-- 站点定位通用页面 -->
+        <activity
+            android:name=".view.home.LocationMapActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- ============================ 主页============================ -->
+        <!-- 主页时间轴页面 -->
+        <activity
+            android:name=".view.home.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 主页地图页面 -->
+        <activity
+            android:name=".view.home.MainMapActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 主页未关联小孩页面 -->
+        <activity
+            android:name=".view.home.MainNotBindActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 关联小孩信息输入页面 -->
+        <activity
+            android:name=".view.home.BindChildActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 关联小孩成功提示页面 -->
+        <activity
+            android:name=".view.home.BindChildActivity_Succ"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 主页安芯地图页面 -->
+        <activity
+            android:name=".view.home.StudentInfoMapActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+
+            <!--
+            <intent-filter >
+            <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <!-- 加载页面 -->
+        <activity
+            android:name=".view.login.LoadingActivity"
+            android:configChanges="keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 帮助向导页面 -->
+        <activity
+            android:name=".view.login.GuideActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+        <!-- 登录页面 -->
+        <activity
+            android:name=".view.login.LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <!-- ============================ 注册，找回密码============================ -->
+        <!-- 注册协议页面 -->
+        <activity
+            android:name=".view.login.RegisterActivity_Protocol"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 注册页面:输入手机号 -->
+        <activity
+            android:name=".view.login.RegisterActivity_InputPhone"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 注册页面:输入验证码 -->
+        <activity
+            android:name=".view.login.RegisterActivity_InputCode"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 注册页面:输入昵称 -->
+        <activity
+            android:name=".view.login.RegisterActivity_InputNickName"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 注册页面:成功 -->
+        <activity
+            android:name=".view.login.RegisterActivity_Succ"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 注册页面:完善个人资料 -->
+        <activity
+            android:name=".view.login.RegisterActivity_FillProfile"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 找回密码页面:输入手机号 -->
+        <activity
+            android:name=".view.login.FindPWDActivity_InputPhone"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 找回密码页面:输入验证码 -->
+        <activity
+            android:name=".view.login.FindPWDActivity_InputCode"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 找回密码页面:输入新密码 -->
+        <activity
+            android:name=".view.login.FindPWDActivity_InputNewPWD"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 找回密码页面:成功 -->
+        <activity
+            android:name=".view.login.FindPWDActivity_Succ"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- ============================ 设置============================ -->
+        <!-- 设置首页面 -->
+        <activity
+            android:name=".view.settings.SettingHomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".view.settings.account.SettingAccountHomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 新闻页面 -->
+        <activity
+            android:name=".view.settings.news.NewsHomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 新闻详细页面 -->
+        <activity
+            android:name=".view.settings.news.NewsDetailActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 反馈与建议页面 -->
+        <activity
+            android:name=".view.settings.SettingFeedBackActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 关于我们页面 -->
+        <activity
+            android:name=".view.settings.SettingAboutActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+		<!-- 服务条款页面 -->
+        <activity
+            android:name=".view.settings.ServiceTermsActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- ============================ 我的账户============================ -->
+        <!-- 修改密码页面 -->
+        <activity
+            android:name=".view.settings.account.EditPWDInputOldPWDActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 更新密码页面 -->
+        <activity
+            android:name=".view.settings.account.EditPWDInputNewPWDActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 更新密码成功页面 -->
+        <activity
+            android:name=".view.settings.account.EditPWDSuccActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 修改用户真实姓名页面 -->
+        <activity
+            android:name=".view.settings.account.EditUserRealNameActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- 修改用户家庭地址页面 -->
+        <activity
+            android:name=".view.settings.account.EditUserAddressActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- ============================ 学生设置============================ -->
+        <!-- 学生设置主页面 -->
+        <activity
+            android:name=".view.settings.child.SettingChildHomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <!-- 头像修改页面 -->
+        <activity
+            android:name=".view.settings.child.HeadImageChangeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 昵称修改页面 -->
+        <activity
+            android:name=".view.settings.child.ChildAliasChangeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 个性设置页面 -->
+        <activity
+            android:name=".view.settings.child.PersonalSetActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 乘车站点及提醒页面 -->
+        <activity
+            android:name=".view.settings.child.RemindSetActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 消息推送页面 -->
+        <activity
+            android:name=".view.settings.child.PushRuleActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 消息详细测试页面 -->
+        <activity
+            android:name=".view.common.NotificationTestActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 乘车历史记录页面 -->
+        <activity
+            android:name=".view.settings.child.TravelRecordActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+
+            <!--
+            <intent-filter >
+            <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <!-- 乘车历史记录时间轴详细页面 -->
+        <activity
+            android:name=".view.settings.child.TravelRecordTimeLineActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 家长页面 -->
+        <activity
+            android:name=".view.settings.child.ParentActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 家长搜索页面 -->
+        <activity
+            android:name=".view.settings.child.ParentActivity_Search"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 家长搜索结果页面 -->
+        <activity
+            android:name=".view.settings.child.ParentActivity_Result"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 其他信息页面 -->
+        <activity
+            android:name=".view.settings.child.OthersActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service
+            android:name="com.yutong.axxc.xmpp.client.NotificationService"
+            android:enabled="true"
+            android:label="NotificationService" >
+            <intent-filter>
+                <action android:name="com.yutong.axxc.xmpp.client.NotificationService" />
+            </intent-filter>
+        </service>
+        <service android:name="com.yutong.axxc.parents.business.messagepush.PushNumInitService" >
+            <intent-filter>
+                <action android:name="com.test.intentservice" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

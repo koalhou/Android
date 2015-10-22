@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/toptitle"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/toptitle"
+        android:background="@color/body_bg" >
+
+        <LinearLayout
+            android:id="@+id/childbarLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/maincolor"
+            android:orientation="vertical" >
+
+            <com.yutong.axxc.parents.view.common.SingleSelectChildrenBar
+                android:id="@+id/mHScrollView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fadingEdge="none"
+                android:fadingEdgeLength="0dp" >
+            </com.yutong.axxc.parents.view.common.SingleSelectChildrenBar>
+        </LinearLayout>
+        <!-- 地图 -->
+
+        <com.yutong.axxc.parents.view.home.EnhancedMapView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/childbarLL"
+            android:clickable="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/childbarLL"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="8dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="23dp"
+                android:src="@drawable/arrow" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.yutong.axxc.parents.view.common.LoadingOverlay
+        android:id="@+id/loadingoverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/body_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/toptitle"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:id="@+id/ScrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toptitle"
+        android:scrollbars="vertical" >
+
+        <!-- 设置项总容器 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/body_bg"
+            android:orientation="vertical"
+            android:padding="20dp" >
+
+            <!-- 我的账户section -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/block_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/pwdSettingsRL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/settingitem_bg" >
+
+                    <ImageView
+                        android:id="@+id/pwdIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="15dp"
+                        android:src="@drawable/accountlable" />
+
+                    <TextView
+                        android:id="@+id/pwdTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/pwdIV"
+                        android:paddingLeft="5dp"
+                        android:text="我的账户（zyong）"
+                        android:textAppearance="@style/content_font_16"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/pwdArrowIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/more_gray" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/divider_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pwd1SettingsRL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/settingitem_bg" >
+
+                    <ImageView
+                        android:id="@+id/pwd1IV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="15dp"
+                        android:src="@drawable/accountlable" />
+
+                    <TextView
+                        android:id="@+id/pwd1TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/pwd1IV"
+                        android:paddingLeft="5dp"
+                        android:text="安全与隐私"
+                        android:textAppearance="@style/content_font_16"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/pwd1ArrowIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/more_gray" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- 杂项section -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/block_bg"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/pwd2SettingsRL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/settingitem_bg" >
+
+                    <ImageView
+                        android:id="@+id/pwd2IV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="15dp"
+                        android:src="@drawable/accountlable" />
+
+                    <TextView
+                        android:id="@+id/pwd2TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/pwd2IV"
+                        android:paddingLeft="5dp"
+                        android:text="新闻"
+                        android:textAppearance="@style/content_font_16"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/pwd2ArrowIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/more_gray" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/divider_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pwd3SettingsRL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/settingitem_bg" >
+
+                    <ImageView
+                        android:id="@+id/pwd3IV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="15dp"
+                        android:src="@drawable/accountlable" />
+
+                    <TextView
+                        android:id="@+id/pwd3TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/pwd3IV"
+                        android:paddingLeft="5dp"
+                        android:text="使用引导"
+                        android:textAppearance="@style/content_font_16"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/pwd3ArrowIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/more_gray" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/divider_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pwd4SettingsRL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/settingitem_bg" >
+
+                    <ImageView
+                        android:id="@+id/pwd4IV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="15dp"
+                        android:src="@drawable/accountlable" />
+
+                    <TextView
+                        android:id="@+id/pwd4TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/pwd4IV"
+                        android:paddingLeft="5dp"
+                        android:text="建议或反馈"
+                        android:textAppearance="@style/content_font_16"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/pwd4ArrowIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/more_gray" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/divider_color" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/pwd5SettingsRL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/settingitem_bg" >
+
+                    <ImageView
+                        android:id="@+id/pwd5IV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="15dp"
+                        android:src="@drawable/accountlable" />
+
+                    <TextView
+                        android:id="@+id/pwd5TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/pwd5IV"
+                        android:paddingLeft="5dp"
+                        android:text="关于安芯"
+                        android:textAppearance="@style/content_font_16"
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/pwd5ArrowIV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/more_gray" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/loginoutButton"
+                android:layout_width="fill_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/red_button_bg"
+                android:text="@string/loginouttext"
+                android:textAppearance="@style/content_font_30" >
+            </Button>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

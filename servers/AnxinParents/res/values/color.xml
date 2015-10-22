@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#ff888888</color>
+    <color name="alert_remark_bg">#E3DFD4</color>
+    <color name="vehicles_list_bg">#ebebeb</color>
+    <color name="divider_color">#eeeeee</color>
+    <color name="listview_press">#ffeeeeee</color>
+    <color name="listview_normal">#00ffffff</color>
+    <color name="common_list_opr_press">#055caa</color>
+    <color name="fontcolor_weekday">#000000</color>
+    <color name="fontcolor_weekend">#808080</color>
+    <color name="ngray">#E7E3D8</color>
+    <color name="nblank">#F0ECE1</color>
+    
+    <!-- 公共颜色 -->
+    <color name="maincolor">#1b9797</color>
+    <color name="body_bg">#f0ece1</color>
+    
+    <color name="bg_t">#33333333</color>
+</resources>

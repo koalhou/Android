@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="attr_timelineitemlayout">
+        <attr name="paddingleft1" format="dimension" />
+        <attr name="paddingtop1" format="dimension" />
+        <attr name="paddingbottom1" format="dimension" />
+        <attr name="color1" format="color" /><!-- 时间轴颜色 -->
+        <attr name="width1" format="dimension" /><!-- 时间轴宽度 -->
+        
+    </declare-styleable>
+
+</resources>

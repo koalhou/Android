@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/body_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/toptitle"
+        layout="@layout/title_bar" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toptitle" >
+
+        <RelativeLayout
+            android:id="@+id/contentRL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toptitle"
+            android:background="@color/body_bg"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/NewDetail_Title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom|left"
+                android:singleLine="false"
+                android:textColor="#302E31"
+                android:textSize="20dip" />
+
+            <LinearLayout
+                android:id="@+id/newscontentHost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/NewDetail_Desc"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/NewDetail_Image"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:scaleType="fitCenter"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/NewDetail_Content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/newscontentHost"
+                android:layout_marginTop="10dp"
+                android:lineSpacingExtra="3dp"
+                android:singleLine="false"
+                android:lineSpacingMultiplier="1.2"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textColor="#2D2E30"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/NewDetail_Desc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/NewDetail_Title"
+                android:layout_below="@+id/NewDetail_Title"
+                android:layout_marginTop="5dp"
+                android:textColor="#A0A09E"
+                android:textSize="14sp" />
+        </RelativeLayout>
+        
+    </ScrollView>
+   <com.yutong.axxc.parents.view.common.LoadingOverlay
+        android:id="@+id/loadingoverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</RelativeLayout>

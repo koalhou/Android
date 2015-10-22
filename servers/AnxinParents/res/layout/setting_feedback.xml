@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/toptitle"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/contentRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toptitle"
+        android:background="@color/body_bg"
+        android:padding="20dp" >
+
+        <EditText
+            android:id="@+id/inputET"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/input_bg"
+            android:gravity="top"
+            android:hint="您的建议非常重要"
+            android:maxLength="300"
+            android:padding="10dp" />
+
+        
+
+    </RelativeLayout>
+
+    <com.yutong.axxc.parents.view.common.LoadingOverlay
+    android:id="@+id/loadingoverlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone" />
+
+</RelativeLayout>

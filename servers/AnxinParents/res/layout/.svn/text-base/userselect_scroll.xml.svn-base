@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hsll_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/maincolor"
+    android:orientation="vertical" >
+
+    <com.yutong.axxc.parents.view.common.MHorizontalScrollView
+        android:id="@+id/horizontalScrollView_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="horizontal"
+        android:fadingEdgeLength="0dp"
+        android:minHeight="48dp"
+        android:scrollbars="none" >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/hsll_sub"
+                android:layout_width="1800dp"
+                android:layout_height="match_parent"
+                android:background="@color/maincolor"
+                android:orientation="horizontal" >
+
+                <GridView
+                    android:id="@+id/gridView_users"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/maincolor"
+                    android:cacheColorHint="@color/maincolor"
+                    android:columnWidth="60dp"
+                    android:gravity="center"
+                    android:listSelector="#00000000"
+                    android:numColumns="auto_fit"
+                    android:stretchMode="spacingWidthUniform">
+                </GridView>
+            </LinearLayout>
+        </FrameLayout>
+    </com.yutong.axxc.parents.view.common.MHorizontalScrollView>
+
+</LinearLayout>

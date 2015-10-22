@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:axxc="http://schemas.android.com/apk/res/com.yutong.axxc.parents"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/toptitle"
+        layout="@layout/title_bar_main" />
+
+    <RelativeLayout
+        android:id="@+id/contentRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toptitle"
+        android:background="@color/body_bg" >
+
+        <ListView
+            android:id="@+id/lv_amn_news"
+            android:layout_below="@+id/rl_amn_btnhost"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:divider="@color/body_bg"
+            android:fadingEdge="none" >
+        </ListView>
+
+        <RelativeLayout
+            android:id="@+id/rl_amn_btnhost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/maincolor"
+            android:paddingBottom="10dp" >
+
+            <Button
+                android:id="@+id/bindbtn"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/tv_amn_tip"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/login_login_button"
+                android:gravity="center"
+                android:text="添加孩子"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_amn_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="您需要关联孩子才能使用安芯的完整功能"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:axxc="http://schemas.android.com/apk/res/com.yutong.axxc.parents"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/body_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/block_bg"
+        android:paddingBottom="4dip"
+        android:paddingLeft="12dip"
+        android:paddingRight="12dip" >
+
+        <TextView
+            android:id="@+id/NewItemTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="河南信阳一辆6座校车载了..."
+            android:textColor="#2e2e2e"
+            android:textSize="20sp"
+            android:typeface="monospace" />
+
+        <TextView
+            android:id="@+id/NewItemContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/NewItemDesc"
+            android:layout_below="@+id/NewItemDesc"
+            android:layout_marginTop="15dp"
+            android:maxLines="2"
+            android:text="TextView03TextView03TextView03TextView03TextView03TextView03TextView03TextView03TextView03TextView03TextView03TextView03TextView03TextView03TextView03"
+            android:textColor="#2e2e2e" />
+
+        <TextView
+            android:id="@+id/NewItemDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/NewItemTitle"
+            android:layout_below="@+id/NewItemTitle"
+            android:layout_marginTop="5dp"
+            android:text="2013/08/09 12:23:45"
+            android:textSize="12sp"
+            android:typeface="normal" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/NewItemImage"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignTop="@+id/RelativeLayout01"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitEnd"
+        android:src="@drawable/news_new" />
+
+</RelativeLayout>

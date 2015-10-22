@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/toptitle"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/contentRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toptitle"
+        android:background="@color/body_bg"
+        android:padding="30dp" >
+
+        <ImageView
+            android:id="@+id/succicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/succ" />
+
+        <TextView
+            android:id="@+id/succtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/succicon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textColor="@color/maincolor"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/succtip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/succtitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:lineSpacingMultiplier="1.5"
+            android:gravity="center"
+            android:textColor="#333333" />
+
+        
+
+        
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,210 @@
+<com.yutong.axxc.parents.view.home.CustomLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:axxc="http://schemas.android.com/apk/res/com.yutong.axxc.parents"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/body_bg"
+    android:cacheColorHint="#00000000"
+    android:orientation="vertical"
+    axxc:paddingleft1="30dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/timeline_dotIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="21.0dp"
+                android:layout_marginTop="25.0dp"
+                android:src="@drawable/timeline_dot_current" />
+			<TextView
+                android:id="@+id/timeline_curTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timeline_dotIV"
+                
+                android:layout_marginLeft="16.0dip"
+                android:layout_marginTop="5.0dip"
+                android:background="@color/body_bg"
+                android:text="当前"
+                android:textColor="#000"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/timeline_timeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timeline_curTV"
+                android:layout_marginLeft="11.0dip"
+                android:layout_marginTop="5.0dip"
+                android:background="@color/body_bg"
+                android:text="00:00"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/timeline_bodyRL"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10.0dip"
+                android:layout_toRightOf="@+id/timeline_dotIV"
+                android:background="@drawable/leftarrow_bg_normal" >
+
+                <TextView
+                    android:id="@+id/timeline_body_titleTV"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="XXX已经在路上。"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+                <!-- 跟车信息 -->
+
+                <LinearLayout
+                    android:id="@+id/busdetailLL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/timeline_body_titleTV"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/drivervalue"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="张悦"
+                            android:textColor="#000"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/driverlabel"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/drivervalue"
+                            android:layout_marginTop="5dp"
+                            android:text="驾驶员"
+                            android:textColor="#666"
+                            android:textSize="10sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/teachervalue"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:textColor="#000"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/teacherlabel"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/teachervalue"
+                            android:layout_marginTop="5dp"
+                            android:text="跟车老师"
+                            android:textColor="#666"
+                            android:textSize="10sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:id="@+id/speedvalue"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="-"
+                            android:textColor="#000"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/speedlabel"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/speedvalue"
+                            android:layout_marginTop="5dp"
+                            android:text="公里/小时"
+                            android:textColor="#666"
+                            android:textSize="10sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <!-- 按钮区域 -->
+
+                <LinearLayout
+                    android:id="@+id/busbtnLL"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/busdetailLL"
+                    android:layout_marginTop="15dp"
+                    
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/gpsBtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/top_right_button"
+                        android:drawableLeft="@drawable/gpsicon_white"
+                        android:text="查看当前位置"
+                        android:textColor="#fff"
+                        android:textSize="12sp" >
+                    </Button>
+
+                    <Button
+                        android:id="@+id/callBtn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/top_right_button"
+                        android:drawableLeft="@drawable/callicon_white"
+                        android:text="呼叫跟车老师"
+                        android:textColor="#fff"
+                        android:textSize="12sp" >
+                    </Button>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/timeline_historytipTV"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timeline_bodyRL"
+                android:layout_marginBottom="10.0dip"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:layout_toRightOf="@+id/timeline_dotIV"
+                android:text="以下是历史消息。"
+                android:textColor="#333"
+                android:textSize="12sp" />
+            
+            
+        </RelativeLayout>
+    </LinearLayout>
+
+</com.yutong.axxc.parents.view.home.CustomLayout>

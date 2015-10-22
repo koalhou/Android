@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common
+END
+Tools.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/Tools.java
+END
+ReadMethodEnum.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/ReadMethodEnum.java
+END
+GlobleConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/GlobleConstants.java
+END
+SysConfigUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/SysConfigUtil.java
+END
+StringTemplateHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/StringTemplateHelper.java
+END
+OnNetworkChangeListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/OnNetworkChangeListener.java
+END
+Converter.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/Converter.java
+END
+YTException.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/YTException.java
+END
+HomeKeyEventBroadCastReceiver.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/HomeKeyEventBroadCastReceiver.java
+END
+YtAsyncTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/YtAsyncTask.java
+END
+DeviceUuidFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/DeviceUuidFactory.java
+END
+ThreadCommStateCode.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/ThreadCommStateCode.java
+END
+Logger.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/Logger.java
+END
+ThreadCommUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/ThreadCommUtil.java
+END
+InstallationUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/InstallationUtils.java
+END
+NetworkCheckUitl.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/NetworkCheckUitl.java
+END
+SharedPreferencesUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/SharedPreferencesUtil.java
+END
+YtPhotoAsyncTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/YtPhotoAsyncTask.java
+END
+LocationUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/LocationUtils.java
+END
+NeuGeoPoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/NeuGeoPoint.java
+END
+BitmapUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/common/BitmapUtils.java
+END

@@ -1,0 +1,57 @@
+<com.yutong.axxc.parents.view.home.CustomLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:axxc="http://schemas.android.com/apk/res/com.yutong.axxc.parents"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/body_bg"
+    android:cacheColorHint="#00000000"
+    android:orientation="vertical"
+    axxc:paddingbottom1="30dp"
+    axxc:paddingleft1="30dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/timeline_dotIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21.0dip"
+            android:layout_marginTop="25.0dip"
+            android:src="@drawable/timeline_dot_gray" />
+
+        <TextView
+            android:id="@+id/timeline_timeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timeline_dotIV"
+            android:layout_marginLeft="11.0dip"
+            android:layout_marginTop="5.0dip"
+            android:background="@color/body_bg"
+            android:text="00:00"
+            android:textColor="#666"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/timeline_bodyRL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_toRightOf="@+id/timeline_dotIV"
+            android:background="@drawable/leftarrow_bg_gray" >
+
+            <TextView
+                android:id="@+id/timeline_body_titleTV"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="又是全新的一天。"
+                android:textColor="#888"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</com.yutong.axxc.parents.view.home.CustomLayout>

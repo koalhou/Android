@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- 地图搜索框的宽度 -->
+    <dimen name="busSearchTextWidith">215dp</dimen>
+    <!-- 刷新相关 -->
+    <dimen name="refreshProgressHeight">16dp</dimen>
+    <dimen name="refreshProgressWidth">16dp</dimen>
+    <dimen name="refreshProgressMarginLeft">71dp</dimen>
+    <dimen name="refreshImageMarginLeft">71dp</dimen>
+    <dimen name="refreshHeight">53dp</dimen>
+
+</resources>

@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/body_bg"
+    android:cacheColorHint="#00000000"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp" >
+
+    <com.yutong.axxc.parents.view.common.CircularImage
+        android:id="@+id/studentheaderIV"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dip"
+        android:src="@drawable/default_boy" />
+
+    <TextView
+        android:id="@+id/studentnameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10.0dip"
+        android:background="@color/body_bg"
+        android:text="果果"
+        android:textColor="#000"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/studentschoolTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10.0dip"
+        android:background="@color/body_bg"
+        android:text="(育德小学)"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+</LinearLayout>

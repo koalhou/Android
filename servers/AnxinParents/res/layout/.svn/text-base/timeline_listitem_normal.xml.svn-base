@@ -1,0 +1,92 @@
+<com.yutong.axxc.parents.view.home.CustomLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:axxc="http://schemas.android.com/apk/res/com.yutong.axxc.parents"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/body_bg"
+    android:cacheColorHint="#00000000"
+    android:orientation="vertical"
+    axxc:paddingleft1="30dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/timeline_dotIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21.0dip"
+            android:layout_marginTop="25.0dip"
+            android:src="@drawable/timeline_dot_color" />
+
+        <TextView
+            android:id="@+id/timeline_timeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timeline_dotIV"
+            android:layout_marginLeft="11.0dip"
+            android:layout_marginTop="5.0dip"
+            android:background="@color/body_bg"
+            android:text="00:00"
+            android:textColor="#666"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/timeline_bodyRL"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10.0dip"
+            android:layout_toRightOf="@+id/timeline_dotIV"
+            android:background="@drawable/leftarrow_bg_normal" >
+
+            <TextView
+                android:id="@+id/timeline_body_titleTV"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:lineSpacingMultiplier="1.2"
+                android:text="XXX已经刷卡下车。"
+                android:textColor="#000"
+                android:textSize="15sp" />
+
+            <!-- 按钮区域 -->
+
+            <LinearLayout
+                android:id="@+id/busbtnLL"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/timeline_body_titleTV"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/gpsBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/gpsicon_blue"
+                    android:background="#fff"
+                    android:text="查看当前位置"
+                    android:textColor="#666"
+                    android:textSize="12sp" >
+                </Button>
+
+                <Button
+                    android:id="@+id/callBtn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/callicon_blue"
+                    android:background="#fff"
+                    android:text="呼叫跟车老师"
+                    android:textColor="#666"
+                    android:textSize="12sp" >
+                </Button>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</com.yutong.axxc.parents.view.home.CustomLayout>

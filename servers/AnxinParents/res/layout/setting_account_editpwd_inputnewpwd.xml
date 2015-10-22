@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:axxc="http://schemas.android.com/apk/res/com.yutong.axxc.parents"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/toptitle"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/contentRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toptitle"
+        android:background="@color/body_bg"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/tiplabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/findpwdinputnewpwd"
+            android:textColor="#333333" />
+
+        <com.yutong.axxc.parents.view.common.ExEditText
+            android:id="@+id/evReNewPassword_EX"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/findpwd_pwd_ET"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            axxc:hintText="确认新密码"
+            axxc:labelIcon="@drawable/pwdlabel"
+            axxc:paddingLeft="40dp" />
+
+        <com.yutong.axxc.parents.view.common.ExEditText
+            android:id="@+id/evNewPassword_EX"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            
+            android:layout_below="@+id/evReNewPassword_EX"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            axxc:hintText="新密码"
+            axxc:labelIcon="@drawable/pwdlabel"
+            axxc:paddingLeft="40dp" >
+        </com.yutong.axxc.parents.view.common.ExEditText>
+    </RelativeLayout>
+
+    <com.yutong.axxc.parents.view.common.LoadingOverlay
+        android:id="@+id/loadingoverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

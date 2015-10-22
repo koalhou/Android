@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/toptitle"
+        layout="@layout/title_bar_main" />
+
+    <RelativeLayout
+        android:id="@+id/networkRL"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/toptitle"
+        android:background="#fffbe0"
+        android:gravity="center_vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/networkspeekerIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/speeker" />
+
+        <TextView
+            android:id="@+id/networktextTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/networkspeekerIV"
+            android:text="@string/networktip"
+            android:textColor="#e37f1e" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_am_host"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/networkRL" >
+
+        <RelativeLayout
+            android:id="@+id/headerRL"
+            android:layout_width="fill_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/childbg_green"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/headerstudentTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="#fff"
+                android:textSize="30sp" />
+
+            <RelativeLayout
+                android:id="@+id/weatherRL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"                
+                android:paddingRight="15dp"
+                android:paddingLeft="5dp" >
+<!-- android:background="@drawable/weatherbg" -->
+                <ImageView
+                    android:id="@+id/weatherIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/b_0" />
+
+                <TextView
+                    android:id="@+id/weatherTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/weatherIV"
+                    android:text="乌鲁木器/多云转阴\n20-20℃/PM:223"
+                    android:textColor="#fff"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/headerRL"
+            android:background="@color/body_bg" >
+
+            <LinearLayout
+                android:id="@+id/childbarLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/maincolor"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <com.yutong.axxc.parents.view.common.SingleSelectChildrenBar
+                    android:id="@+id/mHScrollView1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fadingEdge="none"
+                    android:fadingEdgeLength="0dp" >
+                </com.yutong.axxc.parents.view.common.SingleSelectChildrenBar>
+
+                <Button
+                    android:id="@+id/btn_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/map_button"
+                    android:gravity="center"
+                    android:paddingRight="15dp" />
+            </LinearLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/timeline_viewPager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/childbarLL"
+                android:background="@color/body_bg"
+                android:fadingEdge="none"
+                android:fadingEdgeLength="0dp" >
+            </android.support.v4.view.ViewPager>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.yutong.axxc.parents.view.common.LoadingOverlay
+        android:id="@+id/loadingoverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

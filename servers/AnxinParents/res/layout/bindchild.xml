@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:axxc="http://schemas.android.com/apk/res/com.yutong.axxc.parents"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/toptitle"
+        layout="@layout/title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/contentRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toptitle"
+        android:background="@color/body_bg"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/tip1label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="请使用乘车协议上签署的信息来关联您的孩子"
+            android:textColor="#333333" />
+
+        <com.yutong.axxc.parents.view.common.ExEditText
+            android:id="@+id/parentname_ET"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tip1label"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            axxc:hintText="协议上签署的家长姓名"
+            axxc:paddingLeft="15dp" />
+
+        <LinearLayout
+            android:id="@+id/phoneLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/parentname_ET"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <com.yutong.axxc.parents.view.common.ExEditText
+                android:id="@+id/phone_ET"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                axxc:hintText="协议上签署的手机号"
+                axxc:paddingLeft="15dp" />
+
+            <Button
+                android:id="@+id/sendcodebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                
+                android:background="@drawable/top_right_button"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                
+                android:text="发送验证码"
+                android:textColor="#ffffffff"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <com.yutong.axxc.parents.view.common.ExEditText
+            android:id="@+id/code_ET"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/phoneLL"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            axxc:hintText="验证码"
+            axxc:paddingLeft="15dp" />
+		<TextView
+            android:id="@+id/tip2label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/code_ET"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.5"
+            android:text="请确认您输入的信息和您孩子乘车协议上预留的信息保持一致，如果您的信息已更新，请联系学校进行更新。"
+            android:textColor="#333333" />
+       
+    </RelativeLayout>
+
+    <com.yutong.axxc.parents.view.common.LoadingOverlay
+        android:id="@+id/loadingoverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

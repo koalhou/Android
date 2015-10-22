@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/studentRL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/kidsbg_green" >
+
+        <LinearLayout
+            android:id="@+id/ll_sls_ivhost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/userimg_bg_current"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <com.yutong.axxc.parents.view.common.CircularImage
+                android:id="@+id/studentheaderIV"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="1dp"
+                android:scaleType="center" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/studentindexTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/studentArrowIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/more_white" />
+
+        <TextView
+            android:id="@+id/studentnameTV"
+            style="@style/font_setting_list_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/ll_sls_ivhost"
+            android:paddingLeft="10dp"
+            android:text="果果"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+</LinearLayout>

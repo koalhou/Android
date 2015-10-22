@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/res/anim
+END
+exit_lefttoright.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/res/anim/exit_lefttoright.xml
+END
+exit_righttoleft.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/res/anim/exit_righttoleft.xml
+END
+inputodown.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/res/anim/inputodown.xml
+END
+outdowntoup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/res/anim/outdowntoup.xml
+END
+enter_lefttoright.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/res/anim/enter_lefttoright.xml
+END
+enter_righttoleft.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/res/anim/enter_righttoleft.xml
+END
+new_dync_out_to_left.xml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/res/anim/new_dync_out_to_left.xml
+END
+new_dync_in_from_right.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/res/anim/new_dync_in_from_right.xml
+END

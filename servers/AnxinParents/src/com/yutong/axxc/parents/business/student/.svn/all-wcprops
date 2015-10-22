@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/student
+END
+GetStudentStatusBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/student/GetStudentStatusBiz.java
+END
+GetStudentMsgRecordBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/student/GetStudentMsgRecordBiz.java
+END
+GetStudentPunchCardDateBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/student/GetStudentPunchCardDateBiz.java
+END
+GetStudentCustomInfoBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/student/GetStudentCustomInfoBiz.java
+END
+DeleteCertigierUserBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/student/DeleteCertigierUserBiz.java
+END
+GetStudentInfoBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/student/GetStudentInfoBiz.java
+END
+GetStudentRidingRecordBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/student/GetStudentRidingRecordBiz.java
+END
+SearchCertigierUserBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/student/SearchCertigierUserBiz.java
+END
+AddCertigierUserBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/student/AddCertigierUserBiz.java
+END
+GetCertigierInfoBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/student/GetCertigierInfoBiz.java
+END
+SetStudentCustomInfoBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/student/SetStudentCustomInfoBiz.java
+END
+SetUserSalutionBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/student/SetUserSalutionBiz.java
+END

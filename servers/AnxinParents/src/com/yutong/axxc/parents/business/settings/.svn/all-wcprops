@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/settings
+END
+AdviseBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/settings/AdviseBiz.java
+END
+UserInfoUpdateBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/settings/UserInfoUpdateBiz.java
+END
+OldPasswordCheckBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/settings/OldPasswordCheckBiz.java
+END
+SetPushMsgSettingBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/settings/SetPushMsgSettingBiz.java
+END
+GetPushMsgSettingBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/settings/GetPushMsgSettingBiz.java
+END
+PasswordUpdateBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/datas/!svn/ver/23/other/work_spaces/workspace_android/AnxinParents/src/com/yutong/axxc/parents/business/settings/PasswordUpdateBiz.java
+END

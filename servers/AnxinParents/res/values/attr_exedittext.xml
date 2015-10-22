@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="attr_exedittext">
+        <attr name="hintText" format="string" /><!-- 提示文本 -->
+        <attr name="labelIcon" format="reference" /><!-- 输入提示图片 -->
+        <attr name="paddingLeft" format="dimension" value="10dp"/><!-- text输入字符串左padding -->
+        
+    </declare-styleable>
+
+</resources>

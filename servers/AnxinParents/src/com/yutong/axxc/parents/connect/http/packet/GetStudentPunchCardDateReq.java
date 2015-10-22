@@ -1,0 +1,66 @@
+package com.yutong.axxc.parents.connect.http.packet;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.yutong.axxc.parents.common.Logger;
+import com.yutong.axxc.parents.common.Tools;
+
+/**
+ * 获取学生打卡日期请求类
+ * 
+ * @author zhangzhia 2013-8-22 上午9:19:24
+ */
+public class GetStudentPunchCardDateReq extends AbstractReq
+{
+
+    /** 学生id  */
+    private String cld_id;
+    /** 月份 格式：yyyymm  */
+    private String month;
+
+
+    /**
+     * （非 Javadoc）
+     * 
+     * @see com.yutong.axxc.parents.connect.http.packet.AbstractReq#packetMsgBody()
+     */
+    @Override
+    public String packetMsgBody()
+    {
+        try
+        {
+            JSONObject req = new JSONObject();
+            req.put("cld_id", cld_id);
+            req.put("month", month);
+            return req.toString();
+        }
+        catch (JSONException e)
+        {
+            Logger.e(this.getClass(), "[获取学生打卡日期请求类]:组包请求消息时失败，详细信息：", e);
+            return null;
+        }
+    }
+
+    public void setCld_id(String cld_id)
+    {
+        this.cld_id = cld_id;
+    }
+
+   
+    public void setMonth(String month)
+    {
+        this.month = month;
+    }
+
+    /**
+     * （非 Javadoc）
+     * 
+     * @see com.yutong.axxc.parents.connect.http.packet.AbstractReq#setReuqestUri()
+     */
+    @Override
+    public void setReuqestUri()
+    {
+        reuqestUri = reuqestUri + "/msg/card";
+    }
+}
